@@ -253,64 +253,64 @@ namespace SharpMediaFoundation
         /// <summary>
         /// No documentation.
         /// </summary>
-        /// <param name = "dwCharacteristicsRef">No documentation.</param>
+        /// <param name = "characteristicsRef">No documentation.</param>
         /// <returns>No documentation.</returns>
         /// <unmanaged>HRESULT IMFClock::GetClockCharacteristics([Out] DWORD* pdwCharacteristics)</unmanaged>
         /// <unmanaged-short>IMFClock::GetClockCharacteristics</unmanaged-short>
-        internal unsafe void GetClockCharacteristics(out System.Int32 dwCharacteristicsRef)
+        internal unsafe void GetClockCharacteristics(out System.Int32 characteristicsRef)
         {
             SharpGen.Runtime.Result __result__;
-            fixed (void *dwCharacteristicsRef_ = &dwCharacteristicsRef)
-                __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, dwCharacteristicsRef_, (*(void ***)this._nativePointer)[3]);
+            fixed (void *characteristicsRef_ = &characteristicsRef)
+                __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, characteristicsRef_, (*(void ***)this._nativePointer)[3]);
             __result__.CheckError();
         }
 
         /// <summary>
         /// No documentation.
         /// </summary>
-        /// <param name = "dwReserved">No documentation.</param>
+        /// <param name = "reserved">No documentation.</param>
         /// <param name = "llClockTimeRef">No documentation.</param>
         /// <param name = "hnsSystemTimeRef">No documentation.</param>
         /// <returns>No documentation.</returns>
         /// <unmanaged>HRESULT IMFClock::GetCorrelatedTime([In] DWORD dwReserved,[Out] longlong* pllClockTime,[Out] longlong* phnsSystemTime)</unmanaged>
         /// <unmanaged-short>IMFClock::GetCorrelatedTime</unmanaged-short>
-        public unsafe void GetCorrelatedTime(System.Int32 dwReserved, out System.Int64 llClockTimeRef, out System.Int64 hnsSystemTimeRef)
+        public unsafe void GetCorrelatedTime(System.Int32 reserved, out System.Int64 llClockTimeRef, out System.Int64 hnsSystemTimeRef)
         {
             SharpGen.Runtime.Result __result__;
             fixed (void *hnsSystemTimeRef_ = &hnsSystemTimeRef)
                 fixed (void *llClockTimeRef_ = &llClockTimeRef)
-                    __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, dwReserved, llClockTimeRef_, hnsSystemTimeRef_, (*(void ***)this._nativePointer)[4]);
+                    __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, reserved, llClockTimeRef_, hnsSystemTimeRef_, (*(void ***)this._nativePointer)[4]);
             __result__.CheckError();
         }
 
         /// <summary>
         /// No documentation.
         /// </summary>
-        /// <param name = "dwContinuityKeyRef">No documentation.</param>
+        /// <param name = "continuityKeyRef">No documentation.</param>
         /// <returns>No documentation.</returns>
         /// <unmanaged>HRESULT IMFClock::GetContinuityKey([Out] DWORD* pdwContinuityKey)</unmanaged>
         /// <unmanaged-short>IMFClock::GetContinuityKey</unmanaged-short>
-        internal unsafe void GetContinuityKey(out System.Int32 dwContinuityKeyRef)
+        internal unsafe void GetContinuityKey(out System.Int32 continuityKeyRef)
         {
             SharpGen.Runtime.Result __result__;
-            fixed (void *dwContinuityKeyRef_ = &dwContinuityKeyRef)
-                __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, dwContinuityKeyRef_, (*(void ***)this._nativePointer)[5]);
+            fixed (void *continuityKeyRef_ = &continuityKeyRef)
+                __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, continuityKeyRef_, (*(void ***)this._nativePointer)[5]);
             __result__.CheckError();
         }
 
         /// <summary>
         /// No documentation.
         /// </summary>
-        /// <param name = "dwReserved">No documentation.</param>
+        /// <param name = "reserved">No documentation.</param>
         /// <param name = "eClockStateRef">No documentation.</param>
         /// <returns>No documentation.</returns>
         /// <unmanaged>HRESULT IMFClock::GetState([In] DWORD dwReserved,[Out] MFCLOCK_STATE* peClockState)</unmanaged>
         /// <unmanaged-short>IMFClock::GetState</unmanaged-short>
-        public unsafe void GetState(System.Int32 dwReserved, out SharpMediaFoundation.ClockState eClockStateRef)
+        public unsafe void GetState(System.Int32 reserved, out SharpMediaFoundation.ClockState eClockStateRef)
         {
             SharpGen.Runtime.Result __result__;
             fixed (void *eClockStateRef_ = &eClockStateRef)
-                __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, dwReserved, eClockStateRef_, (*(void ***)this._nativePointer)[6]);
+                __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, reserved, eClockStateRef_, (*(void ***)this._nativePointer)[6]);
             __result__.CheckError();
         }
 
@@ -376,16 +376,16 @@ namespace SharpMediaFoundation
         /// <summary>
         /// No documentation.
         /// </summary>
-        /// <param name = "dwElementIndex">No documentation.</param>
+        /// <param name = "elementIndex">No documentation.</param>
         /// <returns>No documentation.</returns>
         /// <unmanaged>HRESULT IMFCollection::GetElement([In] DWORD dwElementIndex,[Out] IUnknown** ppUnkElement)</unmanaged>
         /// <unmanaged-short>IMFCollection::GetElement</unmanaged-short>
-        public unsafe SharpGen.Runtime.IUnknown GetElement(System.Int32 dwElementIndex)
+        public unsafe SharpGen.Runtime.IUnknown GetElement(System.Int32 elementIndex)
         {
             SharpGen.Runtime.IUnknown unkElementOut;
             System.IntPtr unkElementOut_ = System.IntPtr.Zero;
             SharpGen.Runtime.Result __result__;
-            __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, dwElementIndex, &unkElementOut_, (*(void ***)this._nativePointer)[4]);
+            __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, elementIndex, &unkElementOut_, (*(void ***)this._nativePointer)[4]);
             if (unkElementOut_ != System.IntPtr.Zero)
                 unkElementOut = new SharpGen.Runtime.ComObject(unkElementOut_);
             else
@@ -414,16 +414,16 @@ namespace SharpMediaFoundation
         /// <summary>
         /// No documentation.
         /// </summary>
-        /// <param name = "dwElementIndex">No documentation.</param>
+        /// <param name = "elementIndex">No documentation.</param>
         /// <param name = "unkElementOut">No documentation.</param>
         /// <returns>No documentation.</returns>
         /// <unmanaged>HRESULT IMFCollection::RemoveElement([In] DWORD dwElementIndex,[Out] IUnknown** ppUnkElement)</unmanaged>
         /// <unmanaged-short>IMFCollection::RemoveElement</unmanaged-short>
-        public unsafe void RemoveElement(System.Int32 dwElementIndex, out SharpGen.Runtime.IUnknown unkElementOut)
+        public unsafe void RemoveElement(System.Int32 elementIndex, out SharpGen.Runtime.IUnknown unkElementOut)
         {
             System.IntPtr unkElementOut_ = System.IntPtr.Zero;
             SharpGen.Runtime.Result __result__;
-            __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, dwElementIndex, &unkElementOut_, (*(void ***)this._nativePointer)[6]);
+            __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, elementIndex, &unkElementOut_, (*(void ***)this._nativePointer)[6]);
             if (unkElementOut_ != System.IntPtr.Zero)
                 unkElementOut = new SharpGen.Runtime.ComObject(unkElementOut_);
             else
@@ -434,17 +434,17 @@ namespace SharpMediaFoundation
         /// <summary>
         /// No documentation.
         /// </summary>
-        /// <param name = "dwIndex">No documentation.</param>
+        /// <param name = "index">No documentation.</param>
         /// <param name = "unknownRef">No documentation.</param>
         /// <returns>No documentation.</returns>
         /// <unmanaged>HRESULT IMFCollection::InsertElementAt([In] DWORD dwIndex,[In, Optional] IUnknown* pUnknown)</unmanaged>
         /// <unmanaged-short>IMFCollection::InsertElementAt</unmanaged-short>
-        public unsafe void InsertElementAt(System.Int32 dwIndex, SharpGen.Runtime.IUnknown unknownRef)
+        public unsafe void InsertElementAt(System.Int32 index, SharpGen.Runtime.IUnknown unknownRef)
         {
             System.IntPtr unknownRef_ = System.IntPtr.Zero;
             SharpGen.Runtime.Result __result__;
             unknownRef_ = SharpGen.Runtime.CppObject.ToCallbackPtr<SharpGen.Runtime.IUnknown>(unknownRef);
-            __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, dwIndex, (void *)unknownRef_, (*(void ***)this._nativePointer)[7]);
+            __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, index, (void *)unknownRef_, (*(void ***)this._nativePointer)[7]);
             System.GC.KeepAlive(unknownRef);
             __result__.CheckError();
         }
@@ -599,11 +599,11 @@ namespace SharpMediaFoundation
         /// <unmanaged-short>IMFAttributes::GetDouble</unmanaged-short>
         internal unsafe System.Double GetDouble(System.Guid guidKey)
         {
-            System.Double fValueRef;
+            System.Double valueRef;
             SharpGen.Runtime.Result __result__;
-            __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, &guidKey, &fValueRef, (*(void ***)this._nativePointer)[9]);
+            __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, &guidKey, &valueRef, (*(void ***)this._nativePointer)[9]);
             __result__.CheckError();
-            return fValueRef;
+            return valueRef;
         }
 
         /// <summary>
@@ -817,14 +817,14 @@ namespace SharpMediaFoundation
         /// No documentation.
         /// </summary>
         /// <param name = "guidKey">No documentation.</param>
-        /// <param name = "fValue">No documentation.</param>
+        /// <param name = "value">No documentation.</param>
         /// <returns>No documentation.</returns>
         /// <unmanaged>HRESULT IMFAttributes::SetDouble([In] const GUID&amp; guidKey,[In] double fValue)</unmanaged>
         /// <unmanaged-short>IMFAttributes::SetDouble</unmanaged-short>
-        internal unsafe void Set(System.Guid guidKey, System.Double fValue)
+        internal unsafe void Set(System.Guid guidKey, System.Double value)
         {
             SharpGen.Runtime.Result __result__;
-            __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, &guidKey, fValue, (*(void ***)this._nativePointer)[23]);
+            __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, &guidKey, value, (*(void ***)this._nativePointer)[23]);
             __result__.CheckError();
         }
 
@@ -1109,16 +1109,16 @@ namespace SharpMediaFoundation
         /// <summary>
         /// No documentation.
         /// </summary>
-        /// <param name = "dwFlags">No documentation.</param>
+        /// <param name = "flags">No documentation.</param>
         /// <param name = "eventOut">No documentation.</param>
         /// <returns>No documentation.</returns>
         /// <unmanaged>HRESULT IMFMediaEventGenerator::GetEvent([In] DWORD dwFlags,[Out] IMFMediaEvent** ppEvent)</unmanaged>
         /// <unmanaged-short>IMFMediaEventGenerator::GetEvent</unmanaged-short>
-        internal unsafe void GetEvent(System.Int32 dwFlags, out SharpMediaFoundation.MediaEvent eventOut)
+        internal unsafe void GetEvent(System.Int32 flags, out SharpMediaFoundation.MediaEvent eventOut)
         {
             System.IntPtr eventOut_ = System.IntPtr.Zero;
             SharpGen.Runtime.Result __result__;
-            __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, dwFlags, &eventOut_, (*(void ***)this._nativePointer)[3]);
+            __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, flags, &eventOut_, (*(void ***)this._nativePointer)[3]);
             if (eventOut_ != System.IntPtr.Zero)
                 eventOut = new SharpMediaFoundation.MediaEvent(eventOut_);
             else
@@ -1228,17 +1228,17 @@ namespace SharpMediaFoundation
         /// <summary>
         /// No documentation.
         /// </summary>
-        /// <param name = "dwSetTopologyFlags">No documentation.</param>
+        /// <param name = "setTopologyFlags">No documentation.</param>
         /// <param name = "topologyRef">No documentation.</param>
         /// <returns>No documentation.</returns>
         /// <unmanaged>HRESULT IMFMediaSession::SetTopology([In] DWORD dwSetTopologyFlags,[In, Optional] IMFTopology* pTopology)</unmanaged>
         /// <unmanaged-short>IMFMediaSession::SetTopology</unmanaged-short>
-        public unsafe void SetTopology(SharpMediaFoundation.SessionSetTopologyFlags dwSetTopologyFlags, SharpMediaFoundation.Topology topologyRef)
+        public unsafe void SetTopology(SharpMediaFoundation.SessionSetTopologyFlags setTopologyFlags, SharpMediaFoundation.Topology topologyRef)
         {
             System.IntPtr topologyRef_ = System.IntPtr.Zero;
             SharpGen.Runtime.Result __result__;
             topologyRef_ = SharpGen.Runtime.CppObject.ToCallbackPtr<SharpMediaFoundation.Topology>(topologyRef);
-            __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, unchecked ((System.Int32)dwSetTopologyFlags), (void *)topologyRef_, (*(void ***)this._nativePointer)[7]);
+            __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, unchecked ((System.Int32)setTopologyFlags), (void *)topologyRef_, (*(void ***)this._nativePointer)[7]);
             System.GC.KeepAlive(topologyRef);
             __result__.CheckError();
         }
@@ -1351,32 +1351,32 @@ namespace SharpMediaFoundation
         /// <summary>
         /// No documentation.
         /// </summary>
-        /// <param name = "dwCapsRef">No documentation.</param>
+        /// <param name = "capsRef">No documentation.</param>
         /// <returns>No documentation.</returns>
         /// <unmanaged>HRESULT IMFMediaSession::GetSessionCapabilities([Out] DWORD* pdwCaps)</unmanaged>
         /// <unmanaged-short>IMFMediaSession::GetSessionCapabilities</unmanaged-short>
-        internal unsafe void GetSessionCapabilities(out System.Int32 dwCapsRef)
+        internal unsafe void GetSessionCapabilities(out System.Int32 capsRef)
         {
             SharpGen.Runtime.Result __result__;
-            fixed (void *dwCapsRef_ = &dwCapsRef)
-                __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, dwCapsRef_, (*(void ***)this._nativePointer)[15]);
+            fixed (void *capsRef_ = &capsRef)
+                __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, capsRef_, (*(void ***)this._nativePointer)[15]);
             __result__.CheckError();
         }
 
         /// <summary>
         /// No documentation.
         /// </summary>
-        /// <param name = "dwGetFullTopologyFlags">No documentation.</param>
+        /// <param name = "getFullTopologyFlags">No documentation.</param>
         /// <param name = "topoId">No documentation.</param>
         /// <param name = "fullTopologyOut">No documentation.</param>
         /// <returns>No documentation.</returns>
         /// <unmanaged>HRESULT IMFMediaSession::GetFullTopology([In] DWORD dwGetFullTopologyFlags,[In] unsigned longlong TopoId,[Out] IMFTopology** ppFullTopology)</unmanaged>
         /// <unmanaged-short>IMFMediaSession::GetFullTopology</unmanaged-short>
-        public unsafe void GetFullTopology(System.Int32 dwGetFullTopologyFlags, System.UInt64 topoId, out SharpMediaFoundation.Topology fullTopologyOut)
+        public unsafe void GetFullTopology(System.Int32 getFullTopologyFlags, System.UInt64 topoId, out SharpMediaFoundation.Topology fullTopologyOut)
         {
             System.IntPtr fullTopologyOut_ = System.IntPtr.Zero;
             SharpGen.Runtime.Result __result__;
-            __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, dwGetFullTopologyFlags, topoId, &fullTopologyOut_, (*(void ***)this._nativePointer)[16]);
+            __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, getFullTopologyFlags, topoId, &fullTopologyOut_, (*(void ***)this._nativePointer)[16]);
             if (fullTopologyOut_ != System.IntPtr.Zero)
                 fullTopologyOut = new SharpMediaFoundation.Topology(fullTopologyOut_);
             else
@@ -1440,16 +1440,16 @@ namespace SharpMediaFoundation
         /// <summary>
         /// No documentation.
         /// </summary>
-        /// <param name = "fCompressedRef">No documentation.</param>
+        /// <param name = "compressedRef">No documentation.</param>
         /// <returns>No documentation.</returns>
         /// <unmanaged>HRESULT IMFMediaType::IsCompressedFormat([Out] BOOL* pfCompressed)</unmanaged>
         /// <unmanaged-short>IMFMediaType::IsCompressedFormat</unmanaged-short>
-        internal unsafe void IsCompressedFormat_(out SharpGen.Runtime.Win32.RawBool fCompressedRef)
+        internal unsafe void IsCompressedFormat_(out SharpGen.Runtime.Win32.RawBool compressedRef)
         {
-            fCompressedRef = default (SharpGen.Runtime.Win32.RawBool);
+            compressedRef = default (SharpGen.Runtime.Win32.RawBool);
             SharpGen.Runtime.Result __result__;
-            fixed (void *fCompressedRef_ = &fCompressedRef)
-                __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, fCompressedRef_, (*(void ***)this._nativePointer)[34]);
+            fixed (void *compressedRef_ = &compressedRef)
+                __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, compressedRef_, (*(void ***)this._nativePointer)[34]);
             __result__.CheckError();
         }
 
@@ -1457,17 +1457,17 @@ namespace SharpMediaFoundation
         /// No documentation.
         /// </summary>
         /// <param name = "iMediaTypeRef">No documentation.</param>
-        /// <param name = "dwFlagsRef">No documentation.</param>
+        /// <param name = "flagsRef">No documentation.</param>
         /// <returns>No documentation.</returns>
         /// <unmanaged>HRESULT IMFMediaType::IsEqual([In, Optional] IMFMediaType* pIMediaType,[Out] DWORD* pdwFlags)</unmanaged>
         /// <unmanaged-short>IMFMediaType::IsEqual</unmanaged-short>
-        public unsafe void IsEqual(SharpMediaFoundation.MediaType iMediaTypeRef, out System.Int32 dwFlagsRef)
+        public unsafe void IsEqual(SharpMediaFoundation.MediaType iMediaTypeRef, out System.Int32 flagsRef)
         {
             System.IntPtr iMediaTypeRef_ = System.IntPtr.Zero;
             SharpGen.Runtime.Result __result__;
             iMediaTypeRef_ = SharpGen.Runtime.CppObject.ToCallbackPtr<SharpMediaFoundation.MediaType>(iMediaTypeRef);
-            fixed (void *dwFlagsRef_ = &dwFlagsRef)
-                __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, (void *)iMediaTypeRef_, dwFlagsRef_, (*(void ***)this._nativePointer)[35]);
+            fixed (void *flagsRef_ = &flagsRef)
+                __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, (void *)iMediaTypeRef_, flagsRef_, (*(void ***)this._nativePointer)[35]);
             System.GC.KeepAlive(iMediaTypeRef);
             __result__.CheckError();
         }
@@ -2150,18 +2150,18 @@ namespace SharpMediaFoundation
         /// <summary>
         /// No documentation.
         /// </summary>
-        /// <param name = "dwOutputIndex">No documentation.</param>
+        /// <param name = "outputIndex">No documentation.</param>
         /// <param name = "downstreamNodeRef">No documentation.</param>
-        /// <param name = "dwInputIndexOnDownstreamNode">No documentation.</param>
+        /// <param name = "inputIndexOnDownstreamNode">No documentation.</param>
         /// <returns>No documentation.</returns>
         /// <unmanaged>HRESULT IMFTopologyNode::ConnectOutput([In] DWORD dwOutputIndex,[In] IMFTopologyNode* pDownstreamNode,[In] DWORD dwInputIndexOnDownstreamNode)</unmanaged>
         /// <unmanaged-short>IMFTopologyNode::ConnectOutput</unmanaged-short>
-        public unsafe void ConnectOutput(System.Int32 dwOutputIndex, SharpMediaFoundation.TopologyNode downstreamNodeRef, System.Int32 dwInputIndexOnDownstreamNode)
+        public unsafe void ConnectOutput(System.Int32 outputIndex, SharpMediaFoundation.TopologyNode downstreamNodeRef, System.Int32 inputIndexOnDownstreamNode)
         {
             System.IntPtr downstreamNodeRef_ = System.IntPtr.Zero;
             SharpGen.Runtime.Result __result__;
             downstreamNodeRef_ = SharpGen.Runtime.CppObject.ToCallbackPtr<SharpMediaFoundation.TopologyNode>(downstreamNodeRef);
-            __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, dwOutputIndex, (void *)downstreamNodeRef_, dwInputIndexOnDownstreamNode, (*(void ***)this._nativePointer)[40]);
+            __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, outputIndex, (void *)downstreamNodeRef_, inputIndexOnDownstreamNode, (*(void ***)this._nativePointer)[40]);
             System.GC.KeepAlive(downstreamNodeRef);
             __result__.CheckError();
         }
@@ -2169,32 +2169,32 @@ namespace SharpMediaFoundation
         /// <summary>
         /// No documentation.
         /// </summary>
-        /// <param name = "dwOutputIndex">No documentation.</param>
+        /// <param name = "outputIndex">No documentation.</param>
         /// <returns>No documentation.</returns>
         /// <unmanaged>HRESULT IMFTopologyNode::DisconnectOutput([In] DWORD dwOutputIndex)</unmanaged>
         /// <unmanaged-short>IMFTopologyNode::DisconnectOutput</unmanaged-short>
-        public unsafe void DisconnectOutput(System.Int32 dwOutputIndex)
+        public unsafe void DisconnectOutput(System.Int32 outputIndex)
         {
             SharpGen.Runtime.Result __result__;
-            __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, dwOutputIndex, (*(void ***)this._nativePointer)[41]);
+            __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, outputIndex, (*(void ***)this._nativePointer)[41]);
             __result__.CheckError();
         }
 
         /// <summary>
         /// No documentation.
         /// </summary>
-        /// <param name = "dwInputIndex">No documentation.</param>
+        /// <param name = "inputIndex">No documentation.</param>
         /// <param name = "upstreamNodeOut">No documentation.</param>
-        /// <param name = "dwOutputIndexOnUpstreamNodeRef">No documentation.</param>
+        /// <param name = "outputIndexOnUpstreamNodeRef">No documentation.</param>
         /// <returns>No documentation.</returns>
         /// <unmanaged>HRESULT IMFTopologyNode::GetInput([In] DWORD dwInputIndex,[Out] IMFTopologyNode** ppUpstreamNode,[Out] DWORD* pdwOutputIndexOnUpstreamNode)</unmanaged>
         /// <unmanaged-short>IMFTopologyNode::GetInput</unmanaged-short>
-        public unsafe void GetInput(System.Int32 dwInputIndex, out SharpMediaFoundation.TopologyNode upstreamNodeOut, out System.Int32 dwOutputIndexOnUpstreamNodeRef)
+        public unsafe void GetInput(System.Int32 inputIndex, out SharpMediaFoundation.TopologyNode upstreamNodeOut, out System.Int32 outputIndexOnUpstreamNodeRef)
         {
             System.IntPtr upstreamNodeOut_ = System.IntPtr.Zero;
             SharpGen.Runtime.Result __result__;
-            fixed (void *dwOutputIndexOnUpstreamNodeRef_ = &dwOutputIndexOnUpstreamNodeRef)
-                __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, dwInputIndex, &upstreamNodeOut_, dwOutputIndexOnUpstreamNodeRef_, (*(void ***)this._nativePointer)[42]);
+            fixed (void *outputIndexOnUpstreamNodeRef_ = &outputIndexOnUpstreamNodeRef)
+                __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, inputIndex, &upstreamNodeOut_, outputIndexOnUpstreamNodeRef_, (*(void ***)this._nativePointer)[42]);
             if (upstreamNodeOut_ != System.IntPtr.Zero)
                 upstreamNodeOut = new SharpMediaFoundation.TopologyNode(upstreamNodeOut_);
             else
@@ -2205,18 +2205,18 @@ namespace SharpMediaFoundation
         /// <summary>
         /// No documentation.
         /// </summary>
-        /// <param name = "dwOutputIndex">No documentation.</param>
+        /// <param name = "outputIndex">No documentation.</param>
         /// <param name = "downstreamNodeOut">No documentation.</param>
-        /// <param name = "dwInputIndexOnDownstreamNodeRef">No documentation.</param>
+        /// <param name = "inputIndexOnDownstreamNodeRef">No documentation.</param>
         /// <returns>No documentation.</returns>
         /// <unmanaged>HRESULT IMFTopologyNode::GetOutput([In] DWORD dwOutputIndex,[Out] IMFTopologyNode** ppDownstreamNode,[Out] DWORD* pdwInputIndexOnDownstreamNode)</unmanaged>
         /// <unmanaged-short>IMFTopologyNode::GetOutput</unmanaged-short>
-        public unsafe void GetOutput(System.Int32 dwOutputIndex, out SharpMediaFoundation.TopologyNode downstreamNodeOut, out System.Int32 dwInputIndexOnDownstreamNodeRef)
+        public unsafe void GetOutput(System.Int32 outputIndex, out SharpMediaFoundation.TopologyNode downstreamNodeOut, out System.Int32 inputIndexOnDownstreamNodeRef)
         {
             System.IntPtr downstreamNodeOut_ = System.IntPtr.Zero;
             SharpGen.Runtime.Result __result__;
-            fixed (void *dwInputIndexOnDownstreamNodeRef_ = &dwInputIndexOnDownstreamNodeRef)
-                __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, dwOutputIndex, &downstreamNodeOut_, dwInputIndexOnDownstreamNodeRef_, (*(void ***)this._nativePointer)[43]);
+            fixed (void *inputIndexOnDownstreamNodeRef_ = &inputIndexOnDownstreamNodeRef)
+                __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, outputIndex, &downstreamNodeOut_, inputIndexOnDownstreamNodeRef_, (*(void ***)this._nativePointer)[43]);
             if (downstreamNodeOut_ != System.IntPtr.Zero)
                 downstreamNodeOut = new SharpMediaFoundation.TopologyNode(downstreamNodeOut_);
             else
@@ -2227,17 +2227,17 @@ namespace SharpMediaFoundation
         /// <summary>
         /// No documentation.
         /// </summary>
-        /// <param name = "dwOutputIndex">No documentation.</param>
+        /// <param name = "outputIndex">No documentation.</param>
         /// <param name = "typeRef">No documentation.</param>
         /// <returns>No documentation.</returns>
         /// <unmanaged>HRESULT IMFTopologyNode::SetOutputPrefType([In] DWORD dwOutputIndex,[In] IMFMediaType* pType)</unmanaged>
         /// <unmanaged-short>IMFTopologyNode::SetOutputPrefType</unmanaged-short>
-        public unsafe void SetOutputPrefType(System.Int32 dwOutputIndex, SharpMediaFoundation.MediaType typeRef)
+        public unsafe void SetOutputPrefType(System.Int32 outputIndex, SharpMediaFoundation.MediaType typeRef)
         {
             System.IntPtr typeRef_ = System.IntPtr.Zero;
             SharpGen.Runtime.Result __result__;
             typeRef_ = SharpGen.Runtime.CppObject.ToCallbackPtr<SharpMediaFoundation.MediaType>(typeRef);
-            __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, dwOutputIndex, (void *)typeRef_, (*(void ***)this._nativePointer)[44]);
+            __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, outputIndex, (void *)typeRef_, (*(void ***)this._nativePointer)[44]);
             System.GC.KeepAlive(typeRef);
             __result__.CheckError();
         }
@@ -2245,16 +2245,16 @@ namespace SharpMediaFoundation
         /// <summary>
         /// No documentation.
         /// </summary>
-        /// <param name = "dwOutputIndex">No documentation.</param>
+        /// <param name = "outputIndex">No documentation.</param>
         /// <param name = "typeOut">No documentation.</param>
         /// <returns>No documentation.</returns>
         /// <unmanaged>HRESULT IMFTopologyNode::GetOutputPrefType([In] DWORD dwOutputIndex,[Out] IMFMediaType** ppType)</unmanaged>
         /// <unmanaged-short>IMFTopologyNode::GetOutputPrefType</unmanaged-short>
-        public unsafe void GetOutputPrefType(System.Int32 dwOutputIndex, out SharpMediaFoundation.MediaType typeOut)
+        public unsafe void GetOutputPrefType(System.Int32 outputIndex, out SharpMediaFoundation.MediaType typeOut)
         {
             System.IntPtr typeOut_ = System.IntPtr.Zero;
             SharpGen.Runtime.Result __result__;
-            __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, dwOutputIndex, &typeOut_, (*(void ***)this._nativePointer)[45]);
+            __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, outputIndex, &typeOut_, (*(void ***)this._nativePointer)[45]);
             if (typeOut_ != System.IntPtr.Zero)
                 typeOut = new SharpMediaFoundation.MediaType(typeOut_);
             else
@@ -2265,17 +2265,17 @@ namespace SharpMediaFoundation
         /// <summary>
         /// No documentation.
         /// </summary>
-        /// <param name = "dwInputIndex">No documentation.</param>
+        /// <param name = "inputIndex">No documentation.</param>
         /// <param name = "typeRef">No documentation.</param>
         /// <returns>No documentation.</returns>
         /// <unmanaged>HRESULT IMFTopologyNode::SetInputPrefType([In] DWORD dwInputIndex,[In] IMFMediaType* pType)</unmanaged>
         /// <unmanaged-short>IMFTopologyNode::SetInputPrefType</unmanaged-short>
-        public unsafe void SetInputPrefType(System.Int32 dwInputIndex, SharpMediaFoundation.MediaType typeRef)
+        public unsafe void SetInputPrefType(System.Int32 inputIndex, SharpMediaFoundation.MediaType typeRef)
         {
             System.IntPtr typeRef_ = System.IntPtr.Zero;
             SharpGen.Runtime.Result __result__;
             typeRef_ = SharpGen.Runtime.CppObject.ToCallbackPtr<SharpMediaFoundation.MediaType>(typeRef);
-            __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, dwInputIndex, (void *)typeRef_, (*(void ***)this._nativePointer)[46]);
+            __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, inputIndex, (void *)typeRef_, (*(void ***)this._nativePointer)[46]);
             System.GC.KeepAlive(typeRef);
             __result__.CheckError();
         }
@@ -2283,16 +2283,16 @@ namespace SharpMediaFoundation
         /// <summary>
         /// No documentation.
         /// </summary>
-        /// <param name = "dwInputIndex">No documentation.</param>
+        /// <param name = "inputIndex">No documentation.</param>
         /// <param name = "typeOut">No documentation.</param>
         /// <returns>No documentation.</returns>
         /// <unmanaged>HRESULT IMFTopologyNode::GetInputPrefType([In] DWORD dwInputIndex,[Out] IMFMediaType** ppType)</unmanaged>
         /// <unmanaged-short>IMFTopologyNode::GetInputPrefType</unmanaged-short>
-        public unsafe void GetInputPrefType(System.Int32 dwInputIndex, out SharpMediaFoundation.MediaType typeOut)
+        public unsafe void GetInputPrefType(System.Int32 inputIndex, out SharpMediaFoundation.MediaType typeOut)
         {
             System.IntPtr typeOut_ = System.IntPtr.Zero;
             SharpGen.Runtime.Result __result__;
-            __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, dwInputIndex, &typeOut_, (*(void ***)this._nativePointer)[47]);
+            __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, inputIndex, &typeOut_, (*(void ***)this._nativePointer)[47]);
             if (typeOut_ != System.IntPtr.Zero)
                 typeOut = new SharpMediaFoundation.MediaType(typeOut_);
             else

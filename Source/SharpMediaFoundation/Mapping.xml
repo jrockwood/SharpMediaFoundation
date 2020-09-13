@@ -133,10 +133,13 @@
     <map interface="IMF(.*)" name="$1" />
     <map method=".*GetType" name="GetTypeInfo" />
 
-    <map param="IMFAudioStreamVolume::.*::dw(.*)" name-tmp="$1" type="int" />
-    <map param="IMFAudioStreamVolume::.*::pdw(.*)" name-tmp="x$1" type="int" />
-    <map param="IMFAudioStreamVolume::.*::f(.*)" name-tmp="$1" />
-    <map param="IMFAudioStreamVolume::.*::pf(.*)" name-tmp="f$1" />
+    <map param=".*::.*::dw(.*)" name-tmp="$1" />
+    <map param=".*::.*::pdw(.*)" name-tmp="x$1" />
+    <map param=".*::.*::f(.*)" name-tmp="$1" />
+    <map param=".*::.*::pf(.*)" name-tmp="f$1" />
+
+    <map param="IMFAudioStreamVolume::.*::dw(.*)" type="int" />
+    <map param="IMFAudioStreamVolume::.*::pdw(.*)" type="int" />
 
     <map interface="IMFAsyncCallback" name="IAsyncCallback" callback="true" />
     <map param="IMFAsyncCallback::GetParameters::pdwFlags" type="MFASYNC_CALLBACK_FLAGS" />
