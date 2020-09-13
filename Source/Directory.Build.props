@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!-- Company information -->
+  <PropertyGroup>
+    <Authors>Justin Rockwood</Authors>
+    <Company>Justin Rockwood</Company>
+    <Product>SharpMediaFoundation</Product>
+    <Copyright>Copyright © Justin Rockwood. All rights reserved.</Copyright>
+  </PropertyGroup>
+
+  <!-- Version information -->
+  <PropertyGroup>
+    <InformationalVersion>1.0</InformationalVersion>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+  </PropertyGroup>
+
+  <!-- Compiler flags -->
+  <PropertyGroup>
+    <ErrorReport>prompt</ErrorReport>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <NoWarn>1591</NoWarn>
+    <NeutralLanguage>en-US</NeutralLanguage>
+    <LangVersion>8</LangVersion>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)'=='Debug'">
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)'=='Release'">
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+</Project>
