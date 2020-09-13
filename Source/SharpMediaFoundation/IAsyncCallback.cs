@@ -39,7 +39,7 @@ namespace SharpMediaFoundation
         /// </p>
         /// <p>
         /// If the work queue is not compatible with the value returned in <em>pdwFlags</em>, the Media Foundation
-        /// platform returns <strong><see cref="ResultCode.InvalidWorkqueue"/></strong> when it
+        /// platform returns <strong><see cref="ResultCode.InvalidWorkQueue"/></strong> when it
         /// tries to dispatch the callback. (See <strong><see cref="MediaFactory.PutWorkItem"/></strong>.)
         /// </p>
         /// </remarks>

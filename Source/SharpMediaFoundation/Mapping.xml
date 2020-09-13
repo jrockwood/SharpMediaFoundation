@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <!--
 // Copyright (c) Justin Rockwood. All Rights Reserved. Licensed under the Apache License, Version 2.0. See
 // LICENSE.txt in the project root for license information.
@@ -87,6 +87,68 @@
     <bind from="MEDIA_EVENT_TYPE" to="SharpMediaFoundation.MediaEventTypes" />
   </bindings>
 
+  <!--
+  // *****************************************************************
+  // Naming Hints
+  // *****************************************************************
+  -->
+  <naming>
+    <short name="ACCESSDENIED">AccessDenied</short>
+    <short name="ALREADYSTOPPED">AlreadyStopped</short>
+    <short name="ATTRIBUTENOTFOUND">AttributeNotFound</short>
+    <short name="APPSERVICE">AppService</short>
+    <short name="BITPUMP">BitPump</short>
+    <short name="BUFFERTOOSMALL">BufferTooSmall</short>
+    <short name="BWLEVEL">BwLevel</short>
+    <short name="BYTESTREAM">ByteStream</short>
+    <short name="CACHESTREAM">CacheStream</short>
+    <short name="CANNOTCONNECT">CannotConnect</short>
+    <short name="CONTAINERTYPE">ContainerType</short>
+    <short name="EXATTRIBUTE">ExAttribute</short>
+    <short name="EXTENDEDPROP">ExtendedProp</short>
+    <short name="INDEXNOTLOADED">IndexNotLoaded</short>
+    <short name="INVALIDINDEX">InvalidIndex</short>
+    <short name="INVALIDMEDIATYPE">InvalidMediaType</short>
+    <short name="INVALIDNAME">InvalidName</short>
+    <short name="INVALIDREQUEST">InvalidRequest</short>
+    <short name="INVALIDSTATE">InvalidState</short>
+    <short name="INVALIDSTREAMNUMBER">InvalidStreamNumber</short>
+    <short name="INVALIDTYPE">InvalidType</short>
+    <short name="KEYFRAME">KeyFrame</short>
+    <short name="MANUALSS">ManualSs</short>
+    <short name="MEDIAPROC">MediaProc</short>
+    <short name="MEDIATYPE">MediaType</short>
+    <short name="MGR">Manager</short>
+    <short name="NOTACCEPTING">NotAccepting</short>
+    <short name="NOTMP3">NotMp3</short>
+    <short name="NOTSUPPORTED">NotSupported</short>
+    <short name="OUTOFBOUNDS">OutOfBounds</short>
+    <short name="OUTOFDATA">OutOfData</short>
+    <short name="OUTOFDATE">OutOfDate</short>
+    <short name="OUTOFMEMORY">OutOfMemory</short>
+    <short name="OUTOFRANGE">OutOfRange</short>
+    <short name="PAUSEWHILESTOPPED">PauseWhileStopped</short>
+    <short name="PEAUTH">PeAuth</short>
+    <short name="PUSHSERVER">PushServer</short>
+    <short name="QUALITYKNOB">QualityKnob</short>
+    <short name="SAFEMODE">SafeMode</short>
+    <short name="SAMPLEALLOCATOR">SampleAllocator</short>
+    <short name="SOURCERESOLVER">SourceResolver</short>
+    <short name="SPKR">Speaker</short>
+    <short name="STREAMGROUPS">StreamGroups</short>
+    <short name="STREAMID">StreamId</short>
+    <short name="STREAMNUMBER">StreamNumber</short>
+    <short name="STREAMSINK">StreamSink</short>
+    <short name="STREAMSINKS">StreamSinks</short>
+    <short name="TIMELINECONTROLLER">TimelineController</short>
+    <short name="USERMODE">UserMode</short>
+    <short name="WMDRM">WindowsMediaDrm</short>
+    <short name="WMDRMOTA">WindowsMediaDrmOutputTrustAuthority</short>
+    <short name="WORKQUEUE">WorkQueue</short>
+    <short name="WOULDBLOCK">WouldBlock</short>
+    <short name="WRONGSTATE">WrongState</short>
+  </naming>
+
   <mapping>
     <context id="mediafoundation-all" />
 
@@ -138,34 +200,45 @@
     <map param=".*::.*::f(.*)" name-tmp="$1" />
     <map param=".*::.*::pf(.*)" name-tmp="f$1" />
 
+    <!-- IMFAudioStreamVolume -->
     <map param="IMFAudioStreamVolume::.*::dw(.*)" type="int" />
     <map param="IMFAudioStreamVolume::.*::pdw(.*)" type="int" />
 
+    <!-- IMFAsyncCallback -->
     <map interface="IMFAsyncCallback" name="IAsyncCallback" callback="true" />
     <map param="IMFAsyncCallback::GetParameters::pdwFlags" type="MFASYNC_CALLBACK_FLAGS" />
 
+    <!-- IMFAsyncResult -->
     <map method="IMFAsyncResult::.*" property="false" visibility="internal" />
     <map method="IMFAsyncResult::GetStatus" return="true" check="false" />
     <map param="IMFAsyncResult::GetState::ppunkState" type="void" />
     <map method="IMFAsyncResult::GetObjectW" name="GetObject" />
 
+    <!-- IMFAttributes -->
     <map interface="IMFAttributes" name="MediaAttributes" />
+
     <map method="IMFAttributes::GetItem" visibility="internal" />
     <map param="IMFAttributes::GetItem::pValue" attribute="in" type="void" />
     <map param="IMFAttributes::GetItemType::pType" return="true" />
+
     <map method="IMFAttributes::CompareItem" visibility="internal" />
     <map param="IMFAttributes::CompareItem::pbResult" return="true" />
     <map param="IMFAttributes::Compare::pbResult" return="true" />
+
     <map method="IMFAttributes::GetUINT32" visibility="internal" />
     <map method="IMFAttributes::GetUINT32" name="GetInt" />
     <map param="IMFAttributes::GetUINT32::punValue" return="true" />
+
     <map method="IMFAttributes::GetUINT64" visibility="internal" />
     <map method="IMFAttributes::GetUINT64" name="GetLong" />
     <map param="IMFAttributes::GetUINT64::punValue" return="true" />
+
     <map method="IMFAttributes::GetDouble" visibility="internal" />
-    <map method="IMFAttributes::GetGUID" visibility="internal" />
     <map param="IMFAttributes::GetDouble::pfValue" return="true" />
+
+    <map method="IMFAttributes::GetGUID" visibility="internal" />
     <map param="IMFAttributes::GetGUID::pguidValue" return="true" />
+
     <map method="IMFAttributes::GetString.*" visibility="internal" />
     <map method="IMFAttributes::GetAllocatedString" visibility="internal" />
     <map param="IMFAttributes::GetStringLength::pcchLength" return="true" />
@@ -176,6 +249,7 @@
     <map method="IMFAttributes::SetBlob"    visibility="internal" />
     <map param="IMFAttributes::SetBlob::pBuf" type="void" attribute="in" />
     <map method="IMFAttributes::GetUnknown" visibility="internal" />
+
     <map method="IMFAttributes::SetItem"    name="Set" visibility="internal" />
     <map method="IMFAttributes::SetUINT32"  name="Set" visibility="internal" />
     <map method="IMFAttributes::SetUINT64"  name="Set" visibility="internal" />
@@ -185,15 +259,21 @@
     <map method="IMFAttributes::SetUnknown" name="Set" visibility="internal" />
     <map method="IMFAttributes::GetItemByIndex" visibility="internal" />
 
+    <!-- IMFCollection -->
     <map param="IMFCollection::GetElement::ppUnkElement" return="true" />
+
+    <!-- IMFClockStateSink -->
     <map interface="IMFClockStateSink" callback="true" />
 
+    <!-- IMFMediaEvent -->
     <map param="IMFMediaEvent::GetType::pmet" type="MEDIA_EVENT_TYPE" />
 
+    <!-- IMFMediaEventGenerator -->
     <map method="IMFMediaEventGenerator::GetEvent" name="GetEvent" visibility="internal" />
     <map param="IMFMediaEventGenerator::EndGetEvent::ppEvent" return="true" />
     <map param="IMFMediaEventGenerator::BeginGetEvent::punkState" type="void" />
 
+    <!-- IMFMediaSession -->
     <map param="IMFMediaSession::SetTopology::dwSetTopologyFlags" type="MFSESSION_SETTOPOLOGY_FLAGS" />
 
     <!--

@@ -160,21 +160,21 @@ namespace SharpMediaFoundation
                 ///<summary>Constant PlatformNotInitialized</summary>
         ///<unmanaged>MF_E_PLATFORM_NOT_INITIALIZED</unmanaged>
         public static readonly SharpGen.Runtime.ResultDescriptor PlatformNotInitialized = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222091440UL), "SharpMediaFoundation", "MF_E_PLATFORM_NOT_INITIALIZED", "PlatformNotInitialized");
-                ///<summary>Constant Buffertoosmall</summary>
+                ///<summary>Constant BufferTooSmall</summary>
         ///<unmanaged>MF_E_BUFFERTOOSMALL</unmanaged>
-        public static readonly SharpGen.Runtime.ResultDescriptor Buffertoosmall = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222091441UL), "SharpMediaFoundation", "MF_E_BUFFERTOOSMALL", "Buffertoosmall");
-                ///<summary>Constant Invalidrequest</summary>
+        public static readonly SharpGen.Runtime.ResultDescriptor BufferTooSmall = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222091441UL), "SharpMediaFoundation", "MF_E_BUFFERTOOSMALL", "BufferTooSmall");
+                ///<summary>Constant InvalidRequest</summary>
         ///<unmanaged>MF_E_INVALIDREQUEST</unmanaged>
-        public static readonly SharpGen.Runtime.ResultDescriptor Invalidrequest = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222091442UL), "SharpMediaFoundation", "MF_E_INVALIDREQUEST", "Invalidrequest");
-                ///<summary>Constant Invalidstreamnumber</summary>
+        public static readonly SharpGen.Runtime.ResultDescriptor InvalidRequest = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222091442UL), "SharpMediaFoundation", "MF_E_INVALIDREQUEST", "InvalidRequest");
+                ///<summary>Constant InvalidStreamNumber</summary>
         ///<unmanaged>MF_E_INVALIDSTREAMNUMBER</unmanaged>
-        public static readonly SharpGen.Runtime.ResultDescriptor Invalidstreamnumber = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222091443UL), "SharpMediaFoundation", "MF_E_INVALIDSTREAMNUMBER", "Invalidstreamnumber");
-                ///<summary>Constant Invalidmediatype</summary>
+        public static readonly SharpGen.Runtime.ResultDescriptor InvalidStreamNumber = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222091443UL), "SharpMediaFoundation", "MF_E_INVALIDSTREAMNUMBER", "InvalidStreamNumber");
+                ///<summary>Constant InvalidMediaType</summary>
         ///<unmanaged>MF_E_INVALIDMEDIATYPE</unmanaged>
-        public static readonly SharpGen.Runtime.ResultDescriptor Invalidmediatype = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222091444UL), "SharpMediaFoundation", "MF_E_INVALIDMEDIATYPE", "Invalidmediatype");
-                ///<summary>Constant Notaccepting</summary>
+        public static readonly SharpGen.Runtime.ResultDescriptor InvalidMediaType = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222091444UL), "SharpMediaFoundation", "MF_E_INVALIDMEDIATYPE", "InvalidMediaType");
+                ///<summary>Constant NotAccepting</summary>
         ///<unmanaged>MF_E_NOTACCEPTING</unmanaged>
-        public static readonly SharpGen.Runtime.ResultDescriptor Notaccepting = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222091445UL), "SharpMediaFoundation", "MF_E_NOTACCEPTING", "Notaccepting");
+        public static readonly SharpGen.Runtime.ResultDescriptor NotAccepting = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222091445UL), "SharpMediaFoundation", "MF_E_NOTACCEPTING", "NotAccepting");
                 ///<summary>Constant NotInitialized</summary>
         ///<unmanaged>MF_E_NOT_INITIALIZED</unmanaged>
         public static readonly SharpGen.Runtime.ResultDescriptor NotInitialized = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222091446UL), "SharpMediaFoundation", "MF_E_NOT_INITIALIZED", "NotInitialized");
@@ -190,27 +190,27 @@ namespace SharpMediaFoundation
                 ///<summary>Constant Unexpected</summary>
         ///<unmanaged>MF_E_UNEXPECTED</unmanaged>
         public static readonly SharpGen.Runtime.ResultDescriptor Unexpected = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222091451UL), "SharpMediaFoundation", "MF_E_UNEXPECTED", "Unexpected");
-                ///<summary>Constant Invalidname</summary>
+                ///<summary>Constant InvalidName</summary>
         ///<unmanaged>MF_E_INVALIDNAME</unmanaged>
-        public static readonly SharpGen.Runtime.ResultDescriptor Invalidname = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222091452UL), "SharpMediaFoundation", "MF_E_INVALIDNAME", "Invalidname");
-                ///<summary>Constant Invalidtype</summary>
+        public static readonly SharpGen.Runtime.ResultDescriptor InvalidName = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222091452UL), "SharpMediaFoundation", "MF_E_INVALIDNAME", "InvalidName");
+                ///<summary>Constant InvalidType</summary>
         ///<unmanaged>MF_E_INVALIDTYPE</unmanaged>
-        public static readonly SharpGen.Runtime.ResultDescriptor Invalidtype = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222091453UL), "SharpMediaFoundation", "MF_E_INVALIDTYPE", "Invalidtype");
+        public static readonly SharpGen.Runtime.ResultDescriptor InvalidType = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222091453UL), "SharpMediaFoundation", "MF_E_INVALIDTYPE", "InvalidType");
                 ///<summary>Constant InvalidFileFormat</summary>
         ///<unmanaged>MF_E_INVALID_FILE_FORMAT</unmanaged>
         public static readonly SharpGen.Runtime.ResultDescriptor InvalidFileFormat = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222091454UL), "SharpMediaFoundation", "MF_E_INVALID_FILE_FORMAT", "InvalidFileFormat");
-                ///<summary>Constant Invalidindex</summary>
+                ///<summary>Constant InvalidIndex</summary>
         ///<unmanaged>MF_E_INVALIDINDEX</unmanaged>
-        public static readonly SharpGen.Runtime.ResultDescriptor Invalidindex = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222091455UL), "SharpMediaFoundation", "MF_E_INVALIDINDEX", "Invalidindex");
+        public static readonly SharpGen.Runtime.ResultDescriptor InvalidIndex = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222091455UL), "SharpMediaFoundation", "MF_E_INVALIDINDEX", "InvalidIndex");
                 ///<summary>Constant InvalidTimestamp</summary>
         ///<unmanaged>MF_E_INVALID_TIMESTAMP</unmanaged>
         public static readonly SharpGen.Runtime.ResultDescriptor InvalidTimestamp = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222091456UL), "SharpMediaFoundation", "MF_E_INVALID_TIMESTAMP", "InvalidTimestamp");
                 ///<summary>Constant UnsupportedScheme</summary>
         ///<unmanaged>MF_E_UNSUPPORTED_SCHEME</unmanaged>
         public static readonly SharpGen.Runtime.ResultDescriptor UnsupportedScheme = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222091459UL), "SharpMediaFoundation", "MF_E_UNSUPPORTED_SCHEME", "UnsupportedScheme");
-                ///<summary>Constant UnsupportedBytestreamType</summary>
+                ///<summary>Constant UnsupportedByteStreamType</summary>
         ///<unmanaged>MF_E_UNSUPPORTED_BYTESTREAM_TYPE</unmanaged>
-        public static readonly SharpGen.Runtime.ResultDescriptor UnsupportedBytestreamType = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222091460UL), "SharpMediaFoundation", "MF_E_UNSUPPORTED_BYTESTREAM_TYPE", "UnsupportedBytestreamType");
+        public static readonly SharpGen.Runtime.ResultDescriptor UnsupportedByteStreamType = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222091460UL), "SharpMediaFoundation", "MF_E_UNSUPPORTED_BYTESTREAM_TYPE", "UnsupportedByteStreamType");
                 ///<summary>Constant UnsupportedTimeFormat</summary>
         ///<unmanaged>MF_E_UNSUPPORTED_TIME_FORMAT</unmanaged>
         public static readonly SharpGen.Runtime.ResultDescriptor UnsupportedTimeFormat = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222091461UL), "SharpMediaFoundation", "MF_E_UNSUPPORTED_TIME_FORMAT", "UnsupportedTimeFormat");
@@ -286,9 +286,9 @@ namespace SharpMediaFoundation
                 ///<summary>Constant InvalidPosition</summary>
         ///<unmanaged>MF_E_INVALID_POSITION</unmanaged>
         public static readonly SharpGen.Runtime.ResultDescriptor InvalidPosition = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222091493UL), "SharpMediaFoundation", "MF_E_INVALID_POSITION", "InvalidPosition");
-                ///<summary>Constant Attributenotfound</summary>
+                ///<summary>Constant AttributeNotFound</summary>
         ///<unmanaged>MF_E_ATTRIBUTENOTFOUND</unmanaged>
-        public static readonly SharpGen.Runtime.ResultDescriptor Attributenotfound = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222091494UL), "SharpMediaFoundation", "MF_E_ATTRIBUTENOTFOUND", "Attributenotfound");
+        public static readonly SharpGen.Runtime.ResultDescriptor AttributeNotFound = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222091494UL), "SharpMediaFoundation", "MF_E_ATTRIBUTENOTFOUND", "AttributeNotFound");
                 ///<summary>Constant PropertyTypeNotAllowed</summary>
         ///<unmanaged>MF_E_PROPERTY_TYPE_NOT_ALLOWED</unmanaged>
         public static readonly SharpGen.Runtime.ResultDescriptor PropertyTypeNotAllowed = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222091495UL), "SharpMediaFoundation", "MF_E_PROPERTY_TYPE_NOT_ALLOWED", "PropertyTypeNotAllowed");
@@ -310,57 +310,57 @@ namespace SharpMediaFoundation
                 ///<summary>Constant OperationCancelled</summary>
         ///<unmanaged>MF_E_OPERATION_CANCELLED</unmanaged>
         public static readonly SharpGen.Runtime.ResultDescriptor OperationCancelled = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222091501UL), "SharpMediaFoundation", "MF_E_OPERATION_CANCELLED", "OperationCancelled");
-                ///<summary>Constant BytestreamNotSeekable</summary>
+                ///<summary>Constant ByteStreamNotSeekable</summary>
         ///<unmanaged>MF_E_BYTESTREAM_NOT_SEEKABLE</unmanaged>
-        public static readonly SharpGen.Runtime.ResultDescriptor BytestreamNotSeekable = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222091502UL), "SharpMediaFoundation", "MF_E_BYTESTREAM_NOT_SEEKABLE", "BytestreamNotSeekable");
-                ///<summary>Constant DisabledInSafemode</summary>
+        public static readonly SharpGen.Runtime.ResultDescriptor ByteStreamNotSeekable = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222091502UL), "SharpMediaFoundation", "MF_E_BYTESTREAM_NOT_SEEKABLE", "ByteStreamNotSeekable");
+                ///<summary>Constant DisabledInSafeMode</summary>
         ///<unmanaged>MF_E_DISABLED_IN_SAFEMODE</unmanaged>
-        public static readonly SharpGen.Runtime.ResultDescriptor DisabledInSafemode = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222091503UL), "SharpMediaFoundation", "MF_E_DISABLED_IN_SAFEMODE", "DisabledInSafemode");
-                ///<summary>Constant CannotParseBytestream</summary>
+        public static readonly SharpGen.Runtime.ResultDescriptor DisabledInSafeMode = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222091503UL), "SharpMediaFoundation", "MF_E_DISABLED_IN_SAFEMODE", "DisabledInSafeMode");
+                ///<summary>Constant CannotParseByteStream</summary>
         ///<unmanaged>MF_E_CANNOT_PARSE_BYTESTREAM</unmanaged>
-        public static readonly SharpGen.Runtime.ResultDescriptor CannotParseBytestream = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222091504UL), "SharpMediaFoundation", "MF_E_CANNOT_PARSE_BYTESTREAM", "CannotParseBytestream");
-                ///<summary>Constant SourceresolverMutuallyExclusiveFlags</summary>
+        public static readonly SharpGen.Runtime.ResultDescriptor CannotParseByteStream = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222091504UL), "SharpMediaFoundation", "MF_E_CANNOT_PARSE_BYTESTREAM", "CannotParseByteStream");
+                ///<summary>Constant SourceResolverMutuallyExclusiveFlags</summary>
         ///<unmanaged>MF_E_SOURCERESOLVER_MUTUALLY_EXCLUSIVE_FLAGS</unmanaged>
-        public static readonly SharpGen.Runtime.ResultDescriptor SourceresolverMutuallyExclusiveFlags = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222091505UL), "SharpMediaFoundation", "MF_E_SOURCERESOLVER_MUTUALLY_EXCLUSIVE_FLAGS", "SourceresolverMutuallyExclusiveFlags");
-                ///<summary>Constant MediaprocWrongstate</summary>
+        public static readonly SharpGen.Runtime.ResultDescriptor SourceResolverMutuallyExclusiveFlags = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222091505UL), "SharpMediaFoundation", "MF_E_SOURCERESOLVER_MUTUALLY_EXCLUSIVE_FLAGS", "SourceResolverMutuallyExclusiveFlags");
+                ///<summary>Constant MediaProcWrongState</summary>
         ///<unmanaged>MF_E_MEDIAPROC_WRONGSTATE</unmanaged>
-        public static readonly SharpGen.Runtime.ResultDescriptor MediaprocWrongstate = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222091506UL), "SharpMediaFoundation", "MF_E_MEDIAPROC_WRONGSTATE", "MediaprocWrongstate");
+        public static readonly SharpGen.Runtime.ResultDescriptor MediaProcWrongState = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222091506UL), "SharpMediaFoundation", "MF_E_MEDIAPROC_WRONGSTATE", "MediaProcWrongState");
                 ///<summary>Constant RtThroughputNotAvailable</summary>
         ///<unmanaged>MF_E_RT_THROUGHPUT_NOT_AVAILABLE</unmanaged>
         public static readonly SharpGen.Runtime.ResultDescriptor RtThroughputNotAvailable = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222091507UL), "SharpMediaFoundation", "MF_E_RT_THROUGHPUT_NOT_AVAILABLE", "RtThroughputNotAvailable");
                 ///<summary>Constant RtTooManyClasses</summary>
         ///<unmanaged>MF_E_RT_TOO_MANY_CLASSES</unmanaged>
         public static readonly SharpGen.Runtime.ResultDescriptor RtTooManyClasses = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222091508UL), "SharpMediaFoundation", "MF_E_RT_TOO_MANY_CLASSES", "RtTooManyClasses");
-                ///<summary>Constant RtWouldblock</summary>
+                ///<summary>Constant RtWouldBlock</summary>
         ///<unmanaged>MF_E_RT_WOULDBLOCK</unmanaged>
-        public static readonly SharpGen.Runtime.ResultDescriptor RtWouldblock = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222091509UL), "SharpMediaFoundation", "MF_E_RT_WOULDBLOCK", "RtWouldblock");
-                ///<summary>Constant NoBitpump</summary>
+        public static readonly SharpGen.Runtime.ResultDescriptor RtWouldBlock = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222091509UL), "SharpMediaFoundation", "MF_E_RT_WOULDBLOCK", "RtWouldBlock");
+                ///<summary>Constant NoBitPump</summary>
         ///<unmanaged>MF_E_NO_BITPUMP</unmanaged>
-        public static readonly SharpGen.Runtime.ResultDescriptor NoBitpump = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222091510UL), "SharpMediaFoundation", "MF_E_NO_BITPUMP", "NoBitpump");
-                ///<summary>Constant RtOutofmemory</summary>
+        public static readonly SharpGen.Runtime.ResultDescriptor NoBitPump = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222091510UL), "SharpMediaFoundation", "MF_E_NO_BITPUMP", "NoBitPump");
+                ///<summary>Constant RtOutOfMemory</summary>
         ///<unmanaged>MF_E_RT_OUTOFMEMORY</unmanaged>
-        public static readonly SharpGen.Runtime.ResultDescriptor RtOutofmemory = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222091511UL), "SharpMediaFoundation", "MF_E_RT_OUTOFMEMORY", "RtOutofmemory");
-                ///<summary>Constant RtWorkqueueClassNotSpecified</summary>
+        public static readonly SharpGen.Runtime.ResultDescriptor RtOutOfMemory = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222091511UL), "SharpMediaFoundation", "MF_E_RT_OUTOFMEMORY", "RtOutOfMemory");
+                ///<summary>Constant RtWorkQueueClassNotSpecified</summary>
         ///<unmanaged>MF_E_RT_WORKQUEUE_CLASS_NOT_SPECIFIED</unmanaged>
-        public static readonly SharpGen.Runtime.ResultDescriptor RtWorkqueueClassNotSpecified = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222091512UL), "SharpMediaFoundation", "MF_E_RT_WORKQUEUE_CLASS_NOT_SPECIFIED", "RtWorkqueueClassNotSpecified");
+        public static readonly SharpGen.Runtime.ResultDescriptor RtWorkQueueClassNotSpecified = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222091512UL), "SharpMediaFoundation", "MF_E_RT_WORKQUEUE_CLASS_NOT_SPECIFIED", "RtWorkQueueClassNotSpecified");
                 ///<summary>Constant InsufficientBuffer</summary>
         ///<unmanaged>MF_E_INSUFFICIENT_BUFFER</unmanaged>
         public static readonly SharpGen.Runtime.ResultDescriptor InsufficientBuffer = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222106480UL), "SharpMediaFoundation", "MF_E_INSUFFICIENT_BUFFER", "InsufficientBuffer");
                 ///<summary>Constant CannotCreateSink</summary>
         ///<unmanaged>MF_E_CANNOT_CREATE_SINK</unmanaged>
         public static readonly SharpGen.Runtime.ResultDescriptor CannotCreateSink = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222091514UL), "SharpMediaFoundation", "MF_E_CANNOT_CREATE_SINK", "CannotCreateSink");
-                ///<summary>Constant BytestreamUnknownLength</summary>
+                ///<summary>Constant ByteStreamUnknownLength</summary>
         ///<unmanaged>MF_E_BYTESTREAM_UNKNOWN_LENGTH</unmanaged>
-        public static readonly SharpGen.Runtime.ResultDescriptor BytestreamUnknownLength = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222091515UL), "SharpMediaFoundation", "MF_E_BYTESTREAM_UNKNOWN_LENGTH", "BytestreamUnknownLength");
-                ///<summary>Constant SessionPausewhilestopped</summary>
+        public static readonly SharpGen.Runtime.ResultDescriptor ByteStreamUnknownLength = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222091515UL), "SharpMediaFoundation", "MF_E_BYTESTREAM_UNKNOWN_LENGTH", "ByteStreamUnknownLength");
+                ///<summary>Constant SessionPauseWhileStopped</summary>
         ///<unmanaged>MF_E_SESSION_PAUSEWHILESTOPPED</unmanaged>
-        public static readonly SharpGen.Runtime.ResultDescriptor SessionPausewhilestopped = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222091516UL), "SharpMediaFoundation", "MF_E_SESSION_PAUSEWHILESTOPPED", "SessionPausewhilestopped");
+        public static readonly SharpGen.Runtime.ResultDescriptor SessionPauseWhileStopped = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222091516UL), "SharpMediaFoundation", "MF_E_SESSION_PAUSEWHILESTOPPED", "SessionPauseWhileStopped");
                 ///<summary>Constant FormatChangeNotSupported</summary>
         ///<unmanaged>MF_E_FORMAT_CHANGE_NOT_SUPPORTED</unmanaged>
         public static readonly SharpGen.Runtime.ResultDescriptor FormatChangeNotSupported = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222091518UL), "SharpMediaFoundation", "MF_E_FORMAT_CHANGE_NOT_SUPPORTED", "FormatChangeNotSupported");
-                ///<summary>Constant InvalidWorkqueue</summary>
+                ///<summary>Constant InvalidWorkQueue</summary>
         ///<unmanaged>MF_E_INVALID_WORKQUEUE</unmanaged>
-        public static readonly SharpGen.Runtime.ResultDescriptor InvalidWorkqueue = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222091519UL), "SharpMediaFoundation", "MF_E_INVALID_WORKQUEUE", "InvalidWorkqueue");
+        public static readonly SharpGen.Runtime.ResultDescriptor InvalidWorkQueue = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222091519UL), "SharpMediaFoundation", "MF_E_INVALID_WORKQUEUE", "InvalidWorkQueue");
                 ///<summary>Constant DrmUnsupported</summary>
         ///<unmanaged>MF_E_DRM_UNSUPPORTED</unmanaged>
         public static readonly SharpGen.Runtime.ResultDescriptor DrmUnsupported = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222091520UL), "SharpMediaFoundation", "MF_E_DRM_UNSUPPORTED", "DrmUnsupported");
@@ -388,9 +388,9 @@ namespace SharpMediaFoundation
                 ///<summary>Constant OperationUnsupportedAtD3DFeatureLevel</summary>
         ///<unmanaged>MF_E_OPERATION_UNSUPPORTED_AT_D3D_FEATURE_LEVEL</unmanaged>
         public static readonly SharpGen.Runtime.ResultDescriptor OperationUnsupportedAtD3DFeatureLevel = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222091528UL), "SharpMediaFoundation", "MF_E_OPERATION_UNSUPPORTED_AT_D3D_FEATURE_LEVEL", "OperationUnsupportedAtD3DFeatureLevel");
-                ///<summary>Constant UnsupportedMediatypeAtD3DFeatureLevel</summary>
+                ///<summary>Constant UnsupportedMediaTypeAtD3DFeatureLevel</summary>
         ///<unmanaged>MF_E_UNSUPPORTED_MEDIATYPE_AT_D3D_FEATURE_LEVEL</unmanaged>
-        public static readonly SharpGen.Runtime.ResultDescriptor UnsupportedMediatypeAtD3DFeatureLevel = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222091529UL), "SharpMediaFoundation", "MF_E_UNSUPPORTED_MEDIATYPE_AT_D3D_FEATURE_LEVEL", "UnsupportedMediatypeAtD3DFeatureLevel");
+        public static readonly SharpGen.Runtime.ResultDescriptor UnsupportedMediaTypeAtD3DFeatureLevel = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222091529UL), "SharpMediaFoundation", "MF_E_UNSUPPORTED_MEDIATYPE_AT_D3D_FEATURE_LEVEL", "UnsupportedMediaTypeAtD3DFeatureLevel");
                 ///<summary>Constant AsfParsingincomplete</summary>
         ///<unmanaged>MF_E_ASF_PARSINGINCOMPLETE</unmanaged>
         public static readonly SharpGen.Runtime.ResultDescriptor AsfParsingincomplete = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222092440UL), "SharpMediaFoundation", "MF_E_ASF_PARSINGINCOMPLETE", "AsfParsingincomplete");
@@ -406,12 +406,12 @@ namespace SharpMediaFoundation
                 ///<summary>Constant AsfNoindex</summary>
         ///<unmanaged>MF_E_ASF_NOINDEX</unmanaged>
         public static readonly SharpGen.Runtime.ResultDescriptor AsfNoindex = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222092444UL), "SharpMediaFoundation", "MF_E_ASF_NOINDEX", "AsfNoindex");
-                ///<summary>Constant AsfOutofrange</summary>
+                ///<summary>Constant AsfOutOfRange</summary>
         ///<unmanaged>MF_E_ASF_OUTOFRANGE</unmanaged>
-        public static readonly SharpGen.Runtime.ResultDescriptor AsfOutofrange = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222092445UL), "SharpMediaFoundation", "MF_E_ASF_OUTOFRANGE", "AsfOutofrange");
-                ///<summary>Constant AsfIndexnotloaded</summary>
+        public static readonly SharpGen.Runtime.ResultDescriptor AsfOutOfRange = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222092445UL), "SharpMediaFoundation", "MF_E_ASF_OUTOFRANGE", "AsfOutOfRange");
+                ///<summary>Constant AsfIndexNotLoaded</summary>
         ///<unmanaged>MF_E_ASF_INDEXNOTLOADED</unmanaged>
-        public static readonly SharpGen.Runtime.ResultDescriptor AsfIndexnotloaded = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222092446UL), "SharpMediaFoundation", "MF_E_ASF_INDEXNOTLOADED", "AsfIndexnotloaded");
+        public static readonly SharpGen.Runtime.ResultDescriptor AsfIndexNotLoaded = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222092446UL), "SharpMediaFoundation", "MF_E_ASF_INDEXNOTLOADED", "AsfIndexNotLoaded");
                 ///<summary>Constant AsfTooManyPayloads</summary>
         ///<unmanaged>MF_E_ASF_TOO_MANY_PAYLOADS</unmanaged>
         public static readonly SharpGen.Runtime.ResultDescriptor AsfTooManyPayloads = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222092447UL), "SharpMediaFoundation", "MF_E_ASF_TOO_MANY_PAYLOADS", "AsfTooManyPayloads");
@@ -436,15 +436,15 @@ namespace SharpMediaFoundation
                 ///<summary>Constant Mp3Notfound</summary>
         ///<unmanaged>MF_E_MP3_NOTFOUND</unmanaged>
         public static readonly SharpGen.Runtime.ResultDescriptor Mp3Notfound = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222093446UL), "SharpMediaFoundation", "MF_E_MP3_NOTFOUND", "Mp3Notfound");
-                ///<summary>Constant Mp3Outofdata</summary>
+                ///<summary>Constant Mp3OutOfData</summary>
         ///<unmanaged>MF_E_MP3_OUTOFDATA</unmanaged>
-        public static readonly SharpGen.Runtime.ResultDescriptor Mp3Outofdata = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222093447UL), "SharpMediaFoundation", "MF_E_MP3_OUTOFDATA", "Mp3Outofdata");
-                ///<summary>Constant Mp3Notmp3</summary>
+        public static readonly SharpGen.Runtime.ResultDescriptor Mp3OutOfData = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222093447UL), "SharpMediaFoundation", "MF_E_MP3_OUTOFDATA", "Mp3OutOfData");
+                ///<summary>Constant Mp3NotMp3</summary>
         ///<unmanaged>MF_E_MP3_NOTMP3</unmanaged>
-        public static readonly SharpGen.Runtime.ResultDescriptor Mp3Notmp3 = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222093448UL), "SharpMediaFoundation", "MF_E_MP3_NOTMP3", "Mp3Notmp3");
-                ///<summary>Constant Mp3Notsupported</summary>
+        public static readonly SharpGen.Runtime.ResultDescriptor Mp3NotMp3 = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222093448UL), "SharpMediaFoundation", "MF_E_MP3_NOTMP3", "Mp3NotMp3");
+                ///<summary>Constant Mp3NotSupported</summary>
         ///<unmanaged>MF_E_MP3_NOTSUPPORTED</unmanaged>
-        public static readonly SharpGen.Runtime.ResultDescriptor Mp3Notsupported = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222093449UL), "SharpMediaFoundation", "MF_E_MP3_NOTSUPPORTED", "Mp3Notsupported");
+        public static readonly SharpGen.Runtime.ResultDescriptor Mp3NotSupported = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222093449UL), "SharpMediaFoundation", "MF_E_MP3_NOTSUPPORTED", "Mp3NotSupported");
                 ///<summary>Constant NoDuration</summary>
         ///<unmanaged>MF_E_NO_DURATION</unmanaged>
         public static readonly SharpGen.Runtime.ResultDescriptor NoDuration = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222093450UL), "SharpMediaFoundation", "MF_E_NO_DURATION", "NoDuration");
@@ -472,15 +472,15 @@ namespace SharpMediaFoundation
                 ///<summary>Constant NotProtected</summary>
         ///<unmanaged>MF_E_NOT_PROTECTED</unmanaged>
         public static readonly SharpGen.Runtime.ResultDescriptor NotProtected = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222093466UL), "SharpMediaFoundation", "MF_E_NOT_PROTECTED", "NotProtected");
-                ///<summary>Constant MediaSourceWrongstate</summary>
+                ///<summary>Constant MediaSourceWrongState</summary>
         ///<unmanaged>MF_E_MEDIA_SOURCE_WRONGSTATE</unmanaged>
-        public static readonly SharpGen.Runtime.ResultDescriptor MediaSourceWrongstate = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222093467UL), "SharpMediaFoundation", "MF_E_MEDIA_SOURCE_WRONGSTATE", "MediaSourceWrongstate");
+        public static readonly SharpGen.Runtime.ResultDescriptor MediaSourceWrongState = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222093467UL), "SharpMediaFoundation", "MF_E_MEDIA_SOURCE_WRONGSTATE", "MediaSourceWrongState");
                 ///<summary>Constant MediaSourceNoStreamsSelected</summary>
         ///<unmanaged>MF_E_MEDIA_SOURCE_NO_STREAMS_SELECTED</unmanaged>
         public static readonly SharpGen.Runtime.ResultDescriptor MediaSourceNoStreamsSelected = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222093468UL), "SharpMediaFoundation", "MF_E_MEDIA_SOURCE_NO_STREAMS_SELECTED", "MediaSourceNoStreamsSelected");
-                ///<summary>Constant CannotFindKeyframeSample</summary>
+                ///<summary>Constant CannotFindKeyFrameSample</summary>
         ///<unmanaged>MF_E_CANNOT_FIND_KEYFRAME_SAMPLE</unmanaged>
-        public static readonly SharpGen.Runtime.ResultDescriptor CannotFindKeyframeSample = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222093469UL), "SharpMediaFoundation", "MF_E_CANNOT_FIND_KEYFRAME_SAMPLE", "CannotFindKeyframeSample");
+        public static readonly SharpGen.Runtime.ResultDescriptor CannotFindKeyFrameSample = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222093469UL), "SharpMediaFoundation", "MF_E_CANNOT_FIND_KEYFRAME_SAMPLE", "CannotFindKeyFrameSample");
                 ///<summary>Constant UnsupportedCharacteristics</summary>
         ///<unmanaged>MF_E_UNSUPPORTED_CHARACTERISTICS</unmanaged>
         public static readonly SharpGen.Runtime.ResultDescriptor UnsupportedCharacteristics = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222093470UL), "SharpMediaFoundation", "MF_E_UNSUPPORTED_CHARACTERISTICS", "UnsupportedCharacteristics");
@@ -514,21 +514,21 @@ namespace SharpMediaFoundation
                 ///<summary>Constant NetRequireAsync</summary>
         ///<unmanaged>MF_E_NET_REQUIRE_ASYNC</unmanaged>
         public static readonly SharpGen.Runtime.ResultDescriptor NetRequireAsync = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222094444UL), "SharpMediaFoundation", "MF_E_NET_REQUIRE_ASYNC", "NetRequireAsync");
-                ///<summary>Constant NetBwlevelNotSupported</summary>
+                ///<summary>Constant NetBwLevelNotSupported</summary>
         ///<unmanaged>MF_E_NET_BWLEVEL_NOT_SUPPORTED</unmanaged>
-        public static readonly SharpGen.Runtime.ResultDescriptor NetBwlevelNotSupported = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222094445UL), "SharpMediaFoundation", "MF_E_NET_BWLEVEL_NOT_SUPPORTED", "NetBwlevelNotSupported");
-                ///<summary>Constant NetStreamgroupsNotSupported</summary>
+        public static readonly SharpGen.Runtime.ResultDescriptor NetBwLevelNotSupported = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222094445UL), "SharpMediaFoundation", "MF_E_NET_BWLEVEL_NOT_SUPPORTED", "NetBwLevelNotSupported");
+                ///<summary>Constant NetStreamGroupsNotSupported</summary>
         ///<unmanaged>MF_E_NET_STREAMGROUPS_NOT_SUPPORTED</unmanaged>
-        public static readonly SharpGen.Runtime.ResultDescriptor NetStreamgroupsNotSupported = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222094446UL), "SharpMediaFoundation", "MF_E_NET_STREAMGROUPS_NOT_SUPPORTED", "NetStreamgroupsNotSupported");
-                ///<summary>Constant NetManualssNotSupported</summary>
+        public static readonly SharpGen.Runtime.ResultDescriptor NetStreamGroupsNotSupported = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222094446UL), "SharpMediaFoundation", "MF_E_NET_STREAMGROUPS_NOT_SUPPORTED", "NetStreamGroupsNotSupported");
+                ///<summary>Constant NetManualSsNotSupported</summary>
         ///<unmanaged>MF_E_NET_MANUALSS_NOT_SUPPORTED</unmanaged>
-        public static readonly SharpGen.Runtime.ResultDescriptor NetManualssNotSupported = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222094447UL), "SharpMediaFoundation", "MF_E_NET_MANUALSS_NOT_SUPPORTED", "NetManualssNotSupported");
+        public static readonly SharpGen.Runtime.ResultDescriptor NetManualSsNotSupported = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222094447UL), "SharpMediaFoundation", "MF_E_NET_MANUALSS_NOT_SUPPORTED", "NetManualSsNotSupported");
                 ///<summary>Constant NetInvalidPresentationDescriptor</summary>
         ///<unmanaged>MF_E_NET_INVALID_PRESENTATION_DESCRIPTOR</unmanaged>
         public static readonly SharpGen.Runtime.ResultDescriptor NetInvalidPresentationDescriptor = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222094448UL), "SharpMediaFoundation", "MF_E_NET_INVALID_PRESENTATION_DESCRIPTOR", "NetInvalidPresentationDescriptor");
-                ///<summary>Constant NetCachestreamNotFound</summary>
+                ///<summary>Constant NetCacheStreamNotFound</summary>
         ///<unmanaged>MF_E_NET_CACHESTREAM_NOT_FOUND</unmanaged>
-        public static readonly SharpGen.Runtime.ResultDescriptor NetCachestreamNotFound = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222094449UL), "SharpMediaFoundation", "MF_E_NET_CACHESTREAM_NOT_FOUND", "NetCachestreamNotFound");
+        public static readonly SharpGen.Runtime.ResultDescriptor NetCacheStreamNotFound = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222094449UL), "SharpMediaFoundation", "MF_E_NET_CACHESTREAM_NOT_FOUND", "NetCacheStreamNotFound");
                 ///<summary>Constant NetRequireInput</summary>
         ///<unmanaged>MF_E_NET_REQUIRE_INPUT</unmanaged>
         public static readonly SharpGen.Runtime.ResultDescriptor NetRequireInput = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222094452UL), "SharpMediaFoundation", "MF_E_NET_REQUIRE_INPUT", "NetRequireInput");
@@ -577,18 +577,18 @@ namespace SharpMediaFoundation
                 ///<summary>Constant NetConnectionFailure</summary>
         ///<unmanaged>MF_E_NET_CONNECTION_FAILURE</unmanaged>
         public static readonly SharpGen.Runtime.ResultDescriptor NetConnectionFailure = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222094467UL), "SharpMediaFoundation", "MF_E_NET_CONNECTION_FAILURE", "NetConnectionFailure");
-                ///<summary>Constant NetIncompatiblePushserver</summary>
+                ///<summary>Constant NetIncompatiblePushServer</summary>
         ///<unmanaged>MF_E_NET_INCOMPATIBLE_PUSHSERVER</unmanaged>
-        public static readonly SharpGen.Runtime.ResultDescriptor NetIncompatiblePushserver = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222094468UL), "SharpMediaFoundation", "MF_E_NET_INCOMPATIBLE_PUSHSERVER", "NetIncompatiblePushserver");
-                ///<summary>Constant NetServerAccessdenied</summary>
+        public static readonly SharpGen.Runtime.ResultDescriptor NetIncompatiblePushServer = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222094468UL), "SharpMediaFoundation", "MF_E_NET_INCOMPATIBLE_PUSHSERVER", "NetIncompatiblePushServer");
+                ///<summary>Constant NetServerAccessDenied</summary>
         ///<unmanaged>MF_E_NET_SERVER_ACCESSDENIED</unmanaged>
-        public static readonly SharpGen.Runtime.ResultDescriptor NetServerAccessdenied = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222094469UL), "SharpMediaFoundation", "MF_E_NET_SERVER_ACCESSDENIED", "NetServerAccessdenied");
-                ///<summary>Constant NetProxyAccessdenied</summary>
+        public static readonly SharpGen.Runtime.ResultDescriptor NetServerAccessDenied = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222094469UL), "SharpMediaFoundation", "MF_E_NET_SERVER_ACCESSDENIED", "NetServerAccessDenied");
+                ///<summary>Constant NetProxyAccessDenied</summary>
         ///<unmanaged>MF_E_NET_PROXY_ACCESSDENIED</unmanaged>
-        public static readonly SharpGen.Runtime.ResultDescriptor NetProxyAccessdenied = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222094470UL), "SharpMediaFoundation", "MF_E_NET_PROXY_ACCESSDENIED", "NetProxyAccessdenied");
-                ///<summary>Constant NetCannotconnect</summary>
+        public static readonly SharpGen.Runtime.ResultDescriptor NetProxyAccessDenied = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222094470UL), "SharpMediaFoundation", "MF_E_NET_PROXY_ACCESSDENIED", "NetProxyAccessDenied");
+                ///<summary>Constant NetCannotConnect</summary>
         ///<unmanaged>MF_E_NET_CANNOTCONNECT</unmanaged>
-        public static readonly SharpGen.Runtime.ResultDescriptor NetCannotconnect = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222094471UL), "SharpMediaFoundation", "MF_E_NET_CANNOTCONNECT", "NetCannotconnect");
+        public static readonly SharpGen.Runtime.ResultDescriptor NetCannotConnect = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222094471UL), "SharpMediaFoundation", "MF_E_NET_CANNOTCONNECT", "NetCannotConnect");
                 ///<summary>Constant NetInvalidPushTemplate</summary>
         ///<unmanaged>MF_E_NET_INVALID_PUSH_TEMPLATE</unmanaged>
         public static readonly SharpGen.Runtime.ResultDescriptor NetInvalidPushTemplate = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222094472UL), "SharpMediaFoundation", "MF_E_NET_INVALID_PUSH_TEMPLATE", "NetInvalidPushTemplate");
@@ -658,30 +658,30 @@ namespace SharpMediaFoundation
                 ///<summary>Constant MissingAsfLeakybucket</summary>
         ///<unmanaged>MF_E_MISSING_ASF_LEAKYBUCKET</unmanaged>
         public static readonly SharpGen.Runtime.ResultDescriptor MissingAsfLeakybucket = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222095448UL), "SharpMediaFoundation", "MF_E_MISSING_ASF_LEAKYBUCKET", "MissingAsfLeakybucket");
-                ///<summary>Constant InvalidAsfStreamid</summary>
+                ///<summary>Constant InvalidAsfStreamId</summary>
         ///<unmanaged>MF_E_INVALID_ASF_STREAMID</unmanaged>
-        public static readonly SharpGen.Runtime.ResultDescriptor InvalidAsfStreamid = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222095449UL), "SharpMediaFoundation", "MF_E_INVALID_ASF_STREAMID", "InvalidAsfStreamid");
-                ///<summary>Constant StreamsinkRemoved</summary>
+        public static readonly SharpGen.Runtime.ResultDescriptor InvalidAsfStreamId = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222095449UL), "SharpMediaFoundation", "MF_E_INVALID_ASF_STREAMID", "InvalidAsfStreamId");
+                ///<summary>Constant StreamSinkRemoved</summary>
         ///<unmanaged>MF_E_STREAMSINK_REMOVED</unmanaged>
-        public static readonly SharpGen.Runtime.ResultDescriptor StreamsinkRemoved = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222096440UL), "SharpMediaFoundation", "MF_E_STREAMSINK_REMOVED", "StreamsinkRemoved");
-                ///<summary>Constant StreamsinksOutOfSync</summary>
+        public static readonly SharpGen.Runtime.ResultDescriptor StreamSinkRemoved = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222096440UL), "SharpMediaFoundation", "MF_E_STREAMSINK_REMOVED", "StreamSinkRemoved");
+                ///<summary>Constant StreamSinksOutOfSync</summary>
         ///<unmanaged>MF_E_STREAMSINKS_OUT_OF_SYNC</unmanaged>
-        public static readonly SharpGen.Runtime.ResultDescriptor StreamsinksOutOfSync = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222096442UL), "SharpMediaFoundation", "MF_E_STREAMSINKS_OUT_OF_SYNC", "StreamsinksOutOfSync");
-                ///<summary>Constant StreamsinksFixed</summary>
+        public static readonly SharpGen.Runtime.ResultDescriptor StreamSinksOutOfSync = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222096442UL), "SharpMediaFoundation", "MF_E_STREAMSINKS_OUT_OF_SYNC", "StreamSinksOutOfSync");
+                ///<summary>Constant StreamSinksFixed</summary>
         ///<unmanaged>MF_E_STREAMSINKS_FIXED</unmanaged>
-        public static readonly SharpGen.Runtime.ResultDescriptor StreamsinksFixed = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222096443UL), "SharpMediaFoundation", "MF_E_STREAMSINKS_FIXED", "StreamsinksFixed");
-                ///<summary>Constant StreamsinkExists</summary>
+        public static readonly SharpGen.Runtime.ResultDescriptor StreamSinksFixed = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222096443UL), "SharpMediaFoundation", "MF_E_STREAMSINKS_FIXED", "StreamSinksFixed");
+                ///<summary>Constant StreamSinkExists</summary>
         ///<unmanaged>MF_E_STREAMSINK_EXISTS</unmanaged>
-        public static readonly SharpGen.Runtime.ResultDescriptor StreamsinkExists = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222096444UL), "SharpMediaFoundation", "MF_E_STREAMSINK_EXISTS", "StreamsinkExists");
-                ///<summary>Constant SampleallocatorCanceled</summary>
+        public static readonly SharpGen.Runtime.ResultDescriptor StreamSinkExists = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222096444UL), "SharpMediaFoundation", "MF_E_STREAMSINK_EXISTS", "StreamSinkExists");
+                ///<summary>Constant SampleAllocatorCanceled</summary>
         ///<unmanaged>MF_E_SAMPLEALLOCATOR_CANCELED</unmanaged>
-        public static readonly SharpGen.Runtime.ResultDescriptor SampleallocatorCanceled = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222096445UL), "SharpMediaFoundation", "MF_E_SAMPLEALLOCATOR_CANCELED", "SampleallocatorCanceled");
-                ///<summary>Constant SampleallocatorEmpty</summary>
+        public static readonly SharpGen.Runtime.ResultDescriptor SampleAllocatorCanceled = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222096445UL), "SharpMediaFoundation", "MF_E_SAMPLEALLOCATOR_CANCELED", "SampleAllocatorCanceled");
+                ///<summary>Constant SampleAllocatorEmpty</summary>
         ///<unmanaged>MF_E_SAMPLEALLOCATOR_EMPTY</unmanaged>
-        public static readonly SharpGen.Runtime.ResultDescriptor SampleallocatorEmpty = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222096446UL), "SharpMediaFoundation", "MF_E_SAMPLEALLOCATOR_EMPTY", "SampleallocatorEmpty");
-                ///<summary>Constant SinkAlreadystopped</summary>
+        public static readonly SharpGen.Runtime.ResultDescriptor SampleAllocatorEmpty = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222096446UL), "SharpMediaFoundation", "MF_E_SAMPLEALLOCATOR_EMPTY", "SampleAllocatorEmpty");
+                ///<summary>Constant SinkAlreadyStopped</summary>
         ///<unmanaged>MF_E_SINK_ALREADYSTOPPED</unmanaged>
-        public static readonly SharpGen.Runtime.ResultDescriptor SinkAlreadystopped = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222096447UL), "SharpMediaFoundation", "MF_E_SINK_ALREADYSTOPPED", "SinkAlreadystopped");
+        public static readonly SharpGen.Runtime.ResultDescriptor SinkAlreadyStopped = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222096447UL), "SharpMediaFoundation", "MF_E_SINK_ALREADYSTOPPED", "SinkAlreadyStopped");
                 ///<summary>Constant AsfFilesinkBitrateUnknown</summary>
         ///<unmanaged>MF_E_ASF_FILESINK_BITRATE_UNKNOWN</unmanaged>
         public static readonly SharpGen.Runtime.ResultDescriptor AsfFilesinkBitrateUnknown = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222096448UL), "SharpMediaFoundation", "MF_E_ASF_FILESINK_BITRATE_UNKNOWN", "AsfFilesinkBitrateUnknown");
@@ -817,27 +817,27 @@ namespace SharpMediaFoundation
                 ///<summary>Constant TransformPropertyValueIncompatible</summary>
         ///<unmanaged>MF_E_TRANSFORM_PROPERTY_VALUE_INCOMPATIBLE</unmanaged>
         public static readonly SharpGen.Runtime.ResultDescriptor TransformPropertyValueIncompatible = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222105452UL), "SharpMediaFoundation", "MF_E_TRANSFORM_PROPERTY_VALUE_INCOMPATIBLE", "TransformPropertyValueIncompatible");
-                ///<summary>Constant TransformNotPossibleForCurrentOutputMediatype</summary>
+                ///<summary>Constant TransformNotPossibleForCurrentOutputMediaType</summary>
         ///<unmanaged>MF_E_TRANSFORM_NOT_POSSIBLE_FOR_CURRENT_OUTPUT_MEDIATYPE</unmanaged>
-        public static readonly SharpGen.Runtime.ResultDescriptor TransformNotPossibleForCurrentOutputMediatype = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222105453UL), "SharpMediaFoundation", "MF_E_TRANSFORM_NOT_POSSIBLE_FOR_CURRENT_OUTPUT_MEDIATYPE", "TransformNotPossibleForCurrentOutputMediatype");
-                ///<summary>Constant TransformNotPossibleForCurrentInputMediatype</summary>
+        public static readonly SharpGen.Runtime.ResultDescriptor TransformNotPossibleForCurrentOutputMediaType = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222105453UL), "SharpMediaFoundation", "MF_E_TRANSFORM_NOT_POSSIBLE_FOR_CURRENT_OUTPUT_MEDIATYPE", "TransformNotPossibleForCurrentOutputMediaType");
+                ///<summary>Constant TransformNotPossibleForCurrentInputMediaType</summary>
         ///<unmanaged>MF_E_TRANSFORM_NOT_POSSIBLE_FOR_CURRENT_INPUT_MEDIATYPE</unmanaged>
-        public static readonly SharpGen.Runtime.ResultDescriptor TransformNotPossibleForCurrentInputMediatype = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222105454UL), "SharpMediaFoundation", "MF_E_TRANSFORM_NOT_POSSIBLE_FOR_CURRENT_INPUT_MEDIATYPE", "TransformNotPossibleForCurrentInputMediatype");
-                ///<summary>Constant TransformNotPossibleForCurrentMediatypeCombination</summary>
+        public static readonly SharpGen.Runtime.ResultDescriptor TransformNotPossibleForCurrentInputMediaType = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222105454UL), "SharpMediaFoundation", "MF_E_TRANSFORM_NOT_POSSIBLE_FOR_CURRENT_INPUT_MEDIATYPE", "TransformNotPossibleForCurrentInputMediaType");
+                ///<summary>Constant TransformNotPossibleForCurrentMediaTypeCombination</summary>
         ///<unmanaged>MF_E_TRANSFORM_NOT_POSSIBLE_FOR_CURRENT_MEDIATYPE_COMBINATION</unmanaged>
-        public static readonly SharpGen.Runtime.ResultDescriptor TransformNotPossibleForCurrentMediatypeCombination = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222105455UL), "SharpMediaFoundation", "MF_E_TRANSFORM_NOT_POSSIBLE_FOR_CURRENT_MEDIATYPE_COMBINATION", "TransformNotPossibleForCurrentMediatypeCombination");
+        public static readonly SharpGen.Runtime.ResultDescriptor TransformNotPossibleForCurrentMediaTypeCombination = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222105455UL), "SharpMediaFoundation", "MF_E_TRANSFORM_NOT_POSSIBLE_FOR_CURRENT_MEDIATYPE_COMBINATION", "TransformNotPossibleForCurrentMediaTypeCombination");
                 ///<summary>Constant TransformConflictsWithOtherCurrentlyEnabledFeatures</summary>
         ///<unmanaged>MF_E_TRANSFORM_CONFLICTS_WITH_OTHER_CURRENTLY_ENABLED_FEATURES</unmanaged>
         public static readonly SharpGen.Runtime.ResultDescriptor TransformConflictsWithOtherCurrentlyEnabledFeatures = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222105456UL), "SharpMediaFoundation", "MF_E_TRANSFORM_CONFLICTS_WITH_OTHER_CURRENTLY_ENABLED_FEATURES", "TransformConflictsWithOtherCurrentlyEnabledFeatures");
                 ///<summary>Constant TransformNeedMoreInput</summary>
         ///<unmanaged>MF_E_TRANSFORM_NEED_MORE_INPUT</unmanaged>
         public static readonly SharpGen.Runtime.ResultDescriptor TransformNeedMoreInput = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222105458UL), "SharpMediaFoundation", "MF_E_TRANSFORM_NEED_MORE_INPUT", "TransformNeedMoreInput");
-                ///<summary>Constant TransformNotPossibleForCurrentSpkrConfig</summary>
+                ///<summary>Constant TransformNotPossibleForCurrentSpeakerConfig</summary>
         ///<unmanaged>MF_E_TRANSFORM_NOT_POSSIBLE_FOR_CURRENT_SPKR_CONFIG</unmanaged>
-        public static readonly SharpGen.Runtime.ResultDescriptor TransformNotPossibleForCurrentSpkrConfig = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222105459UL), "SharpMediaFoundation", "MF_E_TRANSFORM_NOT_POSSIBLE_FOR_CURRENT_SPKR_CONFIG", "TransformNotPossibleForCurrentSpkrConfig");
-                ///<summary>Constant TransformCannotChangeMediatypeWhileProcessing</summary>
+        public static readonly SharpGen.Runtime.ResultDescriptor TransformNotPossibleForCurrentSpeakerConfig = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222105459UL), "SharpMediaFoundation", "MF_E_TRANSFORM_NOT_POSSIBLE_FOR_CURRENT_SPKR_CONFIG", "TransformNotPossibleForCurrentSpeakerConfig");
+                ///<summary>Constant TransformCannotChangeMediaTypeWhileProcessing</summary>
         ///<unmanaged>MF_E_TRANSFORM_CANNOT_CHANGE_MEDIATYPE_WHILE_PROCESSING</unmanaged>
-        public static readonly SharpGen.Runtime.ResultDescriptor TransformCannotChangeMediatypeWhileProcessing = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222105460UL), "SharpMediaFoundation", "MF_E_TRANSFORM_CANNOT_CHANGE_MEDIATYPE_WHILE_PROCESSING", "TransformCannotChangeMediatypeWhileProcessing");
+        public static readonly SharpGen.Runtime.ResultDescriptor TransformCannotChangeMediaTypeWhileProcessing = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222105460UL), "SharpMediaFoundation", "MF_E_TRANSFORM_CANNOT_CHANGE_MEDIATYPE_WHILE_PROCESSING", "TransformCannotChangeMediaTypeWhileProcessing");
                 ///<summary>Constant UnsupportedD3DType</summary>
         ///<unmanaged>MF_E_UNSUPPORTED_D3D_TYPE</unmanaged>
         public static readonly SharpGen.Runtime.ResultDescriptor UnsupportedD3DType = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222105462UL), "SharpMediaFoundation", "MF_E_UNSUPPORTED_D3D_TYPE", "UnsupportedD3DType");
@@ -853,15 +853,15 @@ namespace SharpMediaFoundation
                 ///<summary>Constant TransformAsyncMftNotSupported</summary>
         ///<unmanaged>MF_E_TRANSFORM_ASYNC_MFT_NOT_SUPPORTED</unmanaged>
         public static readonly SharpGen.Runtime.ResultDescriptor TransformAsyncMftNotSupported = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222105466UL), "SharpMediaFoundation", "MF_E_TRANSFORM_ASYNC_MFT_NOT_SUPPORTED", "TransformAsyncMftNotSupported");
-                ///<summary>Constant TransformExattributeNotSupported</summary>
+                ///<summary>Constant TransformExAttributeNotSupported</summary>
         ///<unmanaged>MF_E_TRANSFORM_EXATTRIBUTE_NOT_SUPPORTED</unmanaged>
-        public static readonly SharpGen.Runtime.ResultDescriptor TransformExattributeNotSupported = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222105468UL), "SharpMediaFoundation", "MF_E_TRANSFORM_EXATTRIBUTE_NOT_SUPPORTED", "TransformExattributeNotSupported");
+        public static readonly SharpGen.Runtime.ResultDescriptor TransformExAttributeNotSupported = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222105468UL), "SharpMediaFoundation", "MF_E_TRANSFORM_EXATTRIBUTE_NOT_SUPPORTED", "TransformExAttributeNotSupported");
                 ///<summary>Constant LicenseIncorrectRights</summary>
         ///<unmanaged>MF_E_LICENSE_INCORRECT_RIGHTS</unmanaged>
         public static readonly SharpGen.Runtime.ResultDescriptor LicenseIncorrectRights = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222106440UL), "SharpMediaFoundation", "MF_E_LICENSE_INCORRECT_RIGHTS", "LicenseIncorrectRights");
-                ///<summary>Constant LicenseOutofdate</summary>
+                ///<summary>Constant LicenseOutOfDate</summary>
         ///<unmanaged>MF_E_LICENSE_OUTOFDATE</unmanaged>
-        public static readonly SharpGen.Runtime.ResultDescriptor LicenseOutofdate = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222106441UL), "SharpMediaFoundation", "MF_E_LICENSE_OUTOFDATE", "LicenseOutofdate");
+        public static readonly SharpGen.Runtime.ResultDescriptor LicenseOutOfDate = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222106441UL), "SharpMediaFoundation", "MF_E_LICENSE_OUTOFDATE", "LicenseOutOfDate");
                 ///<summary>Constant LicenseRequired</summary>
         ///<unmanaged>MF_E_LICENSE_REQUIRED</unmanaged>
         public static readonly SharpGen.Runtime.ResultDescriptor LicenseRequired = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222106442UL), "SharpMediaFoundation", "MF_E_LICENSE_REQUIRED", "LicenseRequired");
@@ -886,24 +886,24 @@ namespace SharpMediaFoundation
                 ///<summary>Constant TrustDisabled</summary>
         ///<unmanaged>MF_E_TRUST_DISABLED</unmanaged>
         public static readonly SharpGen.Runtime.ResultDescriptor TrustDisabled = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222106450UL), "SharpMediaFoundation", "MF_E_TRUST_DISABLED", "TrustDisabled");
-                ///<summary>Constant WmdrmotaNoAction</summary>
+                ///<summary>Constant WindowsMediaDrmOutputTrustAuthorityNoAction</summary>
         ///<unmanaged>MF_E_WMDRMOTA_NO_ACTION</unmanaged>
-        public static readonly SharpGen.Runtime.ResultDescriptor WmdrmotaNoAction = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222106451UL), "SharpMediaFoundation", "MF_E_WMDRMOTA_NO_ACTION", "WmdrmotaNoAction");
-                ///<summary>Constant WmdrmotaActionAlreadySet</summary>
+        public static readonly SharpGen.Runtime.ResultDescriptor WindowsMediaDrmOutputTrustAuthorityNoAction = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222106451UL), "SharpMediaFoundation", "MF_E_WMDRMOTA_NO_ACTION", "WindowsMediaDrmOutputTrustAuthorityNoAction");
+                ///<summary>Constant WindowsMediaDrmOutputTrustAuthorityActionAlreadySet</summary>
         ///<unmanaged>MF_E_WMDRMOTA_ACTION_ALREADY_SET</unmanaged>
-        public static readonly SharpGen.Runtime.ResultDescriptor WmdrmotaActionAlreadySet = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222106452UL), "SharpMediaFoundation", "MF_E_WMDRMOTA_ACTION_ALREADY_SET", "WmdrmotaActionAlreadySet");
-                ///<summary>Constant WmdrmotaDrmHeaderNotAvailable</summary>
+        public static readonly SharpGen.Runtime.ResultDescriptor WindowsMediaDrmOutputTrustAuthorityActionAlreadySet = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222106452UL), "SharpMediaFoundation", "MF_E_WMDRMOTA_ACTION_ALREADY_SET", "WindowsMediaDrmOutputTrustAuthorityActionAlreadySet");
+                ///<summary>Constant WindowsMediaDrmOutputTrustAuthorityDrmHeaderNotAvailable</summary>
         ///<unmanaged>MF_E_WMDRMOTA_DRM_HEADER_NOT_AVAILABLE</unmanaged>
-        public static readonly SharpGen.Runtime.ResultDescriptor WmdrmotaDrmHeaderNotAvailable = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222106453UL), "SharpMediaFoundation", "MF_E_WMDRMOTA_DRM_HEADER_NOT_AVAILABLE", "WmdrmotaDrmHeaderNotAvailable");
-                ///<summary>Constant WmdrmotaDrmEncryptionSchemeNotSupported</summary>
+        public static readonly SharpGen.Runtime.ResultDescriptor WindowsMediaDrmOutputTrustAuthorityDrmHeaderNotAvailable = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222106453UL), "SharpMediaFoundation", "MF_E_WMDRMOTA_DRM_HEADER_NOT_AVAILABLE", "WindowsMediaDrmOutputTrustAuthorityDrmHeaderNotAvailable");
+                ///<summary>Constant WindowsMediaDrmOutputTrustAuthorityDrmEncryptionSchemeNotSupported</summary>
         ///<unmanaged>MF_E_WMDRMOTA_DRM_ENCRYPTION_SCHEME_NOT_SUPPORTED</unmanaged>
-        public static readonly SharpGen.Runtime.ResultDescriptor WmdrmotaDrmEncryptionSchemeNotSupported = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222106454UL), "SharpMediaFoundation", "MF_E_WMDRMOTA_DRM_ENCRYPTION_SCHEME_NOT_SUPPORTED", "WmdrmotaDrmEncryptionSchemeNotSupported");
-                ///<summary>Constant WmdrmotaActionMismatch</summary>
+        public static readonly SharpGen.Runtime.ResultDescriptor WindowsMediaDrmOutputTrustAuthorityDrmEncryptionSchemeNotSupported = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222106454UL), "SharpMediaFoundation", "MF_E_WMDRMOTA_DRM_ENCRYPTION_SCHEME_NOT_SUPPORTED", "WindowsMediaDrmOutputTrustAuthorityDrmEncryptionSchemeNotSupported");
+                ///<summary>Constant WindowsMediaDrmOutputTrustAuthorityActionMismatch</summary>
         ///<unmanaged>MF_E_WMDRMOTA_ACTION_MISMATCH</unmanaged>
-        public static readonly SharpGen.Runtime.ResultDescriptor WmdrmotaActionMismatch = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222106455UL), "SharpMediaFoundation", "MF_E_WMDRMOTA_ACTION_MISMATCH", "WmdrmotaActionMismatch");
-                ///<summary>Constant WmdrmotaInvalidPolicy</summary>
+        public static readonly SharpGen.Runtime.ResultDescriptor WindowsMediaDrmOutputTrustAuthorityActionMismatch = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222106455UL), "SharpMediaFoundation", "MF_E_WMDRMOTA_ACTION_MISMATCH", "WindowsMediaDrmOutputTrustAuthorityActionMismatch");
+                ///<summary>Constant WindowsMediaDrmOutputTrustAuthorityInvalidPolicy</summary>
         ///<unmanaged>MF_E_WMDRMOTA_INVALID_POLICY</unmanaged>
-        public static readonly SharpGen.Runtime.ResultDescriptor WmdrmotaInvalidPolicy = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222106456UL), "SharpMediaFoundation", "MF_E_WMDRMOTA_INVALID_POLICY", "WmdrmotaInvalidPolicy");
+        public static readonly SharpGen.Runtime.ResultDescriptor WindowsMediaDrmOutputTrustAuthorityInvalidPolicy = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222106456UL), "SharpMediaFoundation", "MF_E_WMDRMOTA_INVALID_POLICY", "WindowsMediaDrmOutputTrustAuthorityInvalidPolicy");
                 ///<summary>Constant PolicyUnsupported</summary>
         ///<unmanaged>MF_E_POLICY_UNSUPPORTED</unmanaged>
         public static readonly SharpGen.Runtime.ResultDescriptor PolicyUnsupported = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222106457UL), "SharpMediaFoundation", "MF_E_POLICY_UNSUPPORTED", "PolicyUnsupported");
@@ -934,9 +934,9 @@ namespace SharpMediaFoundation
                 ///<summary>Constant KernelUntrusted</summary>
         ///<unmanaged>MF_E_KERNEL_UNTRUSTED</unmanaged>
         public static readonly SharpGen.Runtime.ResultDescriptor KernelUntrusted = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222106466UL), "SharpMediaFoundation", "MF_E_KERNEL_UNTRUSTED", "KernelUntrusted");
-                ///<summary>Constant PeauthUntrusted</summary>
+                ///<summary>Constant PeAuthUntrusted</summary>
         ///<unmanaged>MF_E_PEAUTH_UNTRUSTED</unmanaged>
-        public static readonly SharpGen.Runtime.ResultDescriptor PeauthUntrusted = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222106467UL), "SharpMediaFoundation", "MF_E_PEAUTH_UNTRUSTED", "PeauthUntrusted");
+        public static readonly SharpGen.Runtime.ResultDescriptor PeAuthUntrusted = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222106467UL), "SharpMediaFoundation", "MF_E_PEAUTH_UNTRUSTED", "PeAuthUntrusted");
                 ///<summary>Constant NonPeProcess</summary>
         ///<unmanaged>MF_E_NON_PE_PROCESS</unmanaged>
         public static readonly SharpGen.Runtime.ResultDescriptor NonPeProcess = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222106469UL), "SharpMediaFoundation", "MF_E_NON_PE_PROCESS", "NonPeProcess");
@@ -955,24 +955,24 @@ namespace SharpMediaFoundation
                 ///<summary>Constant ProcessRestartRequired</summary>
         ///<unmanaged>MF_E_PROCESS_RESTART_REQUIRED</unmanaged>
         public static readonly SharpGen.Runtime.ResultDescriptor ProcessRestartRequired = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222106477UL), "SharpMediaFoundation", "MF_E_PROCESS_RESTART_REQUIRED", "ProcessRestartRequired");
-                ///<summary>Constant UsermodeUntrusted</summary>
+                ///<summary>Constant UserModeUntrusted</summary>
         ///<unmanaged>MF_E_USERMODE_UNTRUSTED</unmanaged>
-        public static readonly SharpGen.Runtime.ResultDescriptor UsermodeUntrusted = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222106478UL), "SharpMediaFoundation", "MF_E_USERMODE_UNTRUSTED", "UsermodeUntrusted");
-                ///<summary>Constant PeauthSessionNotStarted</summary>
+        public static readonly SharpGen.Runtime.ResultDescriptor UserModeUntrusted = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222106478UL), "SharpMediaFoundation", "MF_E_USERMODE_UNTRUSTED", "UserModeUntrusted");
+                ///<summary>Constant PeAuthSessionNotStarted</summary>
         ///<unmanaged>MF_E_PEAUTH_SESSION_NOT_STARTED</unmanaged>
-        public static readonly SharpGen.Runtime.ResultDescriptor PeauthSessionNotStarted = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222106479UL), "SharpMediaFoundation", "MF_E_PEAUTH_SESSION_NOT_STARTED", "PeauthSessionNotStarted");
-                ///<summary>Constant PeauthPublickeyRevoked</summary>
+        public static readonly SharpGen.Runtime.ResultDescriptor PeAuthSessionNotStarted = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222106479UL), "SharpMediaFoundation", "MF_E_PEAUTH_SESSION_NOT_STARTED", "PeAuthSessionNotStarted");
+                ///<summary>Constant PeAuthPublickeyRevoked</summary>
         ///<unmanaged>MF_E_PEAUTH_PUBLICKEY_REVOKED</unmanaged>
-        public static readonly SharpGen.Runtime.ResultDescriptor PeauthPublickeyRevoked = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222106481UL), "SharpMediaFoundation", "MF_E_PEAUTH_PUBLICKEY_REVOKED", "PeauthPublickeyRevoked");
+        public static readonly SharpGen.Runtime.ResultDescriptor PeAuthPublickeyRevoked = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222106481UL), "SharpMediaFoundation", "MF_E_PEAUTH_PUBLICKEY_REVOKED", "PeAuthPublickeyRevoked");
                 ///<summary>Constant GrlAbsent</summary>
         ///<unmanaged>MF_E_GRL_ABSENT</unmanaged>
         public static readonly SharpGen.Runtime.ResultDescriptor GrlAbsent = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222106482UL), "SharpMediaFoundation", "MF_E_GRL_ABSENT", "GrlAbsent");
                 ///<summary>Constant PeUntrusted</summary>
         ///<unmanaged>MF_E_PE_UNTRUSTED</unmanaged>
         public static readonly SharpGen.Runtime.ResultDescriptor PeUntrusted = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222106484UL), "SharpMediaFoundation", "MF_E_PE_UNTRUSTED", "PeUntrusted");
-                ///<summary>Constant PeauthNotStarted</summary>
+                ///<summary>Constant PeAuthNotStarted</summary>
         ///<unmanaged>MF_E_PEAUTH_NOT_STARTED</unmanaged>
-        public static readonly SharpGen.Runtime.ResultDescriptor PeauthNotStarted = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222106485UL), "SharpMediaFoundation", "MF_E_PEAUTH_NOT_STARTED", "PeauthNotStarted");
+        public static readonly SharpGen.Runtime.ResultDescriptor PeAuthNotStarted = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222106485UL), "SharpMediaFoundation", "MF_E_PEAUTH_NOT_STARTED", "PeAuthNotStarted");
                 ///<summary>Constant IncompatibleSampleProtection</summary>
         ///<unmanaged>MF_E_INCOMPATIBLE_SAMPLE_PROTECTION</unmanaged>
         public static readonly SharpGen.Runtime.ResultDescriptor IncompatibleSampleProtection = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222106486UL), "SharpMediaFoundation", "MF_E_INCOMPATIBLE_SAMPLE_PROTECTION", "IncompatibleSampleProtection");
@@ -991,9 +991,9 @@ namespace SharpMediaFoundation
                 ///<summary>Constant ItaErrorParsingSapParameters</summary>
         ///<unmanaged>MF_E_ITA_ERROR_PARSING_SAP_PARAMETERS</unmanaged>
         public static readonly SharpGen.Runtime.ResultDescriptor ItaErrorParsingSapParameters = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222106491UL), "SharpMediaFoundation", "MF_E_ITA_ERROR_PARSING_SAP_PARAMETERS", "ItaErrorParsingSapParameters");
-                ///<summary>Constant PolicyMgrActionOutofbounds</summary>
+                ///<summary>Constant PolicyManagerActionOutOfBounds</summary>
         ///<unmanaged>MF_E_POLICY_MGR_ACTION_OUTOFBOUNDS</unmanaged>
-        public static readonly SharpGen.Runtime.ResultDescriptor PolicyMgrActionOutofbounds = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222106492UL), "SharpMediaFoundation", "MF_E_POLICY_MGR_ACTION_OUTOFBOUNDS", "PolicyMgrActionOutofbounds");
+        public static readonly SharpGen.Runtime.ResultDescriptor PolicyManagerActionOutOfBounds = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222106492UL), "SharpMediaFoundation", "MF_E_POLICY_MGR_ACTION_OUTOFBOUNDS", "PolicyManagerActionOutOfBounds");
                 ///<summary>Constant BadOplStructureFormat</summary>
         ///<unmanaged>MF_E_BAD_OPL_STRUCTURE_FORMAT</unmanaged>
         public static readonly SharpGen.Runtime.ResultDescriptor BadOplStructureFormat = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222106493UL), "SharpMediaFoundation", "MF_E_BAD_OPL_STRUCTURE_FORMAT", "BadOplStructureFormat");
@@ -1063,15 +1063,15 @@ namespace SharpMediaFoundation
                 ///<summary>Constant DroptimeNotSupported</summary>
         ///<unmanaged>MF_E_DROPTIME_NOT_SUPPORTED</unmanaged>
         public static readonly SharpGen.Runtime.ResultDescriptor DroptimeNotSupported = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222118442UL), "SharpMediaFoundation", "MF_E_DROPTIME_NOT_SUPPORTED", "DroptimeNotSupported");
-                ///<summary>Constant QualityknobWaitLonger</summary>
+                ///<summary>Constant QualityKnobWaitLonger</summary>
         ///<unmanaged>MF_E_QUALITYKNOB_WAIT_LONGER</unmanaged>
-        public static readonly SharpGen.Runtime.ResultDescriptor QualityknobWaitLonger = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222118443UL), "SharpMediaFoundation", "MF_E_QUALITYKNOB_WAIT_LONGER", "QualityknobWaitLonger");
-                ///<summary>Constant QmInvalidstate</summary>
+        public static readonly SharpGen.Runtime.ResultDescriptor QualityKnobWaitLonger = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222118443UL), "SharpMediaFoundation", "MF_E_QUALITYKNOB_WAIT_LONGER", "QualityKnobWaitLonger");
+                ///<summary>Constant QmInvalidState</summary>
         ///<unmanaged>MF_E_QM_INVALIDSTATE</unmanaged>
-        public static readonly SharpGen.Runtime.ResultDescriptor QmInvalidstate = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222118444UL), "SharpMediaFoundation", "MF_E_QM_INVALIDSTATE", "QmInvalidstate");
-                ///<summary>Constant TranscodeNoContainertype</summary>
+        public static readonly SharpGen.Runtime.ResultDescriptor QmInvalidState = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222118444UL), "SharpMediaFoundation", "MF_E_QM_INVALIDSTATE", "QmInvalidState");
+                ///<summary>Constant TranscodeNoContainerType</summary>
         ///<unmanaged>MF_E_TRANSCODE_NO_CONTAINERTYPE</unmanaged>
-        public static readonly SharpGen.Runtime.ResultDescriptor TranscodeNoContainertype = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222119440UL), "SharpMediaFoundation", "MF_E_TRANSCODE_NO_CONTAINERTYPE", "TranscodeNoContainertype");
+        public static readonly SharpGen.Runtime.ResultDescriptor TranscodeNoContainerType = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222119440UL), "SharpMediaFoundation", "MF_E_TRANSCODE_NO_CONTAINERTYPE", "TranscodeNoContainerType");
                 ///<summary>Constant TranscodeProfileNoMatchingStreams</summary>
         ///<unmanaged>MF_E_TRANSCODE_PROFILE_NO_MATCHING_STREAMS</unmanaged>
         public static readonly SharpGen.Runtime.ResultDescriptor TranscodeProfileNoMatchingStreams = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222119441UL), "SharpMediaFoundation", "MF_E_TRANSCODE_PROFILE_NO_MATCHING_STREAMS", "TranscodeProfileNoMatchingStreams");
@@ -1126,9 +1126,9 @@ namespace SharpMediaFoundation
                 ///<summary>Constant CaptureSourceNoAudioStreamPresent</summary>
         ///<unmanaged>MF_E_CAPTURE_SOURCE_NO_AUDIO_STREAM_PRESENT</unmanaged>
         public static readonly SharpGen.Runtime.ResultDescriptor CaptureSourceNoAudioStreamPresent = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222121448UL), "SharpMediaFoundation", "MF_E_CAPTURE_SOURCE_NO_AUDIO_STREAM_PRESENT", "CaptureSourceNoAudioStreamPresent");
-                ///<summary>Constant CaptureSourceDeviceExtendedpropOpInProgress</summary>
+                ///<summary>Constant CaptureSourceDeviceExtendedPropOpInProgress</summary>
         ///<unmanaged>MF_E_CAPTURE_SOURCE_DEVICE_EXTENDEDPROP_OP_IN_PROGRESS</unmanaged>
-        public static readonly SharpGen.Runtime.ResultDescriptor CaptureSourceDeviceExtendedpropOpInProgress = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222121449UL), "SharpMediaFoundation", "MF_E_CAPTURE_SOURCE_DEVICE_EXTENDEDPROP_OP_IN_PROGRESS", "CaptureSourceDeviceExtendedpropOpInProgress");
+        public static readonly SharpGen.Runtime.ResultDescriptor CaptureSourceDeviceExtendedPropOpInProgress = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222121449UL), "SharpMediaFoundation", "MF_E_CAPTURE_SOURCE_DEVICE_EXTENDEDPROP_OP_IN_PROGRESS", "CaptureSourceDeviceExtendedPropOpInProgress");
                 ///<summary>Constant CapturePropertySetDuringPhoto</summary>
         ///<unmanaged>MF_E_CAPTURE_PROPERTY_SET_DURING_PHOTO</unmanaged>
         public static readonly SharpGen.Runtime.ResultDescriptor CapturePropertySetDuringPhoto = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222121450UL), "SharpMediaFoundation", "MF_E_CAPTURE_PROPERTY_SET_DURING_PHOTO", "CapturePropertySetDuringPhoto");
@@ -1141,21 +1141,21 @@ namespace SharpMediaFoundation
                 ///<summary>Constant UnsupportedCaptureDevicePresent</summary>
         ///<unmanaged>MF_E_UNSUPPORTED_CAPTURE_DEVICE_PRESENT</unmanaged>
         public static readonly SharpGen.Runtime.ResultDescriptor UnsupportedCaptureDevicePresent = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222121453UL), "SharpMediaFoundation", "MF_E_UNSUPPORTED_CAPTURE_DEVICE_PRESENT", "UnsupportedCaptureDevicePresent");
-                ///<summary>Constant TimelinecontrollerUnsupportedSourceType</summary>
+                ///<summary>Constant TimelineControllerUnsupportedSourceType</summary>
         ///<unmanaged>MF_E_TIMELINECONTROLLER_UNSUPPORTED_SOURCE_TYPE</unmanaged>
-        public static readonly SharpGen.Runtime.ResultDescriptor TimelinecontrollerUnsupportedSourceType = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222122440UL), "SharpMediaFoundation", "MF_E_TIMELINECONTROLLER_UNSUPPORTED_SOURCE_TYPE", "TimelinecontrollerUnsupportedSourceType");
-                ///<summary>Constant TimelinecontrollerNotAllowed</summary>
+        public static readonly SharpGen.Runtime.ResultDescriptor TimelineControllerUnsupportedSourceType = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222122440UL), "SharpMediaFoundation", "MF_E_TIMELINECONTROLLER_UNSUPPORTED_SOURCE_TYPE", "TimelineControllerUnsupportedSourceType");
+                ///<summary>Constant TimelineControllerNotAllowed</summary>
         ///<unmanaged>MF_E_TIMELINECONTROLLER_NOT_ALLOWED</unmanaged>
-        public static readonly SharpGen.Runtime.ResultDescriptor TimelinecontrollerNotAllowed = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222122441UL), "SharpMediaFoundation", "MF_E_TIMELINECONTROLLER_NOT_ALLOWED", "TimelinecontrollerNotAllowed");
-                ///<summary>Constant TimelinecontrollerCannotAttach</summary>
+        public static readonly SharpGen.Runtime.ResultDescriptor TimelineControllerNotAllowed = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222122441UL), "SharpMediaFoundation", "MF_E_TIMELINECONTROLLER_NOT_ALLOWED", "TimelineControllerNotAllowed");
+                ///<summary>Constant TimelineControllerCannotAttach</summary>
         ///<unmanaged>MF_E_TIMELINECONTROLLER_CANNOT_ATTACH</unmanaged>
-        public static readonly SharpGen.Runtime.ResultDescriptor TimelinecontrollerCannotAttach = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222122442UL), "SharpMediaFoundation", "MF_E_TIMELINECONTROLLER_CANNOT_ATTACH", "TimelinecontrollerCannotAttach");
-                ///<summary>Constant MediaExtensionAppserviceConnectionFailed</summary>
+        public static readonly SharpGen.Runtime.ResultDescriptor TimelineControllerCannotAttach = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222122442UL), "SharpMediaFoundation", "MF_E_TIMELINECONTROLLER_CANNOT_ATTACH", "TimelineControllerCannotAttach");
+                ///<summary>Constant MediaExtensionAppServiceConnectionFailed</summary>
         ///<unmanaged>MF_E_MEDIA_EXTENSION_APPSERVICE_CONNECTION_FAILED</unmanaged>
-        public static readonly SharpGen.Runtime.ResultDescriptor MediaExtensionAppserviceConnectionFailed = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222123440UL), "SharpMediaFoundation", "MF_E_MEDIA_EXTENSION_APPSERVICE_CONNECTION_FAILED", "MediaExtensionAppserviceConnectionFailed");
-                ///<summary>Constant MediaExtensionAppserviceRequestFailed</summary>
+        public static readonly SharpGen.Runtime.ResultDescriptor MediaExtensionAppServiceConnectionFailed = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222123440UL), "SharpMediaFoundation", "MF_E_MEDIA_EXTENSION_APPSERVICE_CONNECTION_FAILED", "MediaExtensionAppServiceConnectionFailed");
+                ///<summary>Constant MediaExtensionAppServiceRequestFailed</summary>
         ///<unmanaged>MF_E_MEDIA_EXTENSION_APPSERVICE_REQUEST_FAILED</unmanaged>
-        public static readonly SharpGen.Runtime.ResultDescriptor MediaExtensionAppserviceRequestFailed = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222123441UL), "SharpMediaFoundation", "MF_E_MEDIA_EXTENSION_APPSERVICE_REQUEST_FAILED", "MediaExtensionAppserviceRequestFailed");
+        public static readonly SharpGen.Runtime.ResultDescriptor MediaExtensionAppServiceRequestFailed = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222123441UL), "SharpMediaFoundation", "MF_E_MEDIA_EXTENSION_APPSERVICE_REQUEST_FAILED", "MediaExtensionAppServiceRequestFailed");
                 ///<summary>Constant MediaExtensionPackageIntegrityCheckFailed</summary>
         ///<unmanaged>MF_E_MEDIA_EXTENSION_PACKAGE_INTEGRITY_CHECK_FAILED</unmanaged>
         public static readonly SharpGen.Runtime.ResultDescriptor MediaExtensionPackageIntegrityCheckFailed = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222123442UL), "SharpMediaFoundation", "MF_E_MEDIA_EXTENSION_PACKAGE_INTEGRITY_CHECK_FAILED", "MediaExtensionPackageIntegrityCheckFailed");
