@@ -9,7 +9,7 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <Description>Limited port of the original SharpDX interop assemblies for working with the Microsoft Media Foundation library in C#.</Description>
-    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <PackageLicenseFile>..\..\LICENSE.txt</PackageLicenseFile>
     <PackageProjectUrl>https://github.com/jrockwood/SharpMediaFoundation</PackageProjectUrl>
     <RepositoryUrl>https://github.com/jrockwood/SharpMediaFoundation</RepositoryUrl>
     <PackageTags>SharpDX, Vortice, Media Foundation, MMF</PackageTags>
@@ -17,10 +17,6 @@
 
   <ItemGroup>
     <None Remove="Mapping.xml" />
-    <None Include="..\..\LICENSE.txt">
-      <Pack>True</Pack>
-      <PackagePath></PackagePath>
-    </None>
     <SharpGenConsumerMapping Remove="Mapping.xml" />
     <EmbeddedResource Include="Mapping.xml" />
     <SharpGenMapping Include="Mapping.xml" />
