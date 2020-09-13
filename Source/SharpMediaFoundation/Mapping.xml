@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- See https://sharpgentools.readthedocs.io/en/latest/getting-started.html for documentation on this file. -->
+<config id="mediafoundation" xmlns="urn:SharpGen.Config">
+  <namespace>SharpMediaFoundation</namespace>
+  <assembly>SharpMediaFoundation</assembly>
+  <depends>Vortice.Runtime.COM</depends>
+
+  <sdk name="WindowsSdk" version="10.0.19041.0" />
+  <sdk name="StdLib" />
+
+  <include file="mfapi.h">
+    <attach>IMFAsyncCallback</attach>
+    <attach>MF_VERSION</attach>
+    <attach>MFAllocateWorkQueue</attach>
+    <attach>MFCreateAsyncResult</attach>
+    <attach>MFPutWorkItem</attach>
+    <attach>MFShutdown</attach>
+    <attach>MFStartup</attach>
+    <attach>MF_TOPOSTATUS</attach>
+  </include>
+
+  <include file="mfidl.h">
+    <attach>IMFClock</attach>
+    <attach>IMFClockStateSink</attach>
+    <attach>IMFMediaSession</attach>
+    <attach>IMFPresentationClock</attach>
+    <attach>IMFPresentationTimeSource</attach>
+    <attach>IMFTopology</attach>
+    <attach>IMFTopologyNode</attach>
+    <attach>MFCLOCK_PROPERTIES</attach>
+    <attach>MFCLOCK_STATE</attach>
+    <attach>MFCreateMediaSession</attach>
+    <attach>MFSESSION_SETTOPOLOGY_FLAGS</attach>
+    <attach>MF_TOPOLOGY_TYPE</attach>
+  </include>
+
+  <include file="mferror.h" attach="true" />
+
+  <include file="mfobjects.h">
+    <attach>IMFAsyncCallback</attach>
+    <attach>IMFAsyncResult</attach>
+    <attach>IMFAttributes</attach>
+    <attach>IMFCollection</attach>
+    <attach>IMFMediaEvent</attach>
+    <attach>IMFMediaEventGenerator</attach>
+    <attach>IMFMediaType</attach>
+    <!--The following really should be MediaEventType-->
+    <attach>__MIDL___MIDL_itf_mfobjects_0000_0012_0001</attach>
+    <attach>MF_ATTRIBUTE_TYPE</attach>
+    <attach>MF_ATTRIBUTES_MATCH_TYPE</attach>
+    <attach>MFASYNC_.*_CALLBACK</attach>
+    <attach>MFASYNC_CALLBACK_QUEUE</attach>
+  </include>
+
+  <context-set id="mediafoundation-all">
+    <context>mediafoundation</context>
+    <context>mediafoundation-ext</context>
+    <context>mfapi</context>
+    <context>mfidl</context>
+    <context>mfobjects</context>
+    <context>mferror</context>
+  </context-set>
+
+  <extension>
+    <context id="mediafoundation-all" />
+
+    <create class="SharpMediaFoundation.MediaFactory" visibility="public static" />
+    <const from-macro="MF_VERSION" class="SharpMediaFoundation.MediaFactory" type="int" name="Version" />
+
+    <create class="ResultCode" visibility="public" />
+    <const from-macro="MF_E_(.*)" type="SharpGen.Runtime.ResultDescriptor" cpp-type="int" name="$1" class="SharpMediaFoundation.ResultCode" visibility="public static readonly">new SharpGen.Runtime.ResultDescriptor($1, "$3", "$0", "$2")</const>
+
+    <create-cpp enum="MFASYNC_CALLBACK_FLAGS" macro="MFASYNC_.*_CALLBACK" />
+    <create-cpp enum="MFASYNC_CALLBACK_QUEUE" macro="MFASYNC_CALLBACK_QUEUE_.*" />
+
+    <define enum="SharpMediaFoundation.MediaEventTypes" sizeof="4" />
+    <context-clear />
+  </extension>
+
+  <bindings>
+    <bind from="MEDIA_EVENT_TYPE" to="SharpMediaFoundation.MediaEventTypes" />
+  </bindings>
+
+  <mapping>
+    <context id="mediafoundation-all" />
+
+    <!--
+    // *****************************************************************
+    // MediaFoundation Enumerations
+    // *****************************************************************
+    -->
+    <map enum="MF(.*)" name-tmp="$1" />
+
+    <map enum="#MEUnknown" name="MediaEventTypes" />
+    <map enum-item="ME(.*)" name-tmp="$1" />
+    <map enum-item="MEWMDRM(.*)" name-tmp="WindowsMediaDrm$1" />
+    <remove enum-item="MEReservedMax" />
+
+    <map enum-item="MF_TOPOLOGY_SOURCESTREAM_NODE" name="SourceStreamNode" />
+    <map enum="MF_TOPOSTATUS" name="TopologyStatus" />
+
+    <map enum="MFASYNC_CALLBACK_FLAGS" name="AsyncCallbackFlags" none="true" flags="true" />
+    <map enum-item="MFASYNC_(.*)_CALLBACK" name-tmp="$1" />
+    <remove enum-item="MFASYNC_CALLBACK_QUEUE_PRIVATE_MASK" />
+
+    <map enum="MFASYNC_CALLBACK_QUEUE" name="WorkQueueType" />
+    <map enum-item="MFASYNC_CALLBACK_QUEUE_(.*)" name-tmp="$1" />
+
+    <map enum="MFSESSION_SETTOPOLOGY_FLAGS" name="SessionSetTopologyFlags" />
+    <map enum-item="MFSESSION_SETTOPOLOGY_NORESOLUTION" name="NoResolution" />
+
+    <!--
+    // *****************************************************************
+    // MediaFoundation Structures
+    // *****************************************************************
+    -->
+    <map struct="MF(.*)" name-tmp="$1" />
+    <map field="MFCLOCK_PROPERTIES::dw(.*)" name-tmp="$1" />
+    <map field="MFCLOCK_PROPERTIES::guid(.*)" name-tmp="$1" />
+    <map field="MFCLOCK_PROPERTIES::qw(.*)" name-tmp="$1" />
+
+    <!--
+    // *****************************************************************
+    // MediaFoundation Interfaces
+    // *****************************************************************
+    -->
+    <map interface="IMF(.*)" name="$1" />
+    <map method=".*GetType" name="GetTypeInfo" />
+
+    <map interface="IMFAsyncCallback" name="IAsyncCallback" callback="true" />
+    <map param="IMFAsyncCallback::GetParameters::pdwFlags" type="MFASYNC_CALLBACK_FLAGS" />
+
+    <map method="IMFAsyncResult::.*" property="false" visibility="internal" />
+    <map method="IMFAsyncResult::GetStatus" return="true" check="false" />
+    <map param="IMFAsyncResult::GetState::ppunkState" type="void" />
+    <map method="IMFAsyncResult::GetObjectW" name="GetObject" />
+
+    <map interface="IMFAttributes" name="MediaAttributes" />
+    <map method="IMFAttributes::GetItem" visibility="internal" />
+    <map param="IMFAttributes::GetItem::pValue" attribute="in" type="void" />
+    <map param="IMFAttributes::GetItemType::pType" return="true" />
+    <map method="IMFAttributes::CompareItem" visibility="internal" />
+    <map param="IMFAttributes::CompareItem::pbResult" return="true" />
+    <map param="IMFAttributes::Compare::pbResult" return="true" />
+    <map method="IMFAttributes::GetUINT32" visibility="internal" />
+    <map method="IMFAttributes::GetUINT32" name="GetInt" />
+    <map param="IMFAttributes::GetUINT32::punValue" return="true" />
+    <map method="IMFAttributes::GetUINT64" visibility="internal" />
+    <map method="IMFAttributes::GetUINT64" name="GetLong" />
+    <map param="IMFAttributes::GetUINT64::punValue" return="true" />
+    <map method="IMFAttributes::GetDouble" visibility="internal" />
+    <map method="IMFAttributes::GetGUID" visibility="internal" />
+    <map param="IMFAttributes::GetDouble::pfValue" return="true" />
+    <map param="IMFAttributes::GetGUID::pguidValue" return="true" />
+    <map method="IMFAttributes::GetString.*" visibility="internal" />
+    <map method="IMFAttributes::GetAllocatedString" visibility="internal" />
+    <map param="IMFAttributes::GetStringLength::pcchLength" return="true" />
+    <map method="IMFAttributes::GetBlob.*" visibility="internal" />
+    <map method="IMFAttributes::GetAllocatedBlob" visibility="internal" />
+    <map param="IMFAttributes::GetBlob::pBuf" type="void" attribute="in" />
+    <map param="IMFAttributes::GetBlobSize::pcbBlobSize" return="true" />
+    <map method="IMFAttributes::SetBlob"    visibility="internal" />
+    <map param="IMFAttributes::SetBlob::pBuf" type="void" attribute="in" />
+    <map method="IMFAttributes::GetUnknown" visibility="internal" />
+    <map method="IMFAttributes::SetItem"    name="Set" visibility="internal" />
+    <map method="IMFAttributes::SetUINT32"  name="Set" visibility="internal" />
+    <map method="IMFAttributes::SetUINT64"  name="Set" visibility="internal" />
+    <map method="IMFAttributes::SetDouble"  name="Set" visibility="internal" />
+    <map method="IMFAttributes::SetGUID"    name="Set" visibility="internal" />
+    <map method="IMFAttributes::SetString"  name="Set" visibility="internal" />
+    <map method="IMFAttributes::SetUnknown" name="Set" visibility="internal" />
+    <map method="IMFAttributes::GetItemByIndex" visibility="internal" />
+
+    <map param="IMFCollection::GetElement::ppUnkElement" return="true" />
+    <map interface="IMFClockStateSink" callback="true" />
+
+    <map param="IMFMediaEvent::GetType::pmet" type="MEDIA_EVENT_TYPE" />
+
+    <map method="IMFMediaEventGenerator::GetEvent" name="GetEvent" visibility="internal" />
+    <map param="IMFMediaEventGenerator::EndGetEvent::ppEvent" return="true" />
+    <map param="IMFMediaEventGenerator::BeginGetEvent::punkState" type="void" />
+
+    <map param="IMFMediaSession::SetTopology::dwSetTopologyFlags" type="MFSESSION_SETTOPOLOGY_FLAGS" />
+
+    <!--
+    // *****************************************************************
+    // MediaFoundation Functions
+    // *****************************************************************
+    -->
+    <map function="MF(.*)" name-tmp="$1" />
+    <map function="MF.*" dll='"Mfplat.dll"' group="SharpMediaFoundation.MediaFactory" />
+
+    <map function="MFCreateMediaSession" dll='"mf.dll"' />
+
+    <context-clear />
+  </mapping>
+</config>

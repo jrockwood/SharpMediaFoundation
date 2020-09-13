@@ -1,8 +1,25 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyName>SharpMediaFoundation</AssemblyName>
     <RootNamespace>SharpMediaFoundation</RootNamespace>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <NoWarn>$(NoWarn);1587</NoWarn>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Mapping.xml" />
+    <SharpGenConsumerMapping Remove="Mapping.xml" />
+    <EmbeddedResource Include="Mapping.xml" />
+    <SharpGenMapping Include="Mapping.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SharpGenTools.Sdk" Version="1.2.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Vortice.Runtime.COM" Version="1.8.9" />
+  </ItemGroup>
 </Project>
