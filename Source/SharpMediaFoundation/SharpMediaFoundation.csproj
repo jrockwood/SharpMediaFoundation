@@ -10,10 +10,23 @@
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <Description>Limited port of the original SharpDX interop assemblies for working with the Microsoft Media Foundation library in C#.</Description>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageProjectUrl>https://github.com/jrockwood/SharpMediaFoundation</PackageProjectUrl>
     <RepositoryUrl>https://github.com/jrockwood/SharpMediaFoundation</RepositoryUrl>
-    <PackageTags>SharpDX, Vortice, Media Foundation, MMF</PackageTags>
+    <PackageTags>SharpDX Vortice MediaFoundation MMF</PackageTags>
   </PropertyGroup>
+
+  <PropertyGroup>
+    <SharpGenGeneratedCodeFolder>$(MSBuildProjectDirectory)\Generated</SharpGenGeneratedCodeFolder>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Generated\Enumerations.cs" />
+    <Compile Remove="Generated\Functions.cs" />
+    <Compile Remove="Generated\Interfaces.cs" />
+    <Compile Remove="Generated\LocalInterop.cs" />
+    <Compile Remove="Generated\Structures.cs" />
+  </ItemGroup>
 
   <ItemGroup>
     <None Remove="Mapping.xml" />
@@ -21,6 +34,11 @@
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
+    <None Include="Generated\Enumerations.cs" />
+    <None Include="Generated\Functions.cs" />
+    <None Include="Generated\Interfaces.cs" />
+    <None Include="Generated\LocalInterop.cs" />
+    <None Include="Generated\Structures.cs" />
     <SharpGenConsumerMapping Remove="Mapping.xml" />
     <EmbeddedResource Include="Mapping.xml" />
     <SharpGenMapping Include="Mapping.xml" />
