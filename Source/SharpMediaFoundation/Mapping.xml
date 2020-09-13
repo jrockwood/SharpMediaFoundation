@@ -1,4 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--
+// Copyright (c) Justin Rockwood. All Rights Reserved. Licensed under the Apache License, Version 2.0. See
+// LICENSE.txt in the project root for license information.
+-->
+
 <!-- See https://sharpgentools.readthedocs.io/en/latest/getting-started.html for documentation on this file. -->
 <config id="mediafoundation" xmlns="urn:SharpGen.Config">
   <namespace>SharpMediaFoundation</namespace>
@@ -20,6 +25,7 @@
   </include>
 
   <include file="mfidl.h">
+    <attach>IMFAudioStreamVolume</attach>
     <attach>IMFClock</attach>
     <attach>IMFClockStateSink</attach>
     <attach>IMFMediaSession</attach>
@@ -126,6 +132,11 @@
     -->
     <map interface="IMF(.*)" name="$1" />
     <map method=".*GetType" name="GetTypeInfo" />
+
+    <map param="IMFAudioStreamVolume::.*::dw(.*)" name-tmp="$1" type="int" />
+    <map param="IMFAudioStreamVolume::.*::pdw(.*)" name-tmp="x$1" type="int" />
+    <map param="IMFAudioStreamVolume::.*::f(.*)" name-tmp="$1" />
+    <map param="IMFAudioStreamVolume::.*::pf(.*)" name-tmp="f$1" />
 
     <map interface="IMFAsyncCallback" name="IAsyncCallback" callback="true" />
     <map param="IMFAsyncCallback::GetParameters::pdwFlags" type="MFASYNC_CALLBACK_FLAGS" />
