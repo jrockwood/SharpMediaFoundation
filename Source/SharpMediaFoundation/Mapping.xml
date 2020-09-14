@@ -21,6 +21,23 @@
     <attach>MFPutWorkItem</attach>
     <attach>MFShutdown</attach>
     <attach>MFStartup</attach>
+    <attach>MF_EVENT_DO_THINNING</attach>
+    <attach>MF_EVENT_MFT_CONTEXT</attach>
+    <attach>MF_EVENT_MFT_INPUT_STREAM_ID</attach>
+    <attach>MF_EVENT_OUTPUT_NODE</attach>
+    <attach>MF_EVENT_PRESENTATION_TIME_OFFSET</attach>
+    <attach>MF_EVENT_SCRUBSAMPLE_TIME</attach>
+    <attach>MF_EVENT_SESSIONCAPS</attach>
+    <attach>MF_EVENT_SESSIONCAPS_DELTA</attach>
+    <attach>MF_EVENT_SOURCE_ACTUAL_START</attach>
+    <attach>MF_EVENT_SOURCE_CHARACTERISTICS</attach>
+    <attach>MF_EVENT_SOURCE_CHARACTERISTICS_OLD</attach>
+    <attach>MF_EVENT_SOURCE_FAKE_START</attach>
+    <attach>MF_EVENT_SOURCE_PROJECTSTART</attach>
+    <attach>MF_EVENT_SOURCE_TOPOLOGY_CANCELED</attach>
+    <attach>MF_EVENT_START_PRESENTATION_TIME</attach>
+    <attach>MF_EVENT_START_PRESENTATION_TIME_AT_OUTPUT</attach>
+    <attach>MF_EVENT_TOPOLOGY_STATUS</attach>
     <attach>MF_TOPOSTATUS</attach>
   </include>
 
@@ -70,12 +87,43 @@
   <extension>
     <context id="mediafoundation-all" />
 
+    <!--
+    // *****************************************************************
+    // MediaFoundation Attributes
+    // *****************************************************************
+    -->
+
+    <!-- Classes to hold GUIDs -->
+    <create visibility="public static" class="EventAttributeKeys" />
+
+    <!-- EventAttributeKeys -->
+    <const from-guid="MF_EVENT_DO_THINNING" class="SharpMediaFoundation.EventAttributeKeys" type="MediaAttributeKey&lt;bool&gt;" name="DoThinning">new MediaAttributeKey&lt;bool&gt;("$1", "DoThinning")</const>
+    <const from-guid="MF_EVENT_MFT_CONTEXT" class="SharpMediaFoundation.EventAttributeKeys" type="MediaAttributeKey&lt;long&gt;" name="TransformContext">new MediaAttributeKey&lt;long&gt;("$1", "TransformContext")</const>
+    <const from-guid="MF_EVENT_MFT_INPUT_STREAM_ID" class="SharpMediaFoundation.EventAttributeKeys" type="MediaAttributeKey&lt;int&gt;" name="TransformInputStreamId">new MediaAttributeKey&lt;int&gt;("$1", "TransformInputStreamId")</const>
+    <const from-guid="MF_EVENT_OUTPUT_NODE" class="SharpMediaFoundation.EventAttributeKeys" type="MediaAttributeKey&lt;long&gt;" name="OutputNode">new MediaAttributeKey&lt;long&gt;("$1", "OutputNode")</const>
+    <const from-guid="MF_EVENT_PRESENTATION_TIME_OFFSET" class="SharpMediaFoundation.EventAttributeKeys" type="MediaAttributeKey&lt;long&gt;" name="PresentationTimeOffset">new MediaAttributeKey&lt;long&gt;("$1", "PresentationTimeOffset")</const>
+    <const from-guid="MF_EVENT_SCRUBSAMPLE_TIME" class="SharpMediaFoundation.EventAttributeKeys" type="MediaAttributeKey&lt;long&gt;" name="ScrubSampleTime">new MediaAttributeKey&lt;long&gt;("$1", "ScrubSampleTime")</const>
+    <const from-guid="MF_EVENT_SESSIONCAPS" class="SharpMediaFoundation.EventAttributeKeys" type="MediaAttributeKey&lt;int&gt;" name="SessionCaps">new MediaAttributeKey&lt;int&gt;("$1", "SessionCaps")</const>
+    <const from-guid="MF_EVENT_SESSIONCAPS_DELTA" class="SharpMediaFoundation.EventAttributeKeys" type="MediaAttributeKey&lt;int&gt;" name="SessionCapsDelta">new MediaAttributeKey&lt;int&gt;("$1", "SessionCapsDelta")</const>
+    <const from-guid="MF_EVENT_SOURCE_ACTUAL_START" class="SharpMediaFoundation.EventAttributeKeys" type="MediaAttributeKey&lt;long&gt;" name="SourceActualStart">new MediaAttributeKey&lt;long&gt;("$1", "SourceActualStart")</const>
+    <const from-guid="MF_EVENT_SOURCE_CHARACTERISTICS" class="SharpMediaFoundation.EventAttributeKeys" type="MediaAttributeKey&lt;int&gt;" name="SourceCharacteristics">new MediaAttributeKey&lt;int&gt;("$1", "SourceCharacteristics")</const>
+    <const from-guid="MF_EVENT_SOURCE_CHARACTERISTICS_OLD" class="SharpMediaFoundation.EventAttributeKeys" type="MediaAttributeKey&lt;int&gt;" name="SourceCharacteristicsOld">new MediaAttributeKey&lt;int&gt;("$1", "SourceCharacteristicsOld")</const>
+    <const from-guid="MF_EVENT_SOURCE_FAKE_START" class="SharpMediaFoundation.EventAttributeKeys" type="MediaAttributeKey&lt;int&gt;" name="SourceFakeStart">new MediaAttributeKey&lt;int&gt;("$1", "SourceFakeStart")</const>
+    <const from-guid="MF_EVENT_SOURCE_PROJECTSTART" class="SharpMediaFoundation.EventAttributeKeys" type="MediaAttributeKey&lt;long&gt;" name="SourceProjectStart">new MediaAttributeKey&lt;long&gt;("$1", "SourceProjectStart")</const>
+    <const from-guid="MF_EVENT_SOURCE_TOPOLOGY_CANCELED" class="SharpMediaFoundation.EventAttributeKeys" type="MediaAttributeKey&lt;int&gt;" name="SourceTopologyCanceled">new MediaAttributeKey&lt;int&gt;("$1", "SourceTopologyCanceled")</const>
+    <const from-guid="MF_EVENT_START_PRESENTATION_TIME" class="SharpMediaFoundation.EventAttributeKeys" type="MediaAttributeKey&lt;long&gt;" name="StartPresentationTime">new MediaAttributeKey&lt;long&gt;("$1", "StartPresentationTime")</const>
+    <const from-guid="MF_EVENT_START_PRESENTATION_TIME_AT_OUTPUT" class="SharpMediaFoundation.EventAttributeKeys" type="MediaAttributeKey&lt;long&gt;" name="StartPresentationTimeAtOutput">new MediaAttributeKey&lt;long&gt;("$1", "StartPresentationTimeAtOutput")</const>
+    <const from-guid="MF_EVENT_TOPOLOGY_STATUS" class="SharpMediaFoundation.EventAttributeKeys" type="MediaAttributeKey&lt;SharpMediaFoundation.TopologyStatus&gt;" name="TopologyStatus">new MediaAttributeKey&lt;SharpMediaFoundation.TopologyStatus&gt;("$1", "TopologyStatus")</const>
+
+    <!-- MediaFactory -->
     <create class="SharpMediaFoundation.MediaFactory" visibility="public static" />
     <const from-macro="MF_VERSION" class="SharpMediaFoundation.MediaFactory" type="int" name="Version" />
 
+    <!-- ResultCode -->
     <create class="ResultCode" visibility="public" />
     <const from-macro="MF_E_(.*)" type="SharpGen.Runtime.ResultDescriptor" cpp-type="int" name="$1" class="SharpMediaFoundation.ResultCode" visibility="public static readonly">new SharpGen.Runtime.ResultDescriptor($1, "$3", "$0", "$2")</const>
 
+    <!-- Async Callback Enums-->
     <create-cpp enum="MFASYNC_CALLBACK_FLAGS" macro="MFASYNC_.*_CALLBACK" />
     <create-cpp enum="MFASYNC_CALLBACK_QUEUE" macro="MFASYNC_CALLBACK_QUEUE_.*" />
 

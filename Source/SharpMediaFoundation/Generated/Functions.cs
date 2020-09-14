@@ -5,6 +5,64 @@ namespace SharpMediaFoundation
     /// <summary>
     /// Functions
     /// </summary>
+    public static partial class EventAttributeKeys
+    {
+                ///<summary>Constant DoThinning</summary>
+        ///<unmanaged>MF_EVENT_DO_THINNING</unmanaged>
+        public static readonly MediaAttributeKey<bool> DoThinning = new MediaAttributeKey<bool>("321ea6fb-dad9-46e4-b31d-d2eae7090e30", "DoThinning");
+                ///<summary>Constant TransformContext</summary>
+        ///<unmanaged>MF_EVENT_MFT_CONTEXT</unmanaged>
+        public static readonly MediaAttributeKey<long> TransformContext = new MediaAttributeKey<long>("b7cd31f1-899e-4b41-80c9-26a896d32977", "TransformContext");
+                ///<summary>Constant TransformInputStreamId</summary>
+        ///<unmanaged>MF_EVENT_MFT_INPUT_STREAM_ID</unmanaged>
+        public static readonly MediaAttributeKey<int> TransformInputStreamId = new MediaAttributeKey<int>("f29c2cca-7ae6-42d2-b284-bf837cc874e2", "TransformInputStreamId");
+                ///<summary>Constant OutputNode</summary>
+        ///<unmanaged>MF_EVENT_OUTPUT_NODE</unmanaged>
+        public static readonly MediaAttributeKey<long> OutputNode = new MediaAttributeKey<long>("830f1a8b-c060-46dd-a801-1c95dec9b107", "OutputNode");
+                ///<summary>Constant PresentationTimeOffset</summary>
+        ///<unmanaged>MF_EVENT_PRESENTATION_TIME_OFFSET</unmanaged>
+        public static readonly MediaAttributeKey<long> PresentationTimeOffset = new MediaAttributeKey<long>("5ad914d1-9b45-4a8d-a2c0-81d1e50bfb07", "PresentationTimeOffset");
+                ///<summary>Constant ScrubSampleTime</summary>
+        ///<unmanaged>MF_EVENT_SCRUBSAMPLE_TIME</unmanaged>
+        public static readonly MediaAttributeKey<long> ScrubSampleTime = new MediaAttributeKey<long>("9ac712b3-dcb8-44d5-8d0c-37455a2782e3", "ScrubSampleTime");
+                ///<summary>Constant SessionCaps</summary>
+        ///<unmanaged>MF_EVENT_SESSIONCAPS</unmanaged>
+        public static readonly MediaAttributeKey<int> SessionCaps = new MediaAttributeKey<int>("7e5ebcd0-11b8-4abe-afad-10f6599a7f42", "SessionCaps");
+                ///<summary>Constant SessionCapsDelta</summary>
+        ///<unmanaged>MF_EVENT_SESSIONCAPS_DELTA</unmanaged>
+        public static readonly MediaAttributeKey<int> SessionCapsDelta = new MediaAttributeKey<int>("7e5ebcd1-11b8-4abe-afad-10f6599a7f42", "SessionCapsDelta");
+                ///<summary>Constant SourceActualStart</summary>
+        ///<unmanaged>MF_EVENT_SOURCE_ACTUAL_START</unmanaged>
+        public static readonly MediaAttributeKey<long> SourceActualStart = new MediaAttributeKey<long>("a8cc55a9-6b31-419f-845d-ffb351a2434b", "SourceActualStart");
+                ///<summary>Constant SourceCharacteristics</summary>
+        ///<unmanaged>MF_EVENT_SOURCE_CHARACTERISTICS</unmanaged>
+        public static readonly MediaAttributeKey<int> SourceCharacteristics = new MediaAttributeKey<int>("47db8490-8b22-4f52-afda-9ce1b2d3cfa8", "SourceCharacteristics");
+                ///<summary>Constant SourceCharacteristicsOld</summary>
+        ///<unmanaged>MF_EVENT_SOURCE_CHARACTERISTICS_OLD</unmanaged>
+        public static readonly MediaAttributeKey<int> SourceCharacteristicsOld = new MediaAttributeKey<int>("47db8491-8b22-4f52-afda-9ce1b2d3cfa8", "SourceCharacteristicsOld");
+                ///<summary>Constant SourceFakeStart</summary>
+        ///<unmanaged>MF_EVENT_SOURCE_FAKE_START</unmanaged>
+        public static readonly MediaAttributeKey<int> SourceFakeStart = new MediaAttributeKey<int>("a8cc55a7-6b31-419f-845d-ffb351a2434b", "SourceFakeStart");
+                ///<summary>Constant SourceProjectStart</summary>
+        ///<unmanaged>MF_EVENT_SOURCE_PROJECTSTART</unmanaged>
+        public static readonly MediaAttributeKey<long> SourceProjectStart = new MediaAttributeKey<long>("a8cc55a8-6b31-419f-845d-ffb351a2434b", "SourceProjectStart");
+                ///<summary>Constant SourceTopologyCanceled</summary>
+        ///<unmanaged>MF_EVENT_SOURCE_TOPOLOGY_CANCELED</unmanaged>
+        public static readonly MediaAttributeKey<int> SourceTopologyCanceled = new MediaAttributeKey<int>("db62f650-9a5e-4704-acf3-563bc6a73364", "SourceTopologyCanceled");
+                ///<summary>Constant StartPresentationTime</summary>
+        ///<unmanaged>MF_EVENT_START_PRESENTATION_TIME</unmanaged>
+        public static readonly MediaAttributeKey<long> StartPresentationTime = new MediaAttributeKey<long>("5ad914d0-9b45-4a8d-a2c0-81d1e50bfb07", "StartPresentationTime");
+                ///<summary>Constant StartPresentationTimeAtOutput</summary>
+        ///<unmanaged>MF_EVENT_START_PRESENTATION_TIME_AT_OUTPUT</unmanaged>
+        public static readonly MediaAttributeKey<long> StartPresentationTimeAtOutput = new MediaAttributeKey<long>("5ad914d2-9b45-4a8d-a2c0-81d1e50bfb07", "StartPresentationTimeAtOutput");
+                ///<summary>Constant TopologyStatus</summary>
+        ///<unmanaged>MF_EVENT_TOPOLOGY_STATUS</unmanaged>
+        public static readonly MediaAttributeKey<SharpMediaFoundation.TopologyStatus> TopologyStatus = new MediaAttributeKey<SharpMediaFoundation.TopologyStatus>("30c5018d-9a53-454b-ad9e-6d5f8fa7c43b", "TopologyStatus");
+    }
+
+    /// <summary>
+    /// Functions
+    /// </summary>
     public static partial class MediaFactory
     {
                 ///<summary>Constant Version</summary>
