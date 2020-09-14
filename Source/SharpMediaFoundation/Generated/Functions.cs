@@ -204,6 +204,64 @@ namespace SharpMediaFoundation
     /// <summary>
     /// Functions
     /// </summary>
+    public static partial class MediaServiceKeys
+    {
+                ///<summary>Constant MetadataProvider</summary>
+        ///<unmanaged>MF_METADATA_PROVIDER_SERVICE</unmanaged>
+        public static readonly System.Guid MetadataProvider = new System.Guid("db214084-58a4-4d2e-b84f-6f755b2f7a0d");
+                ///<summary>Constant PmpServer</summary>
+        ///<unmanaged>MF_PMP_SERVER_CONTEXT</unmanaged>
+        public static readonly System.Guid PmpServer = new System.Guid("2f00c910-d2cf-4278-8b6a-d077fac3a25f");
+                ///<summary>Constant Quality</summary>
+        ///<unmanaged>MF_QUALITY_SERVICES</unmanaged>
+        public static readonly System.Guid Quality = new System.Guid("b7e2be11-2f96-4640-b52c-282365bdf16c");
+                ///<summary>Constant RateControl</summary>
+        ///<unmanaged>MF_RATE_CONTROL_SERVICE</unmanaged>
+        public static readonly System.Guid RateControl = new System.Guid("866fa297-b802-4bf8-9dc9-5e3b6a9f53c9");
+                ///<summary>Constant RemoteProxy</summary>
+        ///<unmanaged>MF_REMOTE_PROXY</unmanaged>
+        public static readonly System.Guid RemoteProxy = new System.Guid("2f00c90e-d2cf-4278-8b6a-d077fac3a25f");
+                ///<summary>Constant Sami</summary>
+        ///<unmanaged>MF_SAMI_SERVICE</unmanaged>
+        public static readonly System.Guid Sami = new System.Guid("49a89ae7-b4d9-4ef2-aa5c-f65a3e05ae4e");
+                ///<summary>Constant SourcePresentationProvider</summary>
+        ///<unmanaged>MF_SOURCE_PRESENTATION_PROVIDER_SERVICE</unmanaged>
+        public static readonly System.Guid SourcePresentationProvider = new System.Guid("e002aadc-f4af-4ee5-9847-053edf840426");
+                ///<summary>Constant TimeCode</summary>
+        ///<unmanaged>MF_TIMECODE_SERVICE</unmanaged>
+        public static readonly System.Guid TimeCode = new System.Guid("a0d502a7-0eb3-4885-b1b9-9feb0d083454");
+                ///<summary>Constant TopologyNodeAttributeEditor</summary>
+        ///<unmanaged>MF_TOPONODE_ATTRIBUTE_EDITOR_SERVICE</unmanaged>
+        public static readonly System.Guid TopologyNodeAttributeEditor = new System.Guid("65656e1a-077f-4472-83ef-316f11d5087a");
+                ///<summary>Constant WrappedObject</summary>
+        ///<unmanaged>MF_WRAPPED_OBJECT</unmanaged>
+        public static readonly System.Guid WrappedObject = new System.Guid("2b182c4c-d6ac-49f4-8915-f71887db70cd");
+                ///<summary>Constant WorkQueue</summary>
+        ///<unmanaged>MF_WORKQUEUE_SERVICES</unmanaged>
+        public static readonly System.Guid WorkQueue = new System.Guid("8e37d489-41e0-413a-9068-287c886d8dda");
+                ///<summary>Constant SaveJob</summary>
+        ///<unmanaged>MFNET_SAVEJOB_SERVICE</unmanaged>
+        public static readonly System.Guid SaveJob = new System.Guid("b85a587f-3d02-4e52-9565-55d3ec1e7ff7");
+                ///<summary>Constant NetworkSourceStatistics</summary>
+        ///<unmanaged>MFNETSOURCE_STATISTICS_SERVICE</unmanaged>
+        public static readonly System.Guid NetworkSourceStatistics = new System.Guid("3cb1f275-0505-4c5d-ae71-0a556344efa1");
+                ///<summary>Constant AudioPolicy</summary>
+        ///<unmanaged>MR_AUDIO_POLICY_SERVICE</unmanaged>
+        public static readonly System.Guid AudioPolicy = new System.Guid("911fd737-6775-4ab0-a614-297862fdac88");
+                ///<summary>Constant CapturePolicyVolume</summary>
+        ///<unmanaged>MR_CAPTURE_POLICY_VOLUME_SERVICE</unmanaged>
+        public static readonly System.Guid CapturePolicyVolume = new System.Guid("24030acd-107a-4265-975c-414e33e65f2a");
+                ///<summary>Constant PolicyVolume</summary>
+        ///<unmanaged>MR_POLICY_VOLUME_SERVICE</unmanaged>
+        public static readonly System.Guid PolicyVolume = new System.Guid("1abaa2ac-9d3b-47c6-ab48-c59506de784d");
+                ///<summary>Constant StreamVolume</summary>
+        ///<unmanaged>MR_STREAM_VOLUME_SERVICE</unmanaged>
+        public static readonly System.Guid StreamVolume = new System.Guid("f8b5fa2f-32ef-46f5-b172-1321212fb2c4");
+    }
+
+    /// <summary>
+    /// Functions
+    /// </summary>
     public partial class ResultCode
     {
                 ///<summary>Constant DxgiDeviceNotInitialized</summary>

@@ -21,6 +21,8 @@
     <attach>MFPutWorkItem</attach>
     <attach>MFShutdown</attach>
     <attach>MFStartup</attach>
+
+    <!-- Event GUIDs -->
     <attach>MF_EVENT_DO_THINNING</attach>
     <attach>MF_EVENT_MFT_CONTEXT</attach>
     <attach>MF_EVENT_MFT_INPUT_STREAM_ID</attach>
@@ -55,6 +57,27 @@
     <attach>MFCreateMediaSession</attach>
     <attach>MFSESSION_SETTOPOLOGY_FLAGS</attach>
     <attach>MF_TOPOLOGY_TYPE</attach>
+
+    <!-- Media Service GUIDs -->
+    <attach>MF_METADATA_PROVIDER_SERVICE</attach>
+    <attach>MF_PMP_SERVER_CONTEXT</attach>
+    <attach>MF_QUALITY_SERVICES</attach>
+    <attach>MF_RATE_CONTROL_SERVICE</attach>
+    <attach>MF_REMOTE_PROXY</attach>
+    <attach>MF_SAMI_SERVICE</attach>
+    <attach>MF_SOURCE_PRESENTATION_PROVIDER_SERVICE</attach>
+    <attach>MF_TIMECODE_SERVICE</attach>
+    <attach>MF_TOPONODE_ATTRIBUTE_EDITOR_SERVICE</attach>
+    <attach>MF_WRAPPED_OBJECT</attach>
+    <attach>MF_WORKQUEUE_SERVICES</attach>
+    <attach>MFNET_SAVEJOB_SERVICE</attach>
+    <attach>MFNETSOURCE_STATISTICS_SERVICE</attach>
+    <attach>MR_AUDIO_POLICY_SERVICE</attach>
+    <attach>MR_BUFFER_SERVICE</attach>
+    <attach>MR_CAPTURE_POLICY_VOLUME_SERVICE</attach>
+    <attach>MR_POLICY_VOLUME_SERVICE</attach>
+    <attach>MR_STREAM_VOLUME_SERVICE</attach>
+    <attach>MR_VIDEO_ACCELERATION_SERVICE</attach>
   </include>
 
   <include file="mferror.h" attach="true" />
@@ -93,10 +116,8 @@
     // *****************************************************************
     -->
 
-    <!-- Classes to hold GUIDs -->
-    <create visibility="public static" class="EventAttributeKeys" />
-
     <!-- EventAttributeKeys -->
+    <create visibility="public static" class="EventAttributeKeys" />
     <const from-guid="MF_EVENT_DO_THINNING" class="SharpMediaFoundation.EventAttributeKeys" type="MediaAttributeKey&lt;bool&gt;" name="DoThinning">new MediaAttributeKey&lt;bool&gt;("$1", "DoThinning")</const>
     <const from-guid="MF_EVENT_MFT_CONTEXT" class="SharpMediaFoundation.EventAttributeKeys" type="MediaAttributeKey&lt;long&gt;" name="TransformContext">new MediaAttributeKey&lt;long&gt;("$1", "TransformContext")</const>
     <const from-guid="MF_EVENT_MFT_INPUT_STREAM_ID" class="SharpMediaFoundation.EventAttributeKeys" type="MediaAttributeKey&lt;int&gt;" name="TransformInputStreamId">new MediaAttributeKey&lt;int&gt;("$1", "TransformInputStreamId")</const>
@@ -114,6 +135,28 @@
     <const from-guid="MF_EVENT_START_PRESENTATION_TIME" class="SharpMediaFoundation.EventAttributeKeys" type="MediaAttributeKey&lt;long&gt;" name="StartPresentationTime">new MediaAttributeKey&lt;long&gt;("$1", "StartPresentationTime")</const>
     <const from-guid="MF_EVENT_START_PRESENTATION_TIME_AT_OUTPUT" class="SharpMediaFoundation.EventAttributeKeys" type="MediaAttributeKey&lt;long&gt;" name="StartPresentationTimeAtOutput">new MediaAttributeKey&lt;long&gt;("$1", "StartPresentationTimeAtOutput")</const>
     <const from-guid="MF_EVENT_TOPOLOGY_STATUS" class="SharpMediaFoundation.EventAttributeKeys" type="MediaAttributeKey&lt;SharpMediaFoundation.TopologyStatus&gt;" name="TopologyStatus">new MediaAttributeKey&lt;SharpMediaFoundation.TopologyStatus&gt;("$1", "TopologyStatus")</const>
+
+    <!-- MediaServiceKeys -->
+    <create visibility="public static" class="MediaServiceKeys" />
+    <const from-guid="MF_METADATA_PROVIDER_SERVICE" class='SharpMediaFoundation.MediaServiceKeys' type='System.Guid' name="MetadataProvider">new System.Guid("$1")</const>
+    <const from-guid="MF_PMP_SERVER_CONTEXT" class='SharpMediaFoundation.MediaServiceKeys' type='System.Guid' name="PmpServer">new System.Guid("$1")</const>
+    <const from-guid="MF_QUALITY_SERVICES" class='SharpMediaFoundation.MediaServiceKeys' type='System.Guid' name="Quality">new System.Guid("$1")</const>
+    <const from-guid="MF_RATE_CONTROL_SERVICE" class='SharpMediaFoundation.MediaServiceKeys' type='System.Guid' name="RateControl">new System.Guid("$1")</const>
+    <const from-guid="MF_REMOTE_PROXY" class='SharpMediaFoundation.MediaServiceKeys' type='System.Guid' name="RemoteProxy">new System.Guid("$1")</const>
+    <const from-guid="MF_SAMI_SERVICE" class='SharpMediaFoundation.MediaServiceKeys' type='System.Guid' name="Sami">new System.Guid("$1")</const>
+    <const from-guid="MF_SOURCE_PRESENTATION_PROVIDER_SERVICE" class='SharpMediaFoundation.MediaServiceKeys' type='System.Guid' name="SourcePresentationProvider">new System.Guid("$1")</const>
+    <const from-guid="MF_TIMECODE_SERVICE" class='SharpMediaFoundation.MediaServiceKeys' type='System.Guid' name="TimeCode">new System.Guid("$1")</const>
+    <const from-guid="MF_TOPONODE_ATTRIBUTE_EDITOR_SERVICE" class='SharpMediaFoundation.MediaServiceKeys' type='System.Guid' name="TopologyNodeAttributeEditor">new System.Guid("$1")</const>
+    <const from-guid="MF_WRAPPED_OBJECT" class='SharpMediaFoundation.MediaServiceKeys' type='System.Guid' name="WrappedObject">new System.Guid("$1")</const>
+    <const from-guid="MF_WORKQUEUE_SERVICES" class='SharpMediaFoundation.MediaServiceKeys' type='System.Guid' name="WorkQueue">new System.Guid("$1")</const>
+    <const from-guid="MFNET_SAVEJOB_SERVICE" class='SharpMediaFoundation.MediaServiceKeys' type='System.Guid' name="SaveJob">new System.Guid("$1")</const>
+    <const from-guid="MFNETSOURCE_STATISTICS_SERVICE" class='SharpMediaFoundation.MediaServiceKeys' type='System.Guid' name="NetworkSourceStatistics">new System.Guid("$1")</const>
+    <const from-guid="MR_AUDIO_POLICY_SERVICE" class='SharpMediaFoundation.MediaServiceKeys' type='System.Guid' name="AudioPolicy">new System.Guid("$1")</const>
+    <const from-guid="MR_BUFFER_SERVICE" class='SharpMediaFoundation.MediaServiceKeys' type='System.Guid' name="Buffer">new System.Guid("$1")</const>
+    <const from-guid="MR_CAPTURE_POLICY_VOLUME_SERVICE" class='SharpMediaFoundation.MediaServiceKeys' type='System.Guid' name="CapturePolicyVolume">new System.Guid("$1")</const>
+    <const from-guid="MR_POLICY_VOLUME_SERVICE" class='SharpMediaFoundation.MediaServiceKeys' type='System.Guid' name="PolicyVolume">new System.Guid("$1")</const>
+    <const from-guid="MR_STREAM_VOLUME_SERVICE" class='SharpMediaFoundation.MediaServiceKeys' type='System.Guid' name="StreamVolume">new System.Guid("$1")</const>
+    <const from-guid="MR_VIDEO_ACCELERATION_SERVICE" class='SharpMediaFoundation.MediaServiceKeys' type='System.Guid' name="VideoAcceleration">new System.Guid("$1")</const>
 
     <!-- MediaFactory -->
     <create class="SharpMediaFoundation.MediaFactory" visibility="public static" />
