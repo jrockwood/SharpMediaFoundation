@@ -57,6 +57,8 @@
     <attach>MFCLOCK_PROPERTIES</attach>
     <attach>MFCLOCK_STATE</attach>
     <attach>MFCreateMediaSession</attach>
+    <attach>MFCreateMFByteStreamOnStream</attach>
+    <attach>MFCreateMFByteStreamOnStreamEx</attach>
     <attach>MFCreateSourceResolver</attach>
     <attach>MFGetService</attach>
     <attach>MF_OBJECT_TYPE</attach>
@@ -104,6 +106,7 @@
     <attach>MF_ATTRIBUTES_MATCH_TYPE</attach>
     <attach>MFASYNC_.*_CALLBACK</attach>
     <attach>MFASYNC_CALLBACK_QUEUE</attach>
+    <attach>MFBYTESTREAM_SEEK_FLAG_CANCEL_PENDING_IO</attach>
     <attach>MFBYTESTREAM_SEEK_ORIGIN</attach>
   </include>
 
@@ -124,6 +127,13 @@
     // MediaFoundation Attributes
     // *****************************************************************
     -->
+
+    <!-- Async Callback Enums-->
+    <create-cpp enum="MFASYNC_CALLBACK_FLAGS" macro="MFASYNC_.*_CALLBACK" />
+    <create-cpp enum="MFASYNC_CALLBACK_QUEUE" macro="MFASYNC_CALLBACK_QUEUE_.*" />
+
+    <!-- ByteStreamSeekFlags -->
+    <create-cpp enum="MFBYTESTREAM_SEEK_FLAGS" macro="MFBYTESTREAM_SEEK_FLAG_.*" />
 
     <!-- EventAttributeKeys -->
     <create visibility="public static" class="EventAttributeKeys" />
@@ -174,10 +184,6 @@
     <!-- ResultCode -->
     <create class="ResultCode" visibility="public" />
     <const from-macro="MF_E_(.*)" type="SharpGen.Runtime.ResultDescriptor" cpp-type="int" name="$1" class="SharpMediaFoundation.ResultCode" visibility="public static readonly">new SharpGen.Runtime.ResultDescriptor($1, "$3", "$0", "$2")</const>
-
-    <!-- Async Callback Enums-->
-    <create-cpp enum="MFASYNC_CALLBACK_FLAGS" macro="MFASYNC_.*_CALLBACK" />
-    <create-cpp enum="MFASYNC_CALLBACK_QUEUE" macro="MFASYNC_CALLBACK_QUEUE_.*" />
 
     <define enum="SharpMediaFoundation.MediaEventTypes" sizeof="4" />
     <context-clear />
@@ -267,6 +273,9 @@
     <map enum="MFASYNC_CALLBACK_FLAGS" name="AsyncCallbackFlags" none="true" flags="true" />
     <map enum-item="MFASYNC_(.*)_CALLBACK" name-tmp="$1" />
     <remove enum-item="MFASYNC_CALLBACK_QUEUE_PRIVATE_MASK" />
+
+    <!-- ByteStreamSeekFlags -->
+    <map enum="MFBYTESTREAM_SEEK_FLAGS" name="ByteStreamSeekFlags" flags="true" />
 
     <!-- ByteStreamSeekOrigin -->
     <map enum-item="mso(.*)" name-tmp="$1" />
@@ -377,6 +386,7 @@
     <map interface="IMFByteStream" name="IByteStream" callback-visibility="public" callback="true" callback-dual="true" callback-name="ByteStream" />
     <map param="IMFByteStream::*.*::pb" type="void" attribute="in" />
     <map param="IMFByteStream::Begin[RW].*::punkState" type="void" />
+    <map param="IMFByteStream::Seek::dwSeekFlags" type="MFBYTESTREAM_SEEK_FLAGS" />
 
     <!-- IMFCollection -->
     <map param="IMFCollection::GetElement::ppUnkElement" return="true" />
@@ -413,8 +423,12 @@
     <!-- MFCreateMediaSession -->
     <map function="MFCreateMediaSession" dll='"mf.dll"' />
 
+    <!-- MFCreateMFByteStreamOnStream -->
+    <map param="MFCreateMFByteStreamOnStream::ppByteStream" attribute="out fast" />
+    <map param="MFCreateMFByteStreamOnStreamEx::ppByteStream" attribute="out fast" />
+
     <!-- MFCreateSourceResolver -->
-    <map function="MFCreateSourceResolver" dll='"mfplat.dll"' visibility="internal" />
+    <map function="MFCreateSourceResolver" dll='"Mfplat.dll"' visibility="internal" />
     <map param="MFCreateSourceResolver::ppISourceResolver" attribute="out fast" />
 
     <!-- MFGetService -->

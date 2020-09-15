@@ -135,6 +135,27 @@ namespace SharpMediaFoundation
         /// <unmanaged-short>MF_ATTRIBUTE_IUNKNOWN</unmanaged-short>
         Iunknown = unchecked ((System.Int32)(13))}
 
+    [System.FlagsAttribute]
+    /// <summary>
+    /// No documentation.
+    /// </summary>
+    /// <unmanaged>MFBYTESTREAM_SEEK_FLAGS</unmanaged>
+    /// <unmanaged-short>MFBYTESTREAM_SEEK_FLAGS</unmanaged-short>
+    public enum ByteStreamSeekFlags : System.Int32
+    {
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <unmanaged>MFBYTESTREAM_SEEK_FLAG_CANCEL_PENDING_IO</unmanaged>
+        /// <unmanaged-short>MFBYTESTREAM_SEEK_FLAG_CANCEL_PENDING_IO</unmanaged-short>
+        CancelPendingIo = unchecked ((System.Int32)(1)),
+        /// <summary>
+        /// None
+        /// </summary>
+        /// <unmanaged>None</unmanaged>
+        /// <unmanaged-short>None</unmanaged-short>
+        None = unchecked ((System.Int32)(0))}
+
     /// <summary>
     /// No documentation.
     /// </summary>

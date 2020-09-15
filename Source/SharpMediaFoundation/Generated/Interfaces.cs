@@ -479,11 +479,11 @@ namespace SharpMediaFoundation
         /// <returns>No documentation.</returns>
         /// <unmanaged>HRESULT IMFByteStream::Seek([In] MFBYTESTREAM_SEEK_ORIGIN SeekOrigin,[In] longlong llSeekOffset,[In] DWORD dwSeekFlags,[Out] unsigned longlong* pqwCurrentPosition)</unmanaged>
         /// <unmanaged-short>IMFByteStream::Seek</unmanaged-short>
-        internal unsafe void Seek_(SharpMediaFoundation.ByteStreamSeekOrigin seekOrigin, System.Int64 llSeekOffset, System.Int32 seekFlags, out System.UInt64 qwCurrentPositionRef)
+        internal unsafe void Seek_(SharpMediaFoundation.ByteStreamSeekOrigin seekOrigin, System.Int64 llSeekOffset, SharpMediaFoundation.ByteStreamSeekFlags seekFlags, out System.UInt64 qwCurrentPositionRef)
         {
             SharpGen.Runtime.Result __result__;
             fixed (void *qwCurrentPositionRef_ = &qwCurrentPositionRef)
-                __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, unchecked ((System.Int32)seekOrigin), llSeekOffset, seekFlags, qwCurrentPositionRef_, (*(void ***)this._nativePointer)[15]);
+                __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, unchecked ((System.Int32)seekOrigin), llSeekOffset, unchecked ((System.Int32)seekFlags), qwCurrentPositionRef_, (*(void ***)this._nativePointer)[15]);
             __result__.CheckError();
         }
 

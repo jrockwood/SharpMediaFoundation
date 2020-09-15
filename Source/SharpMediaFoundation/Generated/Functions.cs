@@ -215,7 +215,7 @@ namespace SharpMediaFoundation
             __result__.CheckError();
         }
 
-        [System.Runtime.InteropServices.DllImportAttribute("mfplat.dll", EntryPoint = "MFCreateSourceResolver", CallingConvention = System.Runtime.InteropServices.CallingConvention.StdCall)]
+        [System.Runtime.InteropServices.DllImportAttribute("Mfplat.dll", EntryPoint = "MFCreateSourceResolver", CallingConvention = System.Runtime.InteropServices.CallingConvention.StdCall)]
         private unsafe static extern int MFCreateSourceResolver_(void *param0);
         /// <summary>
         /// No documentation.
@@ -240,6 +240,50 @@ namespace SharpMediaFoundation
 
         [System.Runtime.InteropServices.DllImportAttribute("mf.dll", EntryPoint = "MFGetService", CallingConvention = System.Runtime.InteropServices.CallingConvention.StdCall)]
         private unsafe static extern int MFGetService_(void *param0, void *param1, void *param2, void *param3);
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <param name = "streamRef">No documentation.</param>
+        /// <param name = "byteStreamOut">No documentation.</param>
+        /// <returns>No documentation.</returns>
+        /// <unmanaged>HRESULT MFCreateMFByteStreamOnStream([In] IStream* pStream,[Out, Fast] IMFByteStream** ppByteStream)</unmanaged>
+        /// <unmanaged-short>MFCreateMFByteStreamOnStream</unmanaged-short>
+        public static unsafe void CreateMFByteStreamOnStream(SharpGen.Runtime.Win32.IStream streamRef, SharpMediaFoundation.ByteStream byteStreamOut)
+        {
+            System.IntPtr streamRef_ = System.IntPtr.Zero;
+            System.IntPtr byteStreamOut_ = System.IntPtr.Zero;
+            SharpGen.Runtime.Result __result__;
+            streamRef_ = SharpGen.Runtime.CppObject.ToCallbackPtr<SharpGen.Runtime.Win32.IStream>(streamRef);
+            __result__ = MFCreateMFByteStreamOnStream_((void *)streamRef_, &byteStreamOut_);
+            (byteStreamOut).NativePointer = byteStreamOut_;
+            System.GC.KeepAlive(streamRef);
+            __result__.CheckError();
+        }
+
+        [System.Runtime.InteropServices.DllImportAttribute("Mfplat.dll", EntryPoint = "MFCreateMFByteStreamOnStream", CallingConvention = System.Runtime.InteropServices.CallingConvention.StdCall)]
+        private unsafe static extern int MFCreateMFByteStreamOnStream_(void *param0, void *param1);
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <param name = "unkStreamRef">No documentation.</param>
+        /// <param name = "byteStreamOut">No documentation.</param>
+        /// <returns>No documentation.</returns>
+        /// <unmanaged>HRESULT MFCreateMFByteStreamOnStreamEx([In] IUnknown* punkStream,[Out, Fast] IMFByteStream** ppByteStream)</unmanaged>
+        /// <unmanaged-short>MFCreateMFByteStreamOnStreamEx</unmanaged-short>
+        public static unsafe void CreateMFByteStreamOnStreamEx(SharpGen.Runtime.IUnknown unkStreamRef, SharpMediaFoundation.ByteStream byteStreamOut)
+        {
+            System.IntPtr unkStreamRef_ = System.IntPtr.Zero;
+            System.IntPtr byteStreamOut_ = System.IntPtr.Zero;
+            SharpGen.Runtime.Result __result__;
+            unkStreamRef_ = SharpGen.Runtime.CppObject.ToCallbackPtr<SharpGen.Runtime.IUnknown>(unkStreamRef);
+            __result__ = MFCreateMFByteStreamOnStreamEx_((void *)unkStreamRef_, &byteStreamOut_);
+            (byteStreamOut).NativePointer = byteStreamOut_;
+            System.GC.KeepAlive(unkStreamRef);
+            __result__.CheckError();
+        }
+
+        [System.Runtime.InteropServices.DllImportAttribute("Mfplat.dll", EntryPoint = "MFCreateMFByteStreamOnStreamEx", CallingConvention = System.Runtime.InteropServices.CallingConvention.StdCall)]
+        private unsafe static extern int MFCreateMFByteStreamOnStreamEx_(void *param0, void *param1);
     }
 
     /// <summary>
