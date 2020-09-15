@@ -47,6 +47,7 @@
     <attach>IMFAudioStreamVolume</attach>
     <attach>IMFClock</attach>
     <attach>IMFClockStateSink</attach>
+    <attach>IMFGetService</attach>
     <attach>IMFMediaSession</attach>
     <attach>IMFPresentationClock</attach>
     <attach>IMFPresentationTimeSource</attach>
@@ -55,6 +56,7 @@
     <attach>MFCLOCK_PROPERTIES</attach>
     <attach>MFCLOCK_STATE</attach>
     <attach>MFCreateMediaSession</attach>
+    <attach>MFGetService</attach>
     <attach>MFSESSION_SETTOPOLOGY_FLAGS</attach>
     <attach>MF_TOPOLOGY_TYPE</attach>
 
@@ -356,6 +358,10 @@
     <!-- IMFClockStateSink -->
     <map interface="IMFClockStateSink" callback="true" />
 
+    <!-- IMFGetService -->
+    <map interface="IMFGetService" name="ServiceProvider" />
+    <map param="IMFGetService::GetService::ppvObject" return="true" />
+
     <!-- IMFMediaEvent -->
     <map param="IMFMediaEvent::GetType::pmet" type="MEDIA_EVENT_TYPE" />
 
@@ -375,7 +381,12 @@
     <map function="MF(.*)" name-tmp="$1" />
     <map function="MF.*" dll='"Mfplat.dll"' group="SharpMediaFoundation.MediaFactory" />
 
+    <!-- MFCreateMediaSession -->
     <map function="MFCreateMediaSession" dll='"mf.dll"' />
+
+    <!-- MFGetService -->
+    <map function="MFGetService" dll='"mf.dll"' />
+    <map param="MFGetService::ppvObject" return="true" />
 
     <context-clear />
   </mapping>

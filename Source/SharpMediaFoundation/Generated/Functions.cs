@@ -199,6 +199,29 @@ namespace SharpMediaFoundation
 
         [System.Runtime.InteropServices.DllImportAttribute("mf.dll", EntryPoint = "MFCreateMediaSession", CallingConvention = System.Runtime.InteropServices.CallingConvention.StdCall)]
         private unsafe static extern int MFCreateMediaSession_(void *param0, void *param1);
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <param name = "unkObjectRef">No documentation.</param>
+        /// <param name = "guidService">No documentation.</param>
+        /// <param name = "riid">No documentation.</param>
+        /// <returns>No documentation.</returns>
+        /// <unmanaged>HRESULT MFGetService([In] IUnknown* punkObject,[In] const GUID&amp; guidService,[In] const GUID&amp; riid,[Out] void** ppvObject)</unmanaged>
+        /// <unmanaged-short>MFGetService</unmanaged-short>
+        public static unsafe System.IntPtr GetService(SharpGen.Runtime.IUnknown unkObjectRef, System.Guid guidService, System.Guid riid)
+        {
+            System.IntPtr unkObjectRef_ = System.IntPtr.Zero;
+            System.IntPtr vObjectOut;
+            SharpGen.Runtime.Result __result__;
+            unkObjectRef_ = SharpGen.Runtime.CppObject.ToCallbackPtr<SharpGen.Runtime.IUnknown>(unkObjectRef);
+            __result__ = MFGetService_((void *)unkObjectRef_, &guidService, &riid, &vObjectOut);
+            System.GC.KeepAlive(unkObjectRef);
+            __result__.CheckError();
+            return vObjectOut;
+        }
+
+        [System.Runtime.InteropServices.DllImportAttribute("mf.dll", EntryPoint = "MFGetService", CallingConvention = System.Runtime.InteropServices.CallingConvention.StdCall)]
+        private unsafe static extern int MFGetService_(void *param0, void *param1, void *param2, void *param3);
     }
 
     /// <summary>

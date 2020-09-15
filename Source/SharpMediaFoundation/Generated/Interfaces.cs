@@ -1710,6 +1710,32 @@ namespace SharpMediaFoundation
         }
     }
 
+    [System.Runtime.InteropServices.GuidAttribute("fa993888-4383-415a-a930-dd472a8cf6f7")]
+    public partial class ServiceProvider : SharpGen.Runtime.ComObject
+    {
+        public ServiceProvider(System.IntPtr nativePtr): base (nativePtr)
+        {
+        }
+
+        public static explicit operator ServiceProvider(System.IntPtr nativePtr) => nativePtr == System.IntPtr.Zero ? null : new ServiceProvider(nativePtr);
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <param name = "guidService">No documentation.</param>
+        /// <param name = "riid">No documentation.</param>
+        /// <returns>No documentation.</returns>
+        /// <unmanaged>HRESULT IMFGetService::GetService([In] const GUID&amp; guidService,[In] const GUID&amp; riid,[Out] void** ppvObject)</unmanaged>
+        /// <unmanaged-short>IMFGetService::GetService</unmanaged-short>
+        public unsafe System.IntPtr GetService(System.Guid guidService, System.Guid riid)
+        {
+            System.IntPtr vObjectOut;
+            SharpGen.Runtime.Result __result__;
+            __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, &guidService, &riid, &vObjectOut, (*(void ***)this._nativePointer)[3]);
+            __result__.CheckError();
+            return vObjectOut;
+        }
+    }
+
     [System.Runtime.InteropServices.GuidAttribute("83CF873A-F6DA-4bc8-823F-BACFD55DC433")]
     public partial class Topology : SharpMediaFoundation.MediaAttributes
     {
