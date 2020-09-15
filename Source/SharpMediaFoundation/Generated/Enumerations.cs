@@ -138,6 +138,26 @@ namespace SharpMediaFoundation
     /// <summary>
     /// No documentation.
     /// </summary>
+    /// <unmanaged>MFBYTESTREAM_SEEK_ORIGIN</unmanaged>
+    /// <unmanaged-short>MFBYTESTREAM_SEEK_ORIGIN</unmanaged-short>
+    public enum ByteStreamSeekOrigin : System.Int32
+    {
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <unmanaged>msoBegin</unmanaged>
+        /// <unmanaged-short>msoBegin</unmanaged-short>
+        Begin = unchecked ((System.Int32)(0)),
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <unmanaged>msoCurrent</unmanaged>
+        /// <unmanaged-short>msoCurrent</unmanaged-short>
+        Current = unchecked ((System.Int32)(1))}
+
+    /// <summary>
+    /// No documentation.
+    /// </summary>
     /// <unmanaged>MFCLOCK_STATE</unmanaged>
     /// <unmanaged-short>MFCLOCK_STATE</unmanaged-short>
     public enum ClockState : System.Int32
@@ -889,6 +909,32 @@ namespace SharpMediaFoundation
         /// <unmanaged-short>MEDeviceThermalStateChanged</unmanaged-short>
         DeviceThermalStateChanged = unchecked ((System.Int32)(950))}
 
+    /// <summary>
+    /// No documentation.
+    /// </summary>
+    /// <unmanaged>MF_OBJECT_TYPE</unmanaged>
+    /// <unmanaged-short>MF_OBJECT_TYPE</unmanaged-short>
+    public enum ObjectType : System.Int32
+    {
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <unmanaged>MF_OBJECT_MEDIASOURCE</unmanaged>
+        /// <unmanaged-short>MF_OBJECT_MEDIASOURCE</unmanaged-short>
+        MediaSource = unchecked ((System.Int32)(0)),
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <unmanaged>MF_OBJECT_BYTESTREAM</unmanaged>
+        /// <unmanaged-short>MF_OBJECT_BYTESTREAM</unmanaged-short>
+        ByteStream = unchecked ((System.Int32)(1)),
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <unmanaged>MF_OBJECT_INVALID</unmanaged>
+        /// <unmanaged-short>MF_OBJECT_INVALID</unmanaged-short>
+        Invalid = unchecked ((System.Int32)(2))}
+
     [System.FlagsAttribute]
     /// <summary>
     /// No documentation.
@@ -915,6 +961,87 @@ namespace SharpMediaFoundation
         /// <unmanaged>MFSESSION_SETTOPOLOGY_CLEAR_CURRENT</unmanaged>
         /// <unmanaged-short>MFSESSION_SETTOPOLOGY_CLEAR_CURRENT</unmanaged-short>
         ClearCurrent = unchecked ((System.Int32)(4)),
+        /// <summary>
+        /// None
+        /// </summary>
+        /// <unmanaged>None</unmanaged>
+        /// <unmanaged-short>None</unmanaged-short>
+        None = unchecked ((System.Int32)(0))}
+
+    [System.FlagsAttribute]
+    /// <summary>
+    /// No documentation.
+    /// </summary>
+    /// <unmanaged>__MIDL___MIDL_itf_mfidl_0000_0001_0001</unmanaged>
+    /// <unmanaged-short>__MIDL___MIDL_itf_mfidl_0000_0001_0001</unmanaged-short>
+    public enum SourceResolverFlags : System.Int32
+    {
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <unmanaged>MF_RESOLUTION_MEDIASOURCE</unmanaged>
+        /// <unmanaged-short>MF_RESOLUTION_MEDIASOURCE</unmanaged-short>
+        MediaSource = unchecked ((System.Int32)(1)),
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <unmanaged>MF_RESOLUTION_BYTESTREAM</unmanaged>
+        /// <unmanaged-short>MF_RESOLUTION_BYTESTREAM</unmanaged-short>
+        ByteStream = unchecked ((System.Int32)(2)),
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <unmanaged>MF_RESOLUTION_CONTENT_DOES_NOT_HAVE_TO_MATCH_EXTENSION_OR_MIME_TYPE</unmanaged>
+        /// <unmanaged-short>MF_RESOLUTION_CONTENT_DOES_NOT_HAVE_TO_MATCH_EXTENSION_OR_MIME_TYPE</unmanaged-short>
+        ContentDoesNotHaveToMatchExtensionOrMimeType = unchecked ((System.Int32)(16)),
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <unmanaged>MF_RESOLUTION_KEEP_BYTE_STREAM_ALIVE_ON_FAIL</unmanaged>
+        /// <unmanaged-short>MF_RESOLUTION_KEEP_BYTE_STREAM_ALIVE_ON_FAIL</unmanaged-short>
+        KeepByteStreamAliveOnFail = unchecked ((System.Int32)(32)),
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <unmanaged>MF_RESOLUTION_DISABLE_LOCAL_PLUGINS</unmanaged>
+        /// <unmanaged-short>MF_RESOLUTION_DISABLE_LOCAL_PLUGINS</unmanaged-short>
+        DisableLocalPlugins = unchecked ((System.Int32)(64)),
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <unmanaged>MF_RESOLUTION_PLUGIN_CONTROL_POLICY_APPROVED_ONLY</unmanaged>
+        /// <unmanaged-short>MF_RESOLUTION_PLUGIN_CONTROL_POLICY_APPROVED_ONLY</unmanaged-short>
+        PluginControlPolicyApprovedOnly = unchecked ((System.Int32)(128)),
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <unmanaged>MF_RESOLUTION_PLUGIN_CONTROL_POLICY_WEB_ONLY</unmanaged>
+        /// <unmanaged-short>MF_RESOLUTION_PLUGIN_CONTROL_POLICY_WEB_ONLY</unmanaged-short>
+        PluginControlPolicyWebOnly = unchecked ((System.Int32)(256)),
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <unmanaged>MF_RESOLUTION_PLUGIN_CONTROL_POLICY_WEB_ONLY_EDGEMODE</unmanaged>
+        /// <unmanaged-short>MF_RESOLUTION_PLUGIN_CONTROL_POLICY_WEB_ONLY_EDGEMODE</unmanaged-short>
+        PluginControlPolicyWebOnlyEdgeMode = unchecked ((System.Int32)(512)),
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <unmanaged>MF_RESOLUTION_ENABLE_STORE_PLUGINS</unmanaged>
+        /// <unmanaged-short>MF_RESOLUTION_ENABLE_STORE_PLUGINS</unmanaged-short>
+        EnableStorePlugins = unchecked ((System.Int32)(1024)),
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <unmanaged>MF_RESOLUTION_READ</unmanaged>
+        /// <unmanaged-short>MF_RESOLUTION_READ</unmanaged-short>
+        Read = unchecked ((System.Int32)(65536)),
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <unmanaged>MF_RESOLUTION_WRITE</unmanaged>
+        /// <unmanaged-short>MF_RESOLUTION_WRITE</unmanaged-short>
+        Write = unchecked ((System.Int32)(131072)),
         /// <summary>
         /// None
         /// </summary>

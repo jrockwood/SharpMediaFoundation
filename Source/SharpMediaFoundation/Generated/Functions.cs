@@ -202,6 +202,24 @@ namespace SharpMediaFoundation
         /// <summary>
         /// No documentation.
         /// </summary>
+        /// <param name = "iSourceResolverOut">No documentation.</param>
+        /// <returns>No documentation.</returns>
+        /// <unmanaged>HRESULT MFCreateSourceResolver([Out, Fast] IMFSourceResolver** ppISourceResolver)</unmanaged>
+        /// <unmanaged-short>MFCreateSourceResolver</unmanaged-short>
+        internal static unsafe void CreateSourceResolver(SharpMediaFoundation.SourceResolver iSourceResolverOut)
+        {
+            System.IntPtr iSourceResolverOut_ = System.IntPtr.Zero;
+            SharpGen.Runtime.Result __result__;
+            __result__ = MFCreateSourceResolver_(&iSourceResolverOut_);
+            (iSourceResolverOut).NativePointer = iSourceResolverOut_;
+            __result__.CheckError();
+        }
+
+        [System.Runtime.InteropServices.DllImportAttribute("mfplat.dll", EntryPoint = "MFCreateSourceResolver", CallingConvention = System.Runtime.InteropServices.CallingConvention.StdCall)]
+        private unsafe static extern int MFCreateSourceResolver_(void *param0);
+        /// <summary>
+        /// No documentation.
+        /// </summary>
         /// <param name = "unkObjectRef">No documentation.</param>
         /// <param name = "guidService">No documentation.</param>
         /// <param name = "riid">No documentation.</param>

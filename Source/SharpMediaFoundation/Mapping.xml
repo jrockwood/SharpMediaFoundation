@@ -51,12 +51,17 @@
     <attach>IMFMediaSession</attach>
     <attach>IMFPresentationClock</attach>
     <attach>IMFPresentationTimeSource</attach>
+    <attach>IMFSourceResolver</attach>
     <attach>IMFTopology</attach>
     <attach>IMFTopologyNode</attach>
     <attach>MFCLOCK_PROPERTIES</attach>
     <attach>MFCLOCK_STATE</attach>
     <attach>MFCreateMediaSession</attach>
+    <attach>MFCreateSourceResolver</attach>
     <attach>MFGetService</attach>
+    <attach>MF_OBJECT_TYPE</attach>
+    <!-- The following is the MF_RESOLUTION_* enum -->
+    <attach>__MIDL___MIDL_itf_mfidl_0000_0001_0001</attach>
     <attach>MFSESSION_SETTOPOLOGY_FLAGS</attach>
     <attach>MF_TOPOLOGY_TYPE</attach>
 
@@ -88,6 +93,7 @@
     <attach>IMFAsyncCallback</attach>
     <attach>IMFAsyncResult</attach>
     <attach>IMFAttributes</attach>
+    <attach>IMFByteStream</attach>
     <attach>IMFCollection</attach>
     <attach>IMFMediaEvent</attach>
     <attach>IMFMediaEventGenerator</attach>
@@ -98,6 +104,7 @@
     <attach>MF_ATTRIBUTES_MATCH_TYPE</attach>
     <attach>MFASYNC_.*_CALLBACK</attach>
     <attach>MFASYNC_CALLBACK_QUEUE</attach>
+    <attach>MFBYTESTREAM_SEEK_ORIGIN</attach>
   </include>
 
   <context-set id="mediafoundation-all">
@@ -197,6 +204,7 @@
     <short name="CACHESTREAM">CacheStream</short>
     <short name="CANNOTCONNECT">CannotConnect</short>
     <short name="CONTAINERTYPE">ContainerType</short>
+    <short name="EDGEMODE">EdgeMode</short>
     <short name="EXATTRIBUTE">ExAttribute</short>
     <short name="EXTENDEDPROP">ExtendedProp</short>
     <short name="INDEXNOTLOADED">IndexNotLoaded</short>
@@ -210,8 +218,10 @@
     <short name="KEYFRAME">KeyFrame</short>
     <short name="MANUALSS">ManualSs</short>
     <short name="MEDIAPROC">MediaProc</short>
+    <short name="MEDIASOURCE">MediaSource</short>
     <short name="MEDIATYPE">MediaType</short>
     <short name="MGR">Manager</short>
+    <short name="NORESOLUTION">NoResolution</short>
     <short name="NOTACCEPTING">NotAccepting</short>
     <short name="NOTMP3">NotMp3</short>
     <short name="NOTSUPPORTED">NotSupported</short>
@@ -227,6 +237,7 @@
     <short name="SAFEMODE">SafeMode</short>
     <short name="SAMPLEALLOCATOR">SampleAllocator</short>
     <short name="SOURCERESOLVER">SourceResolver</short>
+    <short name="SOURCESTREAM">SourceStream</short>
     <short name="SPKR">Speaker</short>
     <short name="STREAMGROUPS">StreamGroups</short>
     <short name="STREAMID">StreamId</short>
@@ -252,23 +263,33 @@
     -->
     <map enum="MF(.*)" name-tmp="$1" />
 
+    <!-- AsyncCallbackFlags -->
+    <map enum="MFASYNC_CALLBACK_FLAGS" name="AsyncCallbackFlags" none="true" flags="true" />
+    <map enum-item="MFASYNC_(.*)_CALLBACK" name-tmp="$1" />
+    <remove enum-item="MFASYNC_CALLBACK_QUEUE_PRIVATE_MASK" />
+
+    <!-- ByteStreamSeekOrigin -->
+    <map enum-item="mso(.*)" name-tmp="$1" />
+
+    <!-- MediaEventTypes -->
     <map enum="#MEUnknown" name="MediaEventTypes" />
     <map enum-item="ME(.*)" name-tmp="$1" />
     <map enum-item="MEWMDRM(.*)" name-tmp="WindowsMediaDrm$1" />
     <remove enum-item="MEReservedMax" />
 
-    <map enum-item="MF_TOPOLOGY_SOURCESTREAM_NODE" name="SourceStreamNode" />
+    <!-- SessionSetTopologyFlags -->
+    <map enum="MFSESSION_SETTOPOLOGY_FLAGS" name="SessionSetTopologyFlags" />
+
+    <!-- SourceResolverFlags -->
+    <map enum="#MF_RESOLUTION_MEDIASOURCE" name="SourceResolverFlags" none="true" flags="true" />
+    <map enum-item="MF_RESOLUTION_(.*)" name-tmp="$1" />
+
+    <!-- TopologyStatus -->
     <map enum="MF_TOPOSTATUS" name="TopologyStatus" />
 
-    <map enum="MFASYNC_CALLBACK_FLAGS" name="AsyncCallbackFlags" none="true" flags="true" />
-    <map enum-item="MFASYNC_(.*)_CALLBACK" name-tmp="$1" />
-    <remove enum-item="MFASYNC_CALLBACK_QUEUE_PRIVATE_MASK" />
-
+    <!-- WorkQueueType -->
     <map enum="MFASYNC_CALLBACK_QUEUE" name="WorkQueueType" />
     <map enum-item="MFASYNC_CALLBACK_QUEUE_(.*)" name-tmp="$1" />
-
-    <map enum="MFSESSION_SETTOPOLOGY_FLAGS" name="SessionSetTopologyFlags" />
-    <map enum-item="MFSESSION_SETTOPOLOGY_NORESOLUTION" name="NoResolution" />
 
     <!--
     // *****************************************************************
@@ -352,6 +373,11 @@
     <map method="IMFAttributes::SetUnknown" name="Set" visibility="internal" />
     <map method="IMFAttributes::GetItemByIndex" visibility="internal" />
 
+    <!-- IMFByteStream -->
+    <map interface="IMFByteStream" name="IByteStream" callback-visibility="public" callback="true" callback-dual="true" callback-name="ByteStream" />
+    <map param="IMFByteStream::*.*::pb" type="void" attribute="in" />
+    <map param="IMFByteStream::Begin[RW].*::punkState" type="void" />
+
     <!-- IMFCollection -->
     <map param="IMFCollection::GetElement::ppUnkElement" return="true" />
 
@@ -373,6 +399,9 @@
     <!-- IMFMediaSession -->
     <map param="IMFMediaSession::SetTopology::dwSetTopologyFlags" type="MFSESSION_SETTOPOLOGY_FLAGS" />
 
+    <!-- IMFSourceResolver -->
+    <map method="IMFSourceResolver::CreateObjectFromURL" visibility="internal" />
+
     <!--
     // *****************************************************************
     // MediaFoundation Functions
@@ -383,6 +412,10 @@
 
     <!-- MFCreateMediaSession -->
     <map function="MFCreateMediaSession" dll='"mf.dll"' />
+
+    <!-- MFCreateSourceResolver -->
+    <map function="MFCreateSourceResolver" dll='"mfplat.dll"' visibility="internal" />
+    <map param="MFCreateSourceResolver::ppISourceResolver" attribute="out fast" />
 
     <!-- MFGetService -->
     <map function="MFGetService" dll='"mf.dll"' />

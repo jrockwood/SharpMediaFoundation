@@ -200,6 +200,320 @@ namespace SharpMediaFoundation
         }
     }
 
+    [System.Runtime.InteropServices.GuidAttribute("ad4c1b00-4bf7-422f-9175-756693d9130d")]
+    public partial class ByteStream : SharpGen.Runtime.ComObject, SharpMediaFoundation.IByteStream
+    {
+        public ByteStream(System.IntPtr nativePtr): base (nativePtr)
+        {
+        }
+
+        public static explicit operator ByteStream(System.IntPtr nativePtr) => nativePtr == System.IntPtr.Zero ? null : new ByteStream(nativePtr);
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <unmanaged>GetCapabilities</unmanaged>
+        /// <unmanaged-short>GetCapabilities</unmanaged-short>
+        public System.Int32 Capabilities_
+        {
+            get
+            {
+                GetCapabilities_(out var __output__);
+                return __output__;
+            }
+        }
+
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <unmanaged>GetLength / SetLength</unmanaged>
+        /// <unmanaged-short>GetLength</unmanaged-short>
+        public System.UInt64 Length_
+        {
+            get
+            {
+                GetLength_(out var __output__);
+                return __output__;
+            }
+
+            set => SetLength_(value);
+        }
+
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <unmanaged>GetCurrentPosition / SetCurrentPosition</unmanaged>
+        /// <unmanaged-short>GetCurrentPosition</unmanaged-short>
+        public System.UInt64 CurrentPosition_
+        {
+            get
+            {
+                GetCurrentPosition_(out var __output__);
+                return __output__;
+            }
+
+            set => SetCurrentPosition_(value);
+        }
+
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <unmanaged>IsEndOfStream</unmanaged>
+        /// <unmanaged-short>IsEndOfStream</unmanaged-short>
+        public SharpGen.Runtime.Win32.RawBool IsEndOfStream_
+        {
+            get
+            {
+                IsEndOfStream__(out var __output__);
+                return __output__;
+            }
+        }
+
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <param name = "capabilitiesRef">No documentation.</param>
+        /// <returns>No documentation.</returns>
+        /// <unmanaged>HRESULT IMFByteStream::GetCapabilities([Out] DWORD* pdwCapabilities)</unmanaged>
+        /// <unmanaged-short>IMFByteStream::GetCapabilities</unmanaged-short>
+        internal unsafe void GetCapabilities_(out System.Int32 capabilitiesRef)
+        {
+            SharpGen.Runtime.Result __result__;
+            fixed (void *capabilitiesRef_ = &capabilitiesRef)
+                __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, capabilitiesRef_, (*(void ***)this._nativePointer)[3]);
+            __result__.CheckError();
+        }
+
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <param name = "qwLengthRef">No documentation.</param>
+        /// <returns>No documentation.</returns>
+        /// <unmanaged>HRESULT IMFByteStream::GetLength([Out] unsigned longlong* pqwLength)</unmanaged>
+        /// <unmanaged-short>IMFByteStream::GetLength</unmanaged-short>
+        internal unsafe void GetLength_(out System.UInt64 qwLengthRef)
+        {
+            SharpGen.Runtime.Result __result__;
+            fixed (void *qwLengthRef_ = &qwLengthRef)
+                __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, qwLengthRef_, (*(void ***)this._nativePointer)[4]);
+            __result__.CheckError();
+        }
+
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <param name = "qwLength">No documentation.</param>
+        /// <returns>No documentation.</returns>
+        /// <unmanaged>HRESULT IMFByteStream::SetLength([In] unsigned longlong qwLength)</unmanaged>
+        /// <unmanaged-short>IMFByteStream::SetLength</unmanaged-short>
+        internal unsafe void SetLength_(System.UInt64 qwLength)
+        {
+            SharpGen.Runtime.Result __result__;
+            __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, qwLength, (*(void ***)this._nativePointer)[5]);
+            __result__.CheckError();
+        }
+
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <param name = "qwPositionRef">No documentation.</param>
+        /// <returns>No documentation.</returns>
+        /// <unmanaged>HRESULT IMFByteStream::GetCurrentPosition([Out] unsigned longlong* pqwPosition)</unmanaged>
+        /// <unmanaged-short>IMFByteStream::GetCurrentPosition</unmanaged-short>
+        internal unsafe void GetCurrentPosition_(out System.UInt64 qwPositionRef)
+        {
+            SharpGen.Runtime.Result __result__;
+            fixed (void *qwPositionRef_ = &qwPositionRef)
+                __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, qwPositionRef_, (*(void ***)this._nativePointer)[6]);
+            __result__.CheckError();
+        }
+
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <param name = "qwPosition">No documentation.</param>
+        /// <returns>No documentation.</returns>
+        /// <unmanaged>HRESULT IMFByteStream::SetCurrentPosition([In] unsigned longlong qwPosition)</unmanaged>
+        /// <unmanaged-short>IMFByteStream::SetCurrentPosition</unmanaged-short>
+        internal unsafe void SetCurrentPosition_(System.UInt64 qwPosition)
+        {
+            SharpGen.Runtime.Result __result__;
+            __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, qwPosition, (*(void ***)this._nativePointer)[7]);
+            __result__.CheckError();
+        }
+
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <param name = "endOfStreamRef">No documentation.</param>
+        /// <returns>No documentation.</returns>
+        /// <unmanaged>HRESULT IMFByteStream::IsEndOfStream([Out] BOOL* pfEndOfStream)</unmanaged>
+        /// <unmanaged-short>IMFByteStream::IsEndOfStream</unmanaged-short>
+        internal unsafe void IsEndOfStream__(out SharpGen.Runtime.Win32.RawBool endOfStreamRef)
+        {
+            endOfStreamRef = default (SharpGen.Runtime.Win32.RawBool);
+            SharpGen.Runtime.Result __result__;
+            fixed (void *endOfStreamRef_ = &endOfStreamRef)
+                __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, endOfStreamRef_, (*(void ***)this._nativePointer)[8]);
+            __result__.CheckError();
+        }
+
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <param name = "bRef">No documentation.</param>
+        /// <param name = "cb">No documentation.</param>
+        /// <param name = "cbReadRef">No documentation.</param>
+        /// <returns>No documentation.</returns>
+        /// <unmanaged>HRESULT IMFByteStream::Read([In] unsigned char* pb,[In] ULONG cb,[Out] ULONG* pcbRead)</unmanaged>
+        /// <unmanaged-short>IMFByteStream::Read</unmanaged-short>
+        internal unsafe void Read_(System.IntPtr bRef, System.UInt32 cb, out System.UInt32 cbReadRef)
+        {
+            SharpGen.Runtime.Result __result__;
+            fixed (void *cbReadRef_ = &cbReadRef)
+                __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, (void *)bRef, cb, cbReadRef_, (*(void ***)this._nativePointer)[9]);
+            __result__.CheckError();
+        }
+
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <param name = "bRef">No documentation.</param>
+        /// <param name = "cb">No documentation.</param>
+        /// <param name = "callbackRef">No documentation.</param>
+        /// <param name = "unkStateRef">No documentation.</param>
+        /// <returns>No documentation.</returns>
+        /// <unmanaged>HRESULT IMFByteStream::BeginRead([In] unsigned char* pb,[In] ULONG cb,[In] IMFAsyncCallback* pCallback,[In] IUnknown* punkState)</unmanaged>
+        /// <unmanaged-short>IMFByteStream::BeginRead</unmanaged-short>
+        internal unsafe void BeginRead_(System.IntPtr bRef, System.UInt32 cb, SharpMediaFoundation.IAsyncCallback callbackRef, System.IntPtr unkStateRef)
+        {
+            System.IntPtr callbackRef_ = System.IntPtr.Zero;
+            SharpGen.Runtime.Result __result__;
+            callbackRef_ = SharpGen.Runtime.CppObject.ToCallbackPtr<SharpMediaFoundation.IAsyncCallback>(callbackRef);
+            __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, (void *)bRef, cb, (void *)callbackRef_, (void *)unkStateRef, (*(void ***)this._nativePointer)[10]);
+            System.GC.KeepAlive(callbackRef);
+            __result__.CheckError();
+        }
+
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <param name = "resultRef">No documentation.</param>
+        /// <param name = "cbReadRef">No documentation.</param>
+        /// <returns>No documentation.</returns>
+        /// <unmanaged>HRESULT IMFByteStream::EndRead([In] IMFAsyncResult* pResult,[Out] ULONG* pcbRead)</unmanaged>
+        /// <unmanaged-short>IMFByteStream::EndRead</unmanaged-short>
+        internal unsafe void EndRead_(SharpMediaFoundation.AsyncResult resultRef, out System.UInt32 cbReadRef)
+        {
+            System.IntPtr resultRef_ = System.IntPtr.Zero;
+            SharpGen.Runtime.Result __result__;
+            resultRef_ = SharpGen.Runtime.CppObject.ToCallbackPtr<SharpMediaFoundation.AsyncResult>(resultRef);
+            fixed (void *cbReadRef_ = &cbReadRef)
+                __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, (void *)resultRef_, cbReadRef_, (*(void ***)this._nativePointer)[11]);
+            System.GC.KeepAlive(resultRef);
+            __result__.CheckError();
+        }
+
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <param name = "bRef">No documentation.</param>
+        /// <param name = "cb">No documentation.</param>
+        /// <param name = "cbWrittenRef">No documentation.</param>
+        /// <returns>No documentation.</returns>
+        /// <unmanaged>HRESULT IMFByteStream::Write([In] const unsigned char* pb,[In] ULONG cb,[Out] ULONG* pcbWritten)</unmanaged>
+        /// <unmanaged-short>IMFByteStream::Write</unmanaged-short>
+        internal unsafe void Write_(System.IntPtr bRef, System.UInt32 cb, out System.UInt32 cbWrittenRef)
+        {
+            SharpGen.Runtime.Result __result__;
+            fixed (void *cbWrittenRef_ = &cbWrittenRef)
+                __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, (void *)bRef, cb, cbWrittenRef_, (*(void ***)this._nativePointer)[12]);
+            __result__.CheckError();
+        }
+
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <param name = "bRef">No documentation.</param>
+        /// <param name = "cb">No documentation.</param>
+        /// <param name = "callbackRef">No documentation.</param>
+        /// <param name = "unkStateRef">No documentation.</param>
+        /// <returns>No documentation.</returns>
+        /// <unmanaged>HRESULT IMFByteStream::BeginWrite([In] const unsigned char* pb,[In] ULONG cb,[In] IMFAsyncCallback* pCallback,[In] IUnknown* punkState)</unmanaged>
+        /// <unmanaged-short>IMFByteStream::BeginWrite</unmanaged-short>
+        internal unsafe void BeginWrite_(System.IntPtr bRef, System.UInt32 cb, SharpMediaFoundation.IAsyncCallback callbackRef, System.IntPtr unkStateRef)
+        {
+            System.IntPtr callbackRef_ = System.IntPtr.Zero;
+            SharpGen.Runtime.Result __result__;
+            callbackRef_ = SharpGen.Runtime.CppObject.ToCallbackPtr<SharpMediaFoundation.IAsyncCallback>(callbackRef);
+            __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, (void *)bRef, cb, (void *)callbackRef_, (void *)unkStateRef, (*(void ***)this._nativePointer)[13]);
+            System.GC.KeepAlive(callbackRef);
+            __result__.CheckError();
+        }
+
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <param name = "resultRef">No documentation.</param>
+        /// <param name = "cbWrittenRef">No documentation.</param>
+        /// <returns>No documentation.</returns>
+        /// <unmanaged>HRESULT IMFByteStream::EndWrite([In] IMFAsyncResult* pResult,[Out] ULONG* pcbWritten)</unmanaged>
+        /// <unmanaged-short>IMFByteStream::EndWrite</unmanaged-short>
+        internal unsafe void EndWrite_(SharpMediaFoundation.AsyncResult resultRef, out System.UInt32 cbWrittenRef)
+        {
+            System.IntPtr resultRef_ = System.IntPtr.Zero;
+            SharpGen.Runtime.Result __result__;
+            resultRef_ = SharpGen.Runtime.CppObject.ToCallbackPtr<SharpMediaFoundation.AsyncResult>(resultRef);
+            fixed (void *cbWrittenRef_ = &cbWrittenRef)
+                __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, (void *)resultRef_, cbWrittenRef_, (*(void ***)this._nativePointer)[14]);
+            System.GC.KeepAlive(resultRef);
+            __result__.CheckError();
+        }
+
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <param name = "seekOrigin">No documentation.</param>
+        /// <param name = "llSeekOffset">No documentation.</param>
+        /// <param name = "seekFlags">No documentation.</param>
+        /// <param name = "qwCurrentPositionRef">No documentation.</param>
+        /// <returns>No documentation.</returns>
+        /// <unmanaged>HRESULT IMFByteStream::Seek([In] MFBYTESTREAM_SEEK_ORIGIN SeekOrigin,[In] longlong llSeekOffset,[In] DWORD dwSeekFlags,[Out] unsigned longlong* pqwCurrentPosition)</unmanaged>
+        /// <unmanaged-short>IMFByteStream::Seek</unmanaged-short>
+        internal unsafe void Seek_(SharpMediaFoundation.ByteStreamSeekOrigin seekOrigin, System.Int64 llSeekOffset, System.Int32 seekFlags, out System.UInt64 qwCurrentPositionRef)
+        {
+            SharpGen.Runtime.Result __result__;
+            fixed (void *qwCurrentPositionRef_ = &qwCurrentPositionRef)
+                __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, unchecked ((System.Int32)seekOrigin), llSeekOffset, seekFlags, qwCurrentPositionRef_, (*(void ***)this._nativePointer)[15]);
+            __result__.CheckError();
+        }
+
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <returns>No documentation.</returns>
+        /// <unmanaged>HRESULT IMFByteStream::Flush()</unmanaged>
+        /// <unmanaged-short>IMFByteStream::Flush</unmanaged-short>
+        internal unsafe void Flush_()
+        {
+            SharpGen.Runtime.Result __result__;
+            __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, (*(void ***)this._nativePointer)[16]);
+            __result__.CheckError();
+        }
+
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <returns>No documentation.</returns>
+        /// <unmanaged>HRESULT IMFByteStream::Close()</unmanaged>
+        /// <unmanaged-short>IMFByteStream::Close</unmanaged-short>
+        internal unsafe void Close_()
+        {
+            SharpGen.Runtime.Result __result__;
+            __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, (*(void ***)this._nativePointer)[17]);
+            __result__.CheckError();
+        }
+    }
+
     [System.Runtime.InteropServices.GuidAttribute("2eb1e945-18b8-4139-9b1a-d5d584818530")]
     public partial class Clock : SharpGen.Runtime.ComObject
     {
@@ -465,6 +779,11 @@ namespace SharpMediaFoundation
 
     [System.Runtime.InteropServices.GuidAttribute("a27003cf-2354-4f2a-8d6a-ab7cff15437e")]
     public partial interface IAsyncCallback : SharpGen.Runtime.IUnknown
+    {
+    }
+
+    [System.Runtime.InteropServices.GuidAttribute("ad4c1b00-4bf7-422f-9175-756693d9130d")]
+    public partial interface IByteStream : SharpGen.Runtime.IUnknown
     {
     }
 
@@ -1733,6 +2052,214 @@ namespace SharpMediaFoundation
             __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, &guidService, &riid, &vObjectOut, (*(void ***)this._nativePointer)[3]);
             __result__.CheckError();
             return vObjectOut;
+        }
+    }
+
+    [System.Runtime.InteropServices.GuidAttribute("FBE5A32D-A497-4b61-BB85-97B1A848A6E3")]
+    public partial class SourceResolver : SharpGen.Runtime.ComObject
+    {
+        public SourceResolver(System.IntPtr nativePtr): base (nativePtr)
+        {
+        }
+
+        public static explicit operator SourceResolver(System.IntPtr nativePtr) => nativePtr == System.IntPtr.Zero ? null : new SourceResolver(nativePtr);
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <param name = "wszURLRef">No documentation.</param>
+        /// <param name = "flags">No documentation.</param>
+        /// <param name = "propsRef">No documentation.</param>
+        /// <param name = "objectTypeRef">No documentation.</param>
+        /// <param name = "objectOut">No documentation.</param>
+        /// <returns>No documentation.</returns>
+        /// <unmanaged>HRESULT IMFSourceResolver::CreateObjectFromURL([In] const wchar_t* pwszURL,[In] DWORD dwFlags,[In] IPropertyStore* pProps,[Out] MF_OBJECT_TYPE* pObjectType,[Out] IUnknown** ppObject)</unmanaged>
+        /// <unmanaged-short>IMFSourceResolver::CreateObjectFromURL</unmanaged-short>
+        internal unsafe void CreateObjectFromURL(System.String wszURLRef, System.Int32 flags, SharpGen.Runtime.ComObject propsRef, out SharpMediaFoundation.ObjectType objectTypeRef, out SharpGen.Runtime.IUnknown objectOut)
+        {
+            System.IntPtr propsRef_ = System.IntPtr.Zero;
+            System.IntPtr objectOut_ = System.IntPtr.Zero;
+            SharpGen.Runtime.Result __result__;
+            propsRef_ = SharpGen.Runtime.CppObject.ToCallbackPtr<SharpGen.Runtime.ComObject>(propsRef);
+            fixed (void *objectTypeRef_ = &objectTypeRef)
+                fixed (char *wszURLRef_ = wszURLRef)
+                    __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, (void *)wszURLRef_, flags, (void *)propsRef_, objectTypeRef_, &objectOut_, (*(void ***)this._nativePointer)[3]);
+            if (objectOut_ != System.IntPtr.Zero)
+                objectOut = new SharpGen.Runtime.ComObject(objectOut_);
+            else
+                objectOut = null;
+            System.GC.KeepAlive(propsRef);
+            __result__.CheckError();
+        }
+
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <param name = "byteStreamRef">No documentation.</param>
+        /// <param name = "wszURLRef">No documentation.</param>
+        /// <param name = "flags">No documentation.</param>
+        /// <param name = "propsRef">No documentation.</param>
+        /// <param name = "objectTypeRef">No documentation.</param>
+        /// <param name = "objectOut">No documentation.</param>
+        /// <returns>No documentation.</returns>
+        /// <unmanaged>HRESULT IMFSourceResolver::CreateObjectFromByteStream([In] IMFByteStream* pByteStream,[In] const wchar_t* pwszURL,[In] DWORD dwFlags,[In] IPropertyStore* pProps,[Out] MF_OBJECT_TYPE* pObjectType,[Out] IUnknown** ppObject)</unmanaged>
+        /// <unmanaged-short>IMFSourceResolver::CreateObjectFromByteStream</unmanaged-short>
+        public unsafe void CreateObjectFromByteStream(SharpMediaFoundation.IByteStream byteStreamRef, System.String wszURLRef, System.Int32 flags, SharpGen.Runtime.ComObject propsRef, out SharpMediaFoundation.ObjectType objectTypeRef, out SharpGen.Runtime.IUnknown objectOut)
+        {
+            System.IntPtr byteStreamRef_ = System.IntPtr.Zero;
+            System.IntPtr propsRef_ = System.IntPtr.Zero;
+            System.IntPtr objectOut_ = System.IntPtr.Zero;
+            SharpGen.Runtime.Result __result__;
+            byteStreamRef_ = SharpGen.Runtime.CppObject.ToCallbackPtr<SharpMediaFoundation.IByteStream>(byteStreamRef);
+            propsRef_ = SharpGen.Runtime.CppObject.ToCallbackPtr<SharpGen.Runtime.ComObject>(propsRef);
+            fixed (void *objectTypeRef_ = &objectTypeRef)
+                fixed (char *wszURLRef_ = wszURLRef)
+                    __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, (void *)byteStreamRef_, (void *)wszURLRef_, flags, (void *)propsRef_, objectTypeRef_, &objectOut_, (*(void ***)this._nativePointer)[4]);
+            if (objectOut_ != System.IntPtr.Zero)
+                objectOut = new SharpGen.Runtime.ComObject(objectOut_);
+            else
+                objectOut = null;
+            System.GC.KeepAlive(byteStreamRef);
+            System.GC.KeepAlive(propsRef);
+            __result__.CheckError();
+        }
+
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <param name = "wszURLRef">No documentation.</param>
+        /// <param name = "flags">No documentation.</param>
+        /// <param name = "propsRef">No documentation.</param>
+        /// <param name = "iUnknownCancelCookieOut">No documentation.</param>
+        /// <param name = "callbackRef">No documentation.</param>
+        /// <param name = "unkStateRef">No documentation.</param>
+        /// <returns>No documentation.</returns>
+        /// <unmanaged>HRESULT IMFSourceResolver::BeginCreateObjectFromURL([In] const wchar_t* pwszURL,[In] DWORD dwFlags,[In] IPropertyStore* pProps,[Out, Optional] IUnknown** ppIUnknownCancelCookie,[In] IMFAsyncCallback* pCallback,[In] IUnknown* punkState)</unmanaged>
+        /// <unmanaged-short>IMFSourceResolver::BeginCreateObjectFromURL</unmanaged-short>
+        public unsafe void BeginCreateObjectFromURL(System.String wszURLRef, System.Int32 flags, SharpGen.Runtime.ComObject propsRef, out SharpGen.Runtime.IUnknown iUnknownCancelCookieOut, SharpMediaFoundation.IAsyncCallback callbackRef, SharpGen.Runtime.IUnknown unkStateRef)
+        {
+            System.IntPtr propsRef_ = System.IntPtr.Zero;
+            System.IntPtr iUnknownCancelCookieOut_ = System.IntPtr.Zero;
+            System.IntPtr callbackRef_ = System.IntPtr.Zero;
+            System.IntPtr unkStateRef_ = System.IntPtr.Zero;
+            SharpGen.Runtime.Result __result__;
+            propsRef_ = SharpGen.Runtime.CppObject.ToCallbackPtr<SharpGen.Runtime.ComObject>(propsRef);
+            callbackRef_ = SharpGen.Runtime.CppObject.ToCallbackPtr<SharpMediaFoundation.IAsyncCallback>(callbackRef);
+            unkStateRef_ = SharpGen.Runtime.CppObject.ToCallbackPtr<SharpGen.Runtime.IUnknown>(unkStateRef);
+            fixed (char *wszURLRef_ = wszURLRef)
+                __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, (void *)wszURLRef_, flags, (void *)propsRef_, &iUnknownCancelCookieOut_, (void *)callbackRef_, (void *)unkStateRef_, (*(void ***)this._nativePointer)[5]);
+            if (iUnknownCancelCookieOut_ != System.IntPtr.Zero)
+                iUnknownCancelCookieOut = new SharpGen.Runtime.ComObject(iUnknownCancelCookieOut_);
+            else
+                iUnknownCancelCookieOut = null;
+            System.GC.KeepAlive(propsRef);
+            System.GC.KeepAlive(callbackRef);
+            System.GC.KeepAlive(unkStateRef);
+            __result__.CheckError();
+        }
+
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <param name = "resultRef">No documentation.</param>
+        /// <param name = "objectTypeRef">No documentation.</param>
+        /// <param name = "objectOut">No documentation.</param>
+        /// <returns>No documentation.</returns>
+        /// <unmanaged>HRESULT IMFSourceResolver::EndCreateObjectFromURL([In] IMFAsyncResult* pResult,[Out] MF_OBJECT_TYPE* pObjectType,[Out] IUnknown** ppObject)</unmanaged>
+        /// <unmanaged-short>IMFSourceResolver::EndCreateObjectFromURL</unmanaged-short>
+        public unsafe void EndCreateObjectFromURL(SharpMediaFoundation.AsyncResult resultRef, out SharpMediaFoundation.ObjectType objectTypeRef, out SharpGen.Runtime.IUnknown objectOut)
+        {
+            System.IntPtr resultRef_ = System.IntPtr.Zero;
+            System.IntPtr objectOut_ = System.IntPtr.Zero;
+            SharpGen.Runtime.Result __result__;
+            resultRef_ = SharpGen.Runtime.CppObject.ToCallbackPtr<SharpMediaFoundation.AsyncResult>(resultRef);
+            fixed (void *objectTypeRef_ = &objectTypeRef)
+                __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, (void *)resultRef_, objectTypeRef_, &objectOut_, (*(void ***)this._nativePointer)[6]);
+            if (objectOut_ != System.IntPtr.Zero)
+                objectOut = new SharpGen.Runtime.ComObject(objectOut_);
+            else
+                objectOut = null;
+            System.GC.KeepAlive(resultRef);
+            __result__.CheckError();
+        }
+
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <param name = "byteStreamRef">No documentation.</param>
+        /// <param name = "wszURLRef">No documentation.</param>
+        /// <param name = "flags">No documentation.</param>
+        /// <param name = "propsRef">No documentation.</param>
+        /// <param name = "iUnknownCancelCookieOut">No documentation.</param>
+        /// <param name = "callbackRef">No documentation.</param>
+        /// <param name = "unkStateRef">No documentation.</param>
+        /// <returns>No documentation.</returns>
+        /// <unmanaged>HRESULT IMFSourceResolver::BeginCreateObjectFromByteStream([In] IMFByteStream* pByteStream,[In] const wchar_t* pwszURL,[In] DWORD dwFlags,[In] IPropertyStore* pProps,[Out, Optional] IUnknown** ppIUnknownCancelCookie,[In] IMFAsyncCallback* pCallback,[In] IUnknown* punkState)</unmanaged>
+        /// <unmanaged-short>IMFSourceResolver::BeginCreateObjectFromByteStream</unmanaged-short>
+        public unsafe void BeginCreateObjectFromByteStream(SharpMediaFoundation.IByteStream byteStreamRef, System.String wszURLRef, System.Int32 flags, SharpGen.Runtime.ComObject propsRef, out SharpGen.Runtime.IUnknown iUnknownCancelCookieOut, SharpMediaFoundation.IAsyncCallback callbackRef, SharpGen.Runtime.IUnknown unkStateRef)
+        {
+            System.IntPtr byteStreamRef_ = System.IntPtr.Zero;
+            System.IntPtr propsRef_ = System.IntPtr.Zero;
+            System.IntPtr iUnknownCancelCookieOut_ = System.IntPtr.Zero;
+            System.IntPtr callbackRef_ = System.IntPtr.Zero;
+            System.IntPtr unkStateRef_ = System.IntPtr.Zero;
+            SharpGen.Runtime.Result __result__;
+            byteStreamRef_ = SharpGen.Runtime.CppObject.ToCallbackPtr<SharpMediaFoundation.IByteStream>(byteStreamRef);
+            propsRef_ = SharpGen.Runtime.CppObject.ToCallbackPtr<SharpGen.Runtime.ComObject>(propsRef);
+            callbackRef_ = SharpGen.Runtime.CppObject.ToCallbackPtr<SharpMediaFoundation.IAsyncCallback>(callbackRef);
+            unkStateRef_ = SharpGen.Runtime.CppObject.ToCallbackPtr<SharpGen.Runtime.IUnknown>(unkStateRef);
+            fixed (char *wszURLRef_ = wszURLRef)
+                __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, (void *)byteStreamRef_, (void *)wszURLRef_, flags, (void *)propsRef_, &iUnknownCancelCookieOut_, (void *)callbackRef_, (void *)unkStateRef_, (*(void ***)this._nativePointer)[7]);
+            if (iUnknownCancelCookieOut_ != System.IntPtr.Zero)
+                iUnknownCancelCookieOut = new SharpGen.Runtime.ComObject(iUnknownCancelCookieOut_);
+            else
+                iUnknownCancelCookieOut = null;
+            System.GC.KeepAlive(byteStreamRef);
+            System.GC.KeepAlive(propsRef);
+            System.GC.KeepAlive(callbackRef);
+            System.GC.KeepAlive(unkStateRef);
+            __result__.CheckError();
+        }
+
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <param name = "resultRef">No documentation.</param>
+        /// <param name = "objectTypeRef">No documentation.</param>
+        /// <param name = "objectOut">No documentation.</param>
+        /// <returns>No documentation.</returns>
+        /// <unmanaged>HRESULT IMFSourceResolver::EndCreateObjectFromByteStream([In] IMFAsyncResult* pResult,[Out] MF_OBJECT_TYPE* pObjectType,[Out] IUnknown** ppObject)</unmanaged>
+        /// <unmanaged-short>IMFSourceResolver::EndCreateObjectFromByteStream</unmanaged-short>
+        public unsafe void EndCreateObjectFromByteStream(SharpMediaFoundation.AsyncResult resultRef, out SharpMediaFoundation.ObjectType objectTypeRef, out SharpGen.Runtime.IUnknown objectOut)
+        {
+            System.IntPtr resultRef_ = System.IntPtr.Zero;
+            System.IntPtr objectOut_ = System.IntPtr.Zero;
+            SharpGen.Runtime.Result __result__;
+            resultRef_ = SharpGen.Runtime.CppObject.ToCallbackPtr<SharpMediaFoundation.AsyncResult>(resultRef);
+            fixed (void *objectTypeRef_ = &objectTypeRef)
+                __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, (void *)resultRef_, objectTypeRef_, &objectOut_, (*(void ***)this._nativePointer)[8]);
+            if (objectOut_ != System.IntPtr.Zero)
+                objectOut = new SharpGen.Runtime.ComObject(objectOut_);
+            else
+                objectOut = null;
+            System.GC.KeepAlive(resultRef);
+            __result__.CheckError();
+        }
+
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <param name = "iUnknownCancelCookieRef">No documentation.</param>
+        /// <returns>No documentation.</returns>
+        /// <unmanaged>HRESULT IMFSourceResolver::CancelObjectCreation([In] IUnknown* pIUnknownCancelCookie)</unmanaged>
+        /// <unmanaged-short>IMFSourceResolver::CancelObjectCreation</unmanaged-short>
+        public unsafe void CancelObjectCreation(SharpGen.Runtime.IUnknown iUnknownCancelCookieRef)
+        {
+            System.IntPtr iUnknownCancelCookieRef_ = System.IntPtr.Zero;
+            SharpGen.Runtime.Result __result__;
+            iUnknownCancelCookieRef_ = SharpGen.Runtime.CppObject.ToCallbackPtr<SharpGen.Runtime.IUnknown>(iUnknownCancelCookieRef);
+            __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, (void *)iUnknownCancelCookieRef_, (*(void ***)this._nativePointer)[9]);
+            System.GC.KeepAlive(iUnknownCancelCookieRef);
+            __result__.CheckError();
         }
     }
 
