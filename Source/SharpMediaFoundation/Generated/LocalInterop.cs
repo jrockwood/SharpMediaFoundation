@@ -64,17 +64,17 @@ namespace SharpMediaFoundation
             throw null;
         }
 
-        public static unsafe int CalliStdCallint(void *thisObject, void *param0, void *param1, System.UInt32 param2, void *param3, void *methodPtr)
+        public static unsafe int CalliStdCallint(void *thisObject, void *param0, void *param1, int param2, void *param3, void *methodPtr)
         {
             throw null;
         }
 
-        public static unsafe int CalliStdCallint(void *thisObject, void *param0, System.UInt32 param1, void *methodPtr)
+        public static unsafe int CalliStdCallint(void *thisObject, void *param0, int param1, void *methodPtr)
         {
             throw null;
         }
 
-        public static unsafe int CalliStdCallint(void *thisObject, void *param0, System.UInt64 param1, void *methodPtr)
+        public static unsafe int CalliStdCallint(void *thisObject, void *param0, long param1, void *methodPtr)
         {
             throw null;
         }
@@ -84,12 +84,12 @@ namespace SharpMediaFoundation
             throw null;
         }
 
-        public static unsafe int CalliStdCallint(void *thisObject, void *param0, void *param1, System.UInt32 param2, void *methodPtr)
+        public static unsafe int CalliStdCallint(void *thisObject, void *param0, void *param1, int param2, void *methodPtr)
         {
             throw null;
         }
 
-        public static unsafe int CalliStdCallint(void *thisObject, System.UInt32 param0, void *param1, void *param2, void *methodPtr)
+        public static unsafe int CalliStdCallint(void *thisObject, int param0, void *param1, void *param2, void *methodPtr)
         {
             throw null;
         }
@@ -119,11 +119,6 @@ namespace SharpMediaFoundation
             throw null;
         }
 
-        public static unsafe int CalliStdCallint(void *thisObject, int param0, void *param1, void *param2, void *methodPtr)
-        {
-            throw null;
-        }
-
         public static unsafe int CalliStdCallint(void *thisObject, long param0, void *methodPtr)
         {
             throw null;
@@ -139,12 +134,7 @@ namespace SharpMediaFoundation
             throw null;
         }
 
-        public static unsafe int CalliStdCallint(void *thisObject, System.UInt32 param0, float param1, void *methodPtr)
-        {
-            throw null;
-        }
-
-        public static unsafe int CalliStdCallint(void *thisObject, System.UInt32 param0, void *param1, void *methodPtr)
+        public static unsafe int CalliStdCallint(void *thisObject, int param0, float param1, void *methodPtr)
         {
             throw null;
         }

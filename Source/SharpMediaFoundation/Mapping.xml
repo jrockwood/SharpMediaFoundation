@@ -191,6 +191,9 @@
 
   <bindings>
     <bind from="MEDIA_EVENT_TYPE" to="SharpMediaFoundation.MediaEventTypes" />
+    <bind from="UINT16" to="System.Int16" />
+    <bind from="UINT32" to="System.Int32" />
+    <bind from="UINT64" to="System.Int64" />
   </bindings>
 
   <!--
@@ -322,10 +325,6 @@
     <map param=".*::.*::pdw(.*)" name-tmp="x$1" />
     <map param=".*::.*::f(.*)" name-tmp="$1" />
     <map param=".*::.*::pf(.*)" name-tmp="f$1" />
-
-    <!-- IMFAudioStreamVolume -->
-    <map param="IMFAudioStreamVolume::.*::dw(.*)" type="int" />
-    <map param="IMFAudioStreamVolume::.*::pdw(.*)" type="int" />
 
     <!-- IMFAsyncCallback -->
     <map interface="IMFAsyncCallback" name="IAsyncCallback" callback="true" />

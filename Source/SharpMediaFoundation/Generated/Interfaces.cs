@@ -117,14 +117,13 @@ namespace SharpMediaFoundation
         /// </summary>
         /// <param name = "countRef">No documentation.</param>
         /// <returns>No documentation.</returns>
-        /// <unmanaged>HRESULT IMFAudioStreamVolume::GetChannelCount([Out] unsigned int* pdwCount)</unmanaged>
+        /// <unmanaged>HRESULT IMFAudioStreamVolume::GetChannelCount([Out] UINT32* pdwCount)</unmanaged>
         /// <unmanaged-short>IMFAudioStreamVolume::GetChannelCount</unmanaged-short>
         internal unsafe void GetChannelCount(out System.Int32 countRef)
         {
-            System.UInt32 countRef_;
             SharpGen.Runtime.Result __result__;
-            __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, &countRef_, (*(void ***)this._nativePointer)[3]);
-            countRef = (System.Int32)countRef_;
+            fixed (void *countRef_ = &countRef)
+                __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, countRef_, (*(void ***)this._nativePointer)[3]);
             __result__.CheckError();
         }
 
@@ -134,14 +133,12 @@ namespace SharpMediaFoundation
         /// <param name = "index">No documentation.</param>
         /// <param name = "level">No documentation.</param>
         /// <returns>No documentation.</returns>
-        /// <unmanaged>HRESULT IMFAudioStreamVolume::SetChannelVolume([In] unsigned int dwIndex,[In] const float fLevel)</unmanaged>
+        /// <unmanaged>HRESULT IMFAudioStreamVolume::SetChannelVolume([In] UINT32 dwIndex,[In] const float fLevel)</unmanaged>
         /// <unmanaged-short>IMFAudioStreamVolume::SetChannelVolume</unmanaged-short>
         public unsafe void SetChannelVolume(System.Int32 index, System.Single level)
         {
-            System.UInt32 index_;
             SharpGen.Runtime.Result __result__;
-            index_ = (System.UInt32)index;
-            __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, index_, level, (*(void ***)this._nativePointer)[4]);
+            __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, index, level, (*(void ***)this._nativePointer)[4]);
             __result__.CheckError();
         }
 
@@ -151,15 +148,13 @@ namespace SharpMediaFoundation
         /// <param name = "index">No documentation.</param>
         /// <param name = "levelRef">No documentation.</param>
         /// <returns>No documentation.</returns>
-        /// <unmanaged>HRESULT IMFAudioStreamVolume::GetChannelVolume([In] unsigned int dwIndex,[Out] float* pfLevel)</unmanaged>
+        /// <unmanaged>HRESULT IMFAudioStreamVolume::GetChannelVolume([In] UINT32 dwIndex,[Out] float* pfLevel)</unmanaged>
         /// <unmanaged-short>IMFAudioStreamVolume::GetChannelVolume</unmanaged-short>
         public unsafe void GetChannelVolume(System.Int32 index, out System.Single levelRef)
         {
-            System.UInt32 index_;
             SharpGen.Runtime.Result __result__;
-            index_ = (System.UInt32)index;
             fixed (void *levelRef_ = &levelRef)
-                __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, index_, levelRef_, (*(void ***)this._nativePointer)[5]);
+                __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, index, levelRef_, (*(void ***)this._nativePointer)[5]);
             __result__.CheckError();
         }
 
@@ -169,15 +164,13 @@ namespace SharpMediaFoundation
         /// <param name = "count">No documentation.</param>
         /// <param name = "volumesRef">No documentation.</param>
         /// <returns>No documentation.</returns>
-        /// <unmanaged>HRESULT IMFAudioStreamVolume::SetAllVolumes([In] unsigned int dwCount,[In, Buffer] const float* pfVolumes)</unmanaged>
+        /// <unmanaged>HRESULT IMFAudioStreamVolume::SetAllVolumes([In] UINT32 dwCount,[In, Buffer] const float* pfVolumes)</unmanaged>
         /// <unmanaged-short>IMFAudioStreamVolume::SetAllVolumes</unmanaged-short>
         public unsafe void SetAllVolumes(System.Int32 count, System.Single[] volumesRef)
         {
-            System.UInt32 count_;
             SharpGen.Runtime.Result __result__;
-            count_ = (System.UInt32)count;
             fixed (void *volumesRef_ = volumesRef)
-                __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, count_, volumesRef_, (*(void ***)this._nativePointer)[6]);
+                __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, count, volumesRef_, (*(void ***)this._nativePointer)[6]);
             __result__.CheckError();
         }
 
@@ -187,15 +180,13 @@ namespace SharpMediaFoundation
         /// <param name = "count">No documentation.</param>
         /// <param name = "volumesRef">No documentation.</param>
         /// <returns>No documentation.</returns>
-        /// <unmanaged>HRESULT IMFAudioStreamVolume::GetAllVolumes([In] unsigned int dwCount,[Out, Buffer] float* pfVolumes)</unmanaged>
+        /// <unmanaged>HRESULT IMFAudioStreamVolume::GetAllVolumes([In] UINT32 dwCount,[Out, Buffer] float* pfVolumes)</unmanaged>
         /// <unmanaged-short>IMFAudioStreamVolume::GetAllVolumes</unmanaged-short>
         public unsafe void GetAllVolumes(System.Int32 count, System.Single[] volumesRef)
         {
-            System.UInt32 count_;
             SharpGen.Runtime.Result __result__;
-            count_ = (System.UInt32)count;
             fixed (void *volumesRef_ = volumesRef)
-                __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, count_, volumesRef_, (*(void ***)this._nativePointer)[7]);
+                __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, count, volumesRef_, (*(void ***)this._nativePointer)[7]);
             __result__.CheckError();
         }
     }
@@ -800,7 +791,7 @@ namespace SharpMediaFoundation
         /// </summary>
         /// <unmanaged>GetCount</unmanaged>
         /// <unmanaged-short>GetCount</unmanaged-short>
-        public System.UInt32 Count
+        public System.Int32 Count
         {
             get
             {
@@ -882,11 +873,11 @@ namespace SharpMediaFoundation
         /// </summary>
         /// <param name = "guidKey">No documentation.</param>
         /// <returns>No documentation.</returns>
-        /// <unmanaged>HRESULT IMFAttributes::GetUINT32([In] const GUID&amp; guidKey,[Out] unsigned int* punValue)</unmanaged>
+        /// <unmanaged>HRESULT IMFAttributes::GetUINT32([In] const GUID&amp; guidKey,[Out] UINT32* punValue)</unmanaged>
         /// <unmanaged-short>IMFAttributes::GetUINT32</unmanaged-short>
-        internal unsafe System.UInt32 GetInt(System.Guid guidKey)
+        internal unsafe System.Int32 GetInt(System.Guid guidKey)
         {
-            System.UInt32 unValueRef;
+            System.Int32 unValueRef;
             SharpGen.Runtime.Result __result__;
             __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, &guidKey, &unValueRef, (*(void ***)this._nativePointer)[7]);
             __result__.CheckError();
@@ -898,11 +889,11 @@ namespace SharpMediaFoundation
         /// </summary>
         /// <param name = "guidKey">No documentation.</param>
         /// <returns>No documentation.</returns>
-        /// <unmanaged>HRESULT IMFAttributes::GetUINT64([In] const GUID&amp; guidKey,[Out] unsigned longlong* punValue)</unmanaged>
+        /// <unmanaged>HRESULT IMFAttributes::GetUINT64([In] const GUID&amp; guidKey,[Out] UINT64* punValue)</unmanaged>
         /// <unmanaged-short>IMFAttributes::GetUINT64</unmanaged-short>
-        internal unsafe System.UInt64 GetLong(System.Guid guidKey)
+        internal unsafe System.Int64 GetLong(System.Guid guidKey)
         {
-            System.UInt64 unValueRef;
+            System.Int64 unValueRef;
             SharpGen.Runtime.Result __result__;
             __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, &guidKey, &unValueRef, (*(void ***)this._nativePointer)[8]);
             __result__.CheckError();
@@ -946,11 +937,11 @@ namespace SharpMediaFoundation
         /// </summary>
         /// <param name = "guidKey">No documentation.</param>
         /// <returns>No documentation.</returns>
-        /// <unmanaged>HRESULT IMFAttributes::GetStringLength([In] const GUID&amp; guidKey,[Out] unsigned int* pcchLength)</unmanaged>
+        /// <unmanaged>HRESULT IMFAttributes::GetStringLength([In] const GUID&amp; guidKey,[Out] UINT32* pcchLength)</unmanaged>
         /// <unmanaged-short>IMFAttributes::GetStringLength</unmanaged-short>
-        internal unsafe System.UInt32 GetStringLength(System.Guid guidKey)
+        internal unsafe System.Int32 GetStringLength(System.Guid guidKey)
         {
-            System.UInt32 cchLengthRef;
+            System.Int32 cchLengthRef;
             SharpGen.Runtime.Result __result__;
             __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, &guidKey, &cchLengthRef, (*(void ***)this._nativePointer)[11]);
             __result__.CheckError();
@@ -965,9 +956,9 @@ namespace SharpMediaFoundation
         /// <param name = "cchBufSize">No documentation.</param>
         /// <param name = "cchLengthRef">No documentation.</param>
         /// <returns>No documentation.</returns>
-        /// <unmanaged>HRESULT IMFAttributes::GetString([In] const GUID&amp; guidKey,[Out, Buffer] wchar_t* pwszValue,[In] unsigned int cchBufSize,[InOut, Optional] unsigned int* pcchLength)</unmanaged>
+        /// <unmanaged>HRESULT IMFAttributes::GetString([In] const GUID&amp; guidKey,[Out, Buffer] wchar_t* pwszValue,[In] UINT32 cchBufSize,[InOut, Optional] UINT32* pcchLength)</unmanaged>
         /// <unmanaged-short>IMFAttributes::GetString</unmanaged-short>
-        internal unsafe void GetString(System.Guid guidKey, System.IntPtr wszValueRef, System.UInt32 cchBufSize, System.IntPtr cchLengthRef)
+        internal unsafe void GetString(System.Guid guidKey, System.IntPtr wszValueRef, System.Int32 cchBufSize, System.IntPtr cchLengthRef)
         {
             SharpGen.Runtime.Result __result__;
             __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, &guidKey, (void *)wszValueRef, cchBufSize, (void *)cchLengthRef, (*(void ***)this._nativePointer)[12]);
@@ -981,9 +972,9 @@ namespace SharpMediaFoundation
         /// <param name = "wszValueOut">No documentation.</param>
         /// <param name = "cchLengthRef">No documentation.</param>
         /// <returns>No documentation.</returns>
-        /// <unmanaged>HRESULT IMFAttributes::GetAllocatedString([In] const GUID&amp; guidKey,[Buffer, Optional] wchar_t** ppwszValue,[Out] unsigned int* pcchLength)</unmanaged>
+        /// <unmanaged>HRESULT IMFAttributes::GetAllocatedString([In] const GUID&amp; guidKey,[Buffer, Optional] wchar_t** ppwszValue,[Out] UINT32* pcchLength)</unmanaged>
         /// <unmanaged-short>IMFAttributes::GetAllocatedString</unmanaged-short>
-        internal unsafe void GetAllocatedString(System.Guid guidKey, System.String wszValueOut, out System.UInt32 cchLengthRef)
+        internal unsafe void GetAllocatedString(System.Guid guidKey, System.String wszValueOut, out System.Int32 cchLengthRef)
         {
             SharpGen.Runtime.Result __result__;
             fixed (void *cchLengthRef_ = &cchLengthRef)
@@ -997,11 +988,11 @@ namespace SharpMediaFoundation
         /// </summary>
         /// <param name = "guidKey">No documentation.</param>
         /// <returns>No documentation.</returns>
-        /// <unmanaged>HRESULT IMFAttributes::GetBlobSize([In] const GUID&amp; guidKey,[Out] unsigned int* pcbBlobSize)</unmanaged>
+        /// <unmanaged>HRESULT IMFAttributes::GetBlobSize([In] const GUID&amp; guidKey,[Out] UINT32* pcbBlobSize)</unmanaged>
         /// <unmanaged-short>IMFAttributes::GetBlobSize</unmanaged-short>
-        internal unsafe System.UInt32 GetBlobSize(System.Guid guidKey)
+        internal unsafe System.Int32 GetBlobSize(System.Guid guidKey)
         {
-            System.UInt32 cbBlobSizeRef;
+            System.Int32 cbBlobSizeRef;
             SharpGen.Runtime.Result __result__;
             __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, &guidKey, &cbBlobSizeRef, (*(void ***)this._nativePointer)[14]);
             __result__.CheckError();
@@ -1016,9 +1007,9 @@ namespace SharpMediaFoundation
         /// <param name = "cbBufSize">No documentation.</param>
         /// <param name = "cbBlobSizeRef">No documentation.</param>
         /// <returns>No documentation.</returns>
-        /// <unmanaged>HRESULT IMFAttributes::GetBlob([In] const GUID&amp; guidKey,[In] unsigned char* pBuf,[In] unsigned int cbBufSize,[InOut, Optional] unsigned int* pcbBlobSize)</unmanaged>
+        /// <unmanaged>HRESULT IMFAttributes::GetBlob([In] const GUID&amp; guidKey,[In] unsigned char* pBuf,[In] UINT32 cbBufSize,[InOut, Optional] UINT32* pcbBlobSize)</unmanaged>
         /// <unmanaged-short>IMFAttributes::GetBlob</unmanaged-short>
-        internal unsafe void GetBlob(System.Guid guidKey, System.IntPtr bufRef, System.UInt32 cbBufSize, System.IntPtr cbBlobSizeRef)
+        internal unsafe void GetBlob(System.Guid guidKey, System.IntPtr bufRef, System.Int32 cbBufSize, System.IntPtr cbBlobSizeRef)
         {
             SharpGen.Runtime.Result __result__;
             __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, &guidKey, (void *)bufRef, cbBufSize, (void *)cbBlobSizeRef, (*(void ***)this._nativePointer)[15]);
@@ -1032,9 +1023,9 @@ namespace SharpMediaFoundation
         /// <param name = "bufOut">No documentation.</param>
         /// <param name = "cbSizeRef">No documentation.</param>
         /// <returns>No documentation.</returns>
-        /// <unmanaged>HRESULT IMFAttributes::GetAllocatedBlob([In] const GUID&amp; guidKey,[Buffer, Optional] unsigned char** ppBuf,[Out] unsigned int* pcbSize)</unmanaged>
+        /// <unmanaged>HRESULT IMFAttributes::GetAllocatedBlob([In] const GUID&amp; guidKey,[Buffer, Optional] unsigned char** ppBuf,[Out] UINT32* pcbSize)</unmanaged>
         /// <unmanaged-short>IMFAttributes::GetAllocatedBlob</unmanaged-short>
-        internal unsafe void GetAllocatedBlob(System.Guid guidKey, System.Byte[] bufOut, out System.UInt32 cbSizeRef)
+        internal unsafe void GetAllocatedBlob(System.Guid guidKey, System.Byte[] bufOut, out System.Int32 cbSizeRef)
         {
             SharpGen.Runtime.Result __result__;
             fixed (void *cbSizeRef_ = &cbSizeRef)
@@ -1108,9 +1099,9 @@ namespace SharpMediaFoundation
         /// <param name = "guidKey">No documentation.</param>
         /// <param name = "unValue">No documentation.</param>
         /// <returns>No documentation.</returns>
-        /// <unmanaged>HRESULT IMFAttributes::SetUINT32([In] const GUID&amp; guidKey,[In] unsigned int unValue)</unmanaged>
+        /// <unmanaged>HRESULT IMFAttributes::SetUINT32([In] const GUID&amp; guidKey,[In] UINT32 unValue)</unmanaged>
         /// <unmanaged-short>IMFAttributes::SetUINT32</unmanaged-short>
-        internal unsafe void Set(System.Guid guidKey, System.UInt32 unValue)
+        internal unsafe void Set(System.Guid guidKey, System.Int32 unValue)
         {
             SharpGen.Runtime.Result __result__;
             __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, &guidKey, unValue, (*(void ***)this._nativePointer)[21]);
@@ -1123,9 +1114,9 @@ namespace SharpMediaFoundation
         /// <param name = "guidKey">No documentation.</param>
         /// <param name = "unValue">No documentation.</param>
         /// <returns>No documentation.</returns>
-        /// <unmanaged>HRESULT IMFAttributes::SetUINT64([In] const GUID&amp; guidKey,[In] unsigned longlong unValue)</unmanaged>
+        /// <unmanaged>HRESULT IMFAttributes::SetUINT64([In] const GUID&amp; guidKey,[In] UINT64 unValue)</unmanaged>
         /// <unmanaged-short>IMFAttributes::SetUINT64</unmanaged-short>
-        internal unsafe void Set(System.Guid guidKey, System.UInt64 unValue)
+        internal unsafe void Set(System.Guid guidKey, System.Int64 unValue)
         {
             SharpGen.Runtime.Result __result__;
             __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, &guidKey, unValue, (*(void ***)this._nativePointer)[22]);
@@ -1185,9 +1176,9 @@ namespace SharpMediaFoundation
         /// <param name = "bufRef">No documentation.</param>
         /// <param name = "cbBufSize">No documentation.</param>
         /// <returns>No documentation.</returns>
-        /// <unmanaged>HRESULT IMFAttributes::SetBlob([In] const GUID&amp; guidKey,[In] const unsigned char* pBuf,[In] unsigned int cbBufSize)</unmanaged>
+        /// <unmanaged>HRESULT IMFAttributes::SetBlob([In] const GUID&amp; guidKey,[In] const unsigned char* pBuf,[In] UINT32 cbBufSize)</unmanaged>
         /// <unmanaged-short>IMFAttributes::SetBlob</unmanaged-short>
-        internal unsafe void SetBlob(System.Guid guidKey, System.IntPtr bufRef, System.UInt32 cbBufSize)
+        internal unsafe void SetBlob(System.Guid guidKey, System.IntPtr bufRef, System.Int32 cbBufSize)
         {
             SharpGen.Runtime.Result __result__;
             __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, &guidKey, (void *)bufRef, cbBufSize, (*(void ***)this._nativePointer)[26]);
@@ -1243,9 +1234,9 @@ namespace SharpMediaFoundation
         /// </summary>
         /// <param name = "cItemsRef">No documentation.</param>
         /// <returns>No documentation.</returns>
-        /// <unmanaged>HRESULT IMFAttributes::GetCount([Out] unsigned int* pcItems)</unmanaged>
+        /// <unmanaged>HRESULT IMFAttributes::GetCount([Out] UINT32* pcItems)</unmanaged>
         /// <unmanaged-short>IMFAttributes::GetCount</unmanaged-short>
-        internal unsafe void GetCount(out System.UInt32 cItemsRef)
+        internal unsafe void GetCount(out System.Int32 cItemsRef)
         {
             SharpGen.Runtime.Result __result__;
             fixed (void *cItemsRef_ = &cItemsRef)
@@ -1260,9 +1251,9 @@ namespace SharpMediaFoundation
         /// <param name = "guidKeyRef">No documentation.</param>
         /// <param name = "valueRef">No documentation.</param>
         /// <returns>No documentation.</returns>
-        /// <unmanaged>HRESULT IMFAttributes::GetItemByIndex([In] unsigned int unIndex,[Out] GUID* pguidKey,[InOut, Optional] PROPVARIANT* pValue)</unmanaged>
+        /// <unmanaged>HRESULT IMFAttributes::GetItemByIndex([In] UINT32 unIndex,[Out] GUID* pguidKey,[InOut, Optional] PROPVARIANT* pValue)</unmanaged>
         /// <unmanaged-short>IMFAttributes::GetItemByIndex</unmanaged-short>
-        internal unsafe void GetItemByIndex(System.UInt32 unIndex, out System.Guid guidKeyRef, System.IntPtr valueRef)
+        internal unsafe void GetItemByIndex(System.Int32 unIndex, out System.Guid guidKeyRef, System.IntPtr valueRef)
         {
             guidKeyRef = default (System.Guid);
             SharpGen.Runtime.Result __result__;
