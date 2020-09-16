@@ -224,6 +224,7 @@
     <short name="INVALIDSTATE">InvalidState</short>
     <short name="INVALIDSTREAMNUMBER">InvalidStreamNumber</short>
     <short name="INVALIDTYPE">InvalidType</short>
+    <short name="IUNKNOWN">IUnknown</short>
     <short name="KEYFRAME">KeyFrame</short>
     <short name="MANUALSS">ManualSs</short>
     <short name="MEDIAPROC">MediaProc</short>
@@ -254,6 +255,7 @@
     <short name="STREAMSINK">StreamSink</short>
     <short name="STREAMSINKS">StreamSinks</short>
     <short name="TIMELINECONTROLLER">TimelineController</short>
+    <short name="UINT">UInt</short>
     <short name="USERMODE">UserMode</short>
     <short name="WMDRM">WindowsMediaDrm</short>
     <short name="WMDRMOTA">WindowsMediaDrmOutputTrustAuthority</short>

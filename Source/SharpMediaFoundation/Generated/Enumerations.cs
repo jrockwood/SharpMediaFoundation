@@ -97,13 +97,13 @@ namespace SharpMediaFoundation
         /// </summary>
         /// <unmanaged>MF_ATTRIBUTE_UINT32</unmanaged>
         /// <unmanaged-short>MF_ATTRIBUTE_UINT32</unmanaged-short>
-        Uint32 = unchecked ((System.Int32)(19)),
+        UInt32 = unchecked ((System.Int32)(19)),
         /// <summary>
         /// No documentation.
         /// </summary>
         /// <unmanaged>MF_ATTRIBUTE_UINT64</unmanaged>
         /// <unmanaged-short>MF_ATTRIBUTE_UINT64</unmanaged-short>
-        Uint64 = unchecked ((System.Int32)(21)),
+        UInt64 = unchecked ((System.Int32)(21)),
         /// <summary>
         /// No documentation.
         /// </summary>
@@ -133,7 +133,7 @@ namespace SharpMediaFoundation
         /// </summary>
         /// <unmanaged>MF_ATTRIBUTE_IUNKNOWN</unmanaged>
         /// <unmanaged-short>MF_ATTRIBUTE_IUNKNOWN</unmanaged-short>
-        Iunknown = unchecked ((System.Int32)(13))}
+        IUnknown = unchecked ((System.Int32)(13))}
 
     [System.FlagsAttribute]
     /// <summary>
