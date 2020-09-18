@@ -923,7 +923,7 @@ namespace SharpMediaFoundation
         /// <returns>No documentation.</returns>
         /// <unmanaged>HRESULT IMFAttributes::GetGUID([In] const GUID&amp; guidKey,[Out] GUID* pguidValue)</unmanaged>
         /// <unmanaged-short>IMFAttributes::GetGUID</unmanaged-short>
-        internal unsafe System.Guid GetGUID(System.Guid guidKey)
+        internal unsafe System.Guid GetGuid(System.Guid guidKey)
         {
             System.Guid guidValueRef;
             SharpGen.Runtime.Result __result__;

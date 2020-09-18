@@ -177,6 +177,25 @@ namespace SharpMediaFoundation
         /// <summary>
         /// No documentation.
         /// </summary>
+        /// <param name = "mFAttributesOut">No documentation.</param>
+        /// <param name = "cInitialSize">No documentation.</param>
+        /// <returns>No documentation.</returns>
+        /// <unmanaged>HRESULT MFCreateAttributes([Out, Fast] IMFAttributes** ppMFAttributes,[In] UINT32 cInitialSize)</unmanaged>
+        /// <unmanaged-short>MFCreateAttributes</unmanaged-short>
+        public static unsafe void CreateAttributes(SharpMediaFoundation.MediaAttributes mFAttributesOut, System.Int32 cInitialSize)
+        {
+            System.IntPtr mFAttributesOut_ = System.IntPtr.Zero;
+            SharpGen.Runtime.Result __result__;
+            __result__ = MFCreateAttributes_(&mFAttributesOut_, cInitialSize);
+            (mFAttributesOut).NativePointer = mFAttributesOut_;
+            __result__.CheckError();
+        }
+
+        [System.Runtime.InteropServices.DllImportAttribute("Mfplat.dll", EntryPoint = "MFCreateAttributes", CallingConvention = System.Runtime.InteropServices.CallingConvention.StdCall)]
+        private unsafe static extern int MFCreateAttributes_(void *param0, int param1);
+        /// <summary>
+        /// No documentation.
+        /// </summary>
         /// <param name = "configurationRef">No documentation.</param>
         /// <param name = "mediaSessionOut">No documentation.</param>
         /// <returns>No documentation.</returns>

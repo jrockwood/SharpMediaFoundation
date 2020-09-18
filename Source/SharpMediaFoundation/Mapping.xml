@@ -18,6 +18,7 @@
     <attach>MF_VERSION</attach>
     <attach>MFAllocateWorkQueue</attach>
     <attach>MFCreateAsyncResult</attach>
+    <attach>MFCreateAttributes</attach>
     <attach>MFPutWorkItem</attach>
     <attach>MFShutdown</attach>
     <attach>MFStartup</attach>
@@ -349,26 +350,25 @@
     <map param="IMFAttributes::CompareItem::pbResult" return="true" />
     <map param="IMFAttributes::Compare::pbResult" return="true" />
 
-    <map method="IMFAttributes::GetUINT32" visibility="internal" />
-    <map method="IMFAttributes::GetUINT32" name="GetInt" />
+    <map method="IMFAttributes::GetUINT32" name="GetInt" visibility="internal" />
     <map param="IMFAttributes::GetUINT32::punValue" return="true" />
 
-    <map method="IMFAttributes::GetUINT64" visibility="internal" />
-    <map method="IMFAttributes::GetUINT64" name="GetLong" />
+    <map method="IMFAttributes::GetUINT64" name="GetLong" visibility="internal" />
     <map param="IMFAttributes::GetUINT64::punValue" return="true" />
 
     <map method="IMFAttributes::GetDouble" visibility="internal" />
     <map param="IMFAttributes::GetDouble::pfValue" return="true" />
 
-    <map method="IMFAttributes::GetGUID" visibility="internal" />
+    <map method="IMFAttributes::GetGUID" name="GetGuid" visibility="internal" />
     <map param="IMFAttributes::GetGUID::pguidValue" return="true" />
 
     <map method="IMFAttributes::GetString.*" visibility="internal" />
     <map method="IMFAttributes::GetAllocatedString" visibility="internal" />
     <map param="IMFAttributes::GetStringLength::pcchLength" return="true" />
+
     <map method="IMFAttributes::GetBlob.*" visibility="internal" />
-    <map method="IMFAttributes::GetAllocatedBlob" visibility="internal" />
     <map param="IMFAttributes::GetBlob::pBuf" type="void" attribute="in" />
+    <map method="IMFAttributes::GetAllocatedBlob" visibility="internal" />
     <map param="IMFAttributes::GetBlobSize::pcbBlobSize" return="true" />
     <map method="IMFAttributes::SetBlob"    visibility="internal" />
     <map param="IMFAttributes::SetBlob::pBuf" type="void" attribute="in" />
@@ -420,6 +420,9 @@
     -->
     <map function="MF(.*)" name-tmp="$1" />
     <map function="MF.*" dll='"Mfplat.dll"' group="SharpMediaFoundation.MediaFactory" />
+
+    <!-- MFCreatAttributes -->
+    <map param="MFCreateAttributes::ppMFAttributes" attribute="out fast" />
 
     <!-- MFCreateMediaSession -->
     <map function="MFCreateMediaSession" dll='"mf.dll"' />

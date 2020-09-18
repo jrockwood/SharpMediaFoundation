@@ -194,6 +194,11 @@ namespace SharpMediaFoundation
             throw null;
         }
 
+        public static unsafe int CalliStdCallFuncint(void *param0, int param1, void *funcPtr)
+        {
+            throw null;
+        }
+
         public static unsafe int CalliStdCallFuncint(void *param0, void *param1, void *funcPtr)
         {
             throw null;
