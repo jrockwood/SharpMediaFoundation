@@ -9,6 +9,7 @@ namespace SharpMediaFoundation.Interop
 {
     using System.Diagnostics.CodeAnalysis;
     using System.Runtime.InteropServices;
+    using System.Security;
 
     /// <summary>
     /// Contains definitions for interop methods.
@@ -35,9 +36,11 @@ namespace SharpMediaFoundation.Interop
 
         private const string MfPlat = "Mfplat.dll";
 
+        [SuppressUnmanagedCodeSecurity]
         [DllImport(MfPlat, CallingConvention = CallingConvention.StdCall)]
         public static extern int MFShutdown();
 
+        [SuppressUnmanagedCodeSecurity]
         [DllImport(MfPlat, CallingConvention = CallingConvention.StdCall)]
         public static extern int MFStartup(int version, int dwFlags);
     }
