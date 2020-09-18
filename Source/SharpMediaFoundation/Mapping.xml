@@ -48,6 +48,8 @@
     <attach>IMFAudioStreamVolume</attach>
     <attach>IMFClock</attach>
     <attach>IMFClockStateSink</attach>
+    <attach>MFCreateTopology</attach>
+    <attach>MFCreateTopologyNode</attach>
     <attach>IMFGetService</attach>
     <attach>IMFMediaSession</attach>
     <attach>IMFPresentationClock</attach>
@@ -421,7 +423,7 @@
     <map function="MF(.*)" name-tmp="$1" />
     <map function="MF.*" dll='"Mfplat.dll"' group="SharpMediaFoundation.MediaFactory" />
 
-    <!-- MFCreatAttributes -->
+    <!-- MFCreateAttributes -->
     <map param="MFCreateAttributes::ppMFAttributes" attribute="out fast" />
 
     <!-- MFCreateMediaSession -->
@@ -432,8 +434,16 @@
     <map param="MFCreateMFByteStreamOnStreamEx::ppByteStream" attribute="out fast" />
 
     <!-- MFCreateSourceResolver -->
-    <map function="MFCreateSourceResolver" dll='"Mfplat.dll"' visibility="internal" />
-    <map param="MFCreateSourceResolver::ppISourceResolver" attribute="out fast" />
+    <map function="MFCreateSourceResolver" dll='"Mfplat.dll"' />
+    <map param="MFCreateSourceResolver::ppISourceResolver" return="true" />
+
+    <!-- MFCreateTopology -->
+    <map function="MFCreateTopology" dll='"mf.dll"' />
+    <map param="MFCreateTopology::ppTopo" return="true" />
+
+    <!-- MFCreateTopologyNode -->
+    <map function="MFCreateTopologyNode" dll='"mf.dll"' />
+    <map param="MFCreateTopologyNode::ppNode" return="true" />
 
     <!-- MFGetService -->
     <map function="MFGetService" dll='"mf.dll"' />

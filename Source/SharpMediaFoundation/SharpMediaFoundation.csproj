@@ -30,6 +30,9 @@
 
   <ItemGroup>
     <None Remove="Mapping.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Include="..\..\LICENSE.txt">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
@@ -40,7 +43,7 @@
     <None Include="Generated\LocalInterop.cs" />
     <None Include="Generated\Structures.cs" />
     <SharpGenConsumerMapping Remove="Mapping.xml" />
-    <Content Include="Mapping.xml" />
+    <EmbeddedResource Include="Mapping.xml" />
     <SharpGenMapping Include="Mapping.xml" />
   </ItemGroup>
 

@@ -221,21 +221,70 @@ namespace SharpMediaFoundation
         /// <summary>
         /// No documentation.
         /// </summary>
-        /// <param name = "iSourceResolverOut">No documentation.</param>
         /// <returns>No documentation.</returns>
-        /// <unmanaged>HRESULT MFCreateSourceResolver([Out, Fast] IMFSourceResolver** ppISourceResolver)</unmanaged>
+        /// <unmanaged>HRESULT MFCreateSourceResolver([Out] IMFSourceResolver** ppISourceResolver)</unmanaged>
         /// <unmanaged-short>MFCreateSourceResolver</unmanaged-short>
-        internal static unsafe void CreateSourceResolver(SharpMediaFoundation.SourceResolver iSourceResolverOut)
+        public static unsafe SharpMediaFoundation.SourceResolver CreateSourceResolver()
         {
+            SharpMediaFoundation.SourceResolver iSourceResolverOut;
             System.IntPtr iSourceResolverOut_ = System.IntPtr.Zero;
             SharpGen.Runtime.Result __result__;
             __result__ = MFCreateSourceResolver_(&iSourceResolverOut_);
-            (iSourceResolverOut).NativePointer = iSourceResolverOut_;
+            if (iSourceResolverOut_ != System.IntPtr.Zero)
+                iSourceResolverOut = new SharpMediaFoundation.SourceResolver(iSourceResolverOut_);
+            else
+                iSourceResolverOut = null;
             __result__.CheckError();
+            return iSourceResolverOut;
         }
 
         [System.Runtime.InteropServices.DllImportAttribute("Mfplat.dll", EntryPoint = "MFCreateSourceResolver", CallingConvention = System.Runtime.InteropServices.CallingConvention.StdCall)]
         private unsafe static extern int MFCreateSourceResolver_(void *param0);
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <returns>No documentation.</returns>
+        /// <unmanaged>HRESULT MFCreateTopology([Out] IMFTopology** ppTopo)</unmanaged>
+        /// <unmanaged-short>MFCreateTopology</unmanaged-short>
+        public static unsafe SharpMediaFoundation.Topology CreateTopology()
+        {
+            SharpMediaFoundation.Topology topoOut;
+            System.IntPtr topoOut_ = System.IntPtr.Zero;
+            SharpGen.Runtime.Result __result__;
+            __result__ = MFCreateTopology_(&topoOut_);
+            if (topoOut_ != System.IntPtr.Zero)
+                topoOut = new SharpMediaFoundation.Topology(topoOut_);
+            else
+                topoOut = null;
+            __result__.CheckError();
+            return topoOut;
+        }
+
+        [System.Runtime.InteropServices.DllImportAttribute("mf.dll", EntryPoint = "MFCreateTopology", CallingConvention = System.Runtime.InteropServices.CallingConvention.StdCall)]
+        private unsafe static extern int MFCreateTopology_(void *param0);
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <param name = "nodeType">No documentation.</param>
+        /// <returns>No documentation.</returns>
+        /// <unmanaged>HRESULT MFCreateTopologyNode([In] MF_TOPOLOGY_TYPE NodeType,[Out] IMFTopologyNode** ppNode)</unmanaged>
+        /// <unmanaged-short>MFCreateTopologyNode</unmanaged-short>
+        public static unsafe SharpMediaFoundation.TopologyNode CreateTopologyNode(SharpMediaFoundation.TopologyType nodeType)
+        {
+            SharpMediaFoundation.TopologyNode nodeOut;
+            System.IntPtr nodeOut_ = System.IntPtr.Zero;
+            SharpGen.Runtime.Result __result__;
+            __result__ = MFCreateTopologyNode_(unchecked ((System.Int32)nodeType), &nodeOut_);
+            if (nodeOut_ != System.IntPtr.Zero)
+                nodeOut = new SharpMediaFoundation.TopologyNode(nodeOut_);
+            else
+                nodeOut = null;
+            __result__.CheckError();
+            return nodeOut;
+        }
+
+        [System.Runtime.InteropServices.DllImportAttribute("mf.dll", EntryPoint = "MFCreateTopologyNode", CallingConvention = System.Runtime.InteropServices.CallingConvention.StdCall)]
+        private unsafe static extern int MFCreateTopologyNode_(int param0, void *param1);
         /// <summary>
         /// No documentation.
         /// </summary>
