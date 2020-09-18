@@ -1,18 +1,10 @@
-﻿// ---------------------------------------------------------------------------------------------------------------------
-// <copyright file="HResult.cs" company="Justin Rockwood">
-//   Copyright (c) Justin Rockwood. All Rights Reserved. Licensed under the Apache License, Version 2.0. See
-//   LICENSE.txt in the project root for license information.
-// </copyright>
-// ---------------------------------------------------------------------------------------------------------------------
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
 namespace SharpMediaFoundation.Interop
 {
-    using System.Diagnostics.CodeAnalysis;
-
-    [SuppressMessage("ReSharper", "InconsistentNaming")]
-    [SuppressMessage("ReSharper", "UnusedMember.Global")]
-    public enum HResult
+    class HResult
     {
-        S_OK = 0,
     }
 }

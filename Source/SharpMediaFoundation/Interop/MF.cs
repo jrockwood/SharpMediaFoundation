@@ -1,4 +1,4 @@
-// ---------------------------------------------------------------------------------------------------------------------
+﻿// ---------------------------------------------------------------------------------------------------------------------
 // <copyright file="MF.cs" company="Justin Rockwood">
 //   Copyright (c) Justin Rockwood. All Rights Reserved. Licensed under the Apache License, Version 2.0. See
 //   LICENSE.txt in the project root for license information.
@@ -7,6 +7,7 @@
 
 namespace SharpMediaFoundation.Interop
 {
+    using System;
     using System.Diagnostics.CodeAnalysis;
     using System.Runtime.InteropServices;
     using System.Security;
@@ -34,14 +35,19 @@ namespace SharpMediaFoundation.Interop
         //// Functions
         //// ===========================================================================================================
 
+        private const string Mf = "Mf.dll";
         private const string MfPlat = "Mfplat.dll";
 
         [SuppressUnmanagedCodeSecurity]
-        [DllImport(MfPlat, CallingConvention = CallingConvention.StdCall)]
-        public static extern int MFShutdown();
+        [DllImport(Mf, CallingConvention = CallingConvention.StdCall)]
+        public static extern HResult MFCreateMediaSession(IntPtr pConfiguration, out IntPtr ppMediaSession);
 
         [SuppressUnmanagedCodeSecurity]
         [DllImport(MfPlat, CallingConvention = CallingConvention.StdCall)]
-        public static extern int MFStartup(int version, int dwFlags);
+        public static extern HResult MFShutdown();
+
+        [SuppressUnmanagedCodeSecurity]
+        [DllImport(MfPlat, CallingConvention = CallingConvention.StdCall)]
+        public static extern HResult MFStartup(int version, int dwFlags);
     }
 }
