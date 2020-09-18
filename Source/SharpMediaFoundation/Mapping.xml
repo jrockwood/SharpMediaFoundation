@@ -41,6 +41,23 @@
     <attach>MF_EVENT_START_PRESENTATION_TIME</attach>
     <attach>MF_EVENT_START_PRESENTATION_TIME_AT_OUTPUT</attach>
     <attach>MF_EVENT_TOPOLOGY_STATUS</attach>
+
+    <!-- MFMediaType GUIDs -->
+    <attach>MFMediaType_Default</attach>
+    <attach>MFMediaType_Audio</attach>
+    <attach>MFMediaType_Video</attach>
+    <attach>MFMediaType_Protected</attach>
+    <attach>MFMediaType_SAMI</attach>
+    <attach>MFMediaType_Script</attach>
+    <attach>MFMediaType_Image</attach>
+    <attach>MFMediaType_HTML</attach>
+    <attach>MFMediaType_Binary</attach>
+    <attach>MFMediaType_FileTransfer</attach>
+    <attach>MFMediaType_Stream</attach>
+    <attach>MFMediaType_MultiplexedFrames</attach>
+    <attach>MFMediaType_Subtitle</attach>
+    <attach>MFMediaType_Perception</attach>
+
     <attach>MF_TOPOSTATUS</attach>
   </include>
 
@@ -179,6 +196,10 @@
     <const from-guid="MR_POLICY_VOLUME_SERVICE" class='SharpMediaFoundation.MediaServiceKeys' type='System.Guid' name="PolicyVolume">new System.Guid("$1")</const>
     <const from-guid="MR_STREAM_VOLUME_SERVICE" class='SharpMediaFoundation.MediaServiceKeys' type='System.Guid' name="StreamVolume">new System.Guid("$1")</const>
     <const from-guid="MR_VIDEO_ACCELERATION_SERVICE" class='SharpMediaFoundation.MediaServiceKeys' type='System.Guid' name="VideoAcceleration">new System.Guid("$1")</const>
+
+    <!-- MediaTypeGuids -->
+    <create visibility="public static" class="MediaTypeGuids" />
+    <const from-guid="MFMediaType_(.*)" class="SharpMediaFoundation.MediaTypeGuids" type="System.Guid" name="$1">new System.Guid("$1")</const>
 
     <!-- MediaFactory -->
     <create class="SharpMediaFoundation.MediaFactory" visibility="public static" />

@@ -415,6 +415,55 @@ namespace SharpMediaFoundation
     /// <summary>
     /// Functions
     /// </summary>
+    public static partial class MediaTypeGuids
+    {
+                ///<summary>Constant Default</summary>
+        ///<unmanaged>MFMediaType_Default</unmanaged>
+        public static readonly System.Guid Default = new System.Guid("81a412e6-8103-4b06-857f-1862781024ac");
+                ///<summary>Constant Audio</summary>
+        ///<unmanaged>MFMediaType_Audio</unmanaged>
+        public static readonly System.Guid Audio = new System.Guid("73647561-0000-0010-8000-00aa00389b71");
+                ///<summary>Constant Video</summary>
+        ///<unmanaged>MFMediaType_Video</unmanaged>
+        public static readonly System.Guid Video = new System.Guid("73646976-0000-0010-8000-00aa00389b71");
+                ///<summary>Constant Protected</summary>
+        ///<unmanaged>MFMediaType_Protected</unmanaged>
+        public static readonly System.Guid Protected = new System.Guid("7b4b6fe6-9d04-4494-be14-7e0bd076c8e4");
+                ///<summary>Constant Sami</summary>
+        ///<unmanaged>MFMediaType_SAMI</unmanaged>
+        public static readonly System.Guid Sami = new System.Guid("e69669a0-3dcd-40cb-9e2e-3708387c0616");
+                ///<summary>Constant Script</summary>
+        ///<unmanaged>MFMediaType_Script</unmanaged>
+        public static readonly System.Guid Script = new System.Guid("72178c22-e45b-11d5-bc2a-00b0d0f3f4ab");
+                ///<summary>Constant Image</summary>
+        ///<unmanaged>MFMediaType_Image</unmanaged>
+        public static readonly System.Guid Image = new System.Guid("72178c23-e45b-11d5-bc2a-00b0d0f3f4ab");
+                ///<summary>Constant Html</summary>
+        ///<unmanaged>MFMediaType_HTML</unmanaged>
+        public static readonly System.Guid Html = new System.Guid("72178c24-e45b-11d5-bc2a-00b0d0f3f4ab");
+                ///<summary>Constant Binary</summary>
+        ///<unmanaged>MFMediaType_Binary</unmanaged>
+        public static readonly System.Guid Binary = new System.Guid("72178c25-e45b-11d5-bc2a-00b0d0f3f4ab");
+                ///<summary>Constant FileTransfer</summary>
+        ///<unmanaged>MFMediaType_FileTransfer</unmanaged>
+        public static readonly System.Guid FileTransfer = new System.Guid("72178c26-e45b-11d5-bc2a-00b0d0f3f4ab");
+                ///<summary>Constant Stream</summary>
+        ///<unmanaged>MFMediaType_Stream</unmanaged>
+        public static readonly System.Guid Stream = new System.Guid("e436eb83-524f-11ce-9f53-0020af0ba770");
+                ///<summary>Constant MultiplexedFrames</summary>
+        ///<unmanaged>MFMediaType_MultiplexedFrames</unmanaged>
+        public static readonly System.Guid MultiplexedFrames = new System.Guid("6ea542b0-281f-4231-a464-fe2f5022501c");
+                ///<summary>Constant Subtitle</summary>
+        ///<unmanaged>MFMediaType_Subtitle</unmanaged>
+        public static readonly System.Guid Subtitle = new System.Guid("a6d13581-ed50-4e65-ae08-26065576aacc");
+                ///<summary>Constant Perception</summary>
+        ///<unmanaged>MFMediaType_Perception</unmanaged>
+        public static readonly System.Guid Perception = new System.Guid("597ff6f9-6ea2-4670-85b4-ea84073fe940");
+    }
+
+    /// <summary>
+    /// Functions
+    /// </summary>
     public partial class ResultCode
     {
                 ///<summary>Constant DxgiDeviceNotInitialized</summary>
