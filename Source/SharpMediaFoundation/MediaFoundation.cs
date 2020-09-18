@@ -48,10 +48,7 @@ namespace SharpMediaFoundation
                 return;
             }
 
-            int hresult = NativeMethods.MFStartup(
-                    NativeMethods.MF_VERSION,
-                    useLightVersion ? NativeMethods.MFSTARTUP_LITE : NativeMethods.MFSTARTUP_FULL);
-
+            int hresult = MF.MFStartup(MF.MF_VERSION, useLightVersion ? MF.MFSTARTUP_LITE : MF.MFSTARTUP_FULL);
             Marshal.ThrowExceptionForHR(hresult);
 
             s_hasStarted = true;
@@ -67,7 +64,7 @@ namespace SharpMediaFoundation
                 return;
             }
 
-            int hresult = NativeMethods.MFShutdown();
+            int hresult = MF.MFShutdown();
             Marshal.ThrowExceptionForHR(hresult);
 
             s_hasStarted = false;
