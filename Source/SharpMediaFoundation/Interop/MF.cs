@@ -21,9 +21,9 @@ namespace SharpMediaFoundation.Interop
         //// Constants
         //// ===========================================================================================================
 
-        public const uint MF_VERSION = (MF_SDK_VERSION << 16) | MF_API_VERSION;
-        private const uint MF_SDK_VERSION = 0x0002;
-        private const uint MF_API_VERSION = 0x0070;
+        public const int MF_VERSION = (MF_SDK_VERSION << 16) | MF_API_VERSION;
+        private const int MF_SDK_VERSION = 0x0002;
+        private const int MF_API_VERSION = 0x0070;
 
         public const int MFSTARTUP_NOSOCKET = 0x1;
         public const int MFSTARTUP_LITE = MFSTARTUP_NOSOCKET;
@@ -39,6 +39,6 @@ namespace SharpMediaFoundation.Interop
         public static extern int MFShutdown();
 
         [DllImport(MfPlat, CallingConvention = CallingConvention.StdCall)]
-        public static extern int MFStartup(uint version, int dwFlags);
+        public static extern int MFStartup(int version, int dwFlags);
     }
 }
