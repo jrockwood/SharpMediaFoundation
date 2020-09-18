@@ -930,6 +930,63 @@ namespace SharpMediaFoundation
         /// <unmanaged-short>MEDeviceThermalStateChanged</unmanaged-short>
         DeviceThermalStateChanged = unchecked ((System.Int32)(950))}
 
+    [System.FlagsAttribute]
+    /// <summary>
+    /// No documentation.
+    /// </summary>
+    /// <unmanaged>MFMEDIASOURCE_CHARACTERISTICS</unmanaged>
+    /// <unmanaged-short>MFMEDIASOURCE_CHARACTERISTICS</unmanaged-short>
+    public enum MediaSourceCharacteristics : System.Int32
+    {
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <unmanaged>MFMEDIASOURCE_IS_LIVE</unmanaged>
+        /// <unmanaged-short>MFMEDIASOURCE_IS_LIVE</unmanaged-short>
+        IsLive = unchecked ((System.Int32)(1)),
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <unmanaged>MFMEDIASOURCE_CAN_SEEK</unmanaged>
+        /// <unmanaged-short>MFMEDIASOURCE_CAN_SEEK</unmanaged-short>
+        CanSeek = unchecked ((System.Int32)(2)),
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <unmanaged>MFMEDIASOURCE_CAN_PAUSE</unmanaged>
+        /// <unmanaged-short>MFMEDIASOURCE_CAN_PAUSE</unmanaged-short>
+        CanPause = unchecked ((System.Int32)(4)),
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <unmanaged>MFMEDIASOURCE_HAS_SLOW_SEEK</unmanaged>
+        /// <unmanaged-short>MFMEDIASOURCE_HAS_SLOW_SEEK</unmanaged-short>
+        HasSlowSeek = unchecked ((System.Int32)(8)),
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <unmanaged>MFMEDIASOURCE_HAS_MULTIPLE_PRESENTATIONS</unmanaged>
+        /// <unmanaged-short>MFMEDIASOURCE_HAS_MULTIPLE_PRESENTATIONS</unmanaged-short>
+        HasMultiplePresentations = unchecked ((System.Int32)(16)),
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <unmanaged>MFMEDIASOURCE_CAN_SKIPFORWARD</unmanaged>
+        /// <unmanaged-short>MFMEDIASOURCE_CAN_SKIPFORWARD</unmanaged-short>
+        CanSkipForward = unchecked ((System.Int32)(32)),
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <unmanaged>MFMEDIASOURCE_CAN_SKIPBACKWARD</unmanaged>
+        /// <unmanaged-short>MFMEDIASOURCE_CAN_SKIPBACKWARD</unmanaged-short>
+        CanSkipBackward = unchecked ((System.Int32)(64)),
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <unmanaged>MFMEDIASOURCE_DOES_NOT_USE_NETWORK</unmanaged>
+        /// <unmanaged-short>MFMEDIASOURCE_DOES_NOT_USE_NETWORK</unmanaged-short>
+        DoesNotUseNetwork = unchecked ((System.Int32)(128))}
+
     /// <summary>
     /// No documentation.
     /// </summary>

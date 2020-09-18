@@ -1695,6 +1695,128 @@ namespace SharpMediaFoundation
         }
     }
 
+    [System.Runtime.InteropServices.GuidAttribute("279a808d-aec7-40c8-9c6b-a6b492c78a66")]
+    public partial class MediaSource : SharpMediaFoundation.MediaEventGenerator
+    {
+        public MediaSource(System.IntPtr nativePtr): base (nativePtr)
+        {
+        }
+
+        public static explicit operator MediaSource(System.IntPtr nativePtr) => nativePtr == System.IntPtr.Zero ? null : new MediaSource(nativePtr);
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <unmanaged>GetCharacteristics</unmanaged>
+        /// <unmanaged-short>GetCharacteristics</unmanaged-short>
+        public SharpMediaFoundation.MediaSourceCharacteristics Characteristics
+        {
+            get
+            {
+                GetCharacteristics(out var __output__);
+                return __output__;
+            }
+        }
+
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <param name = "characteristicsRef">No documentation.</param>
+        /// <returns>No documentation.</returns>
+        /// <unmanaged>HRESULT IMFMediaSource::GetCharacteristics([Out] DWORD* pdwCharacteristics)</unmanaged>
+        /// <unmanaged-short>IMFMediaSource::GetCharacteristics</unmanaged-short>
+        internal unsafe void GetCharacteristics(out SharpMediaFoundation.MediaSourceCharacteristics characteristicsRef)
+        {
+            SharpGen.Runtime.Result __result__;
+            fixed (void *characteristicsRef_ = &characteristicsRef)
+                __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, characteristicsRef_, (*(void ***)this._nativePointer)[7]);
+            __result__.CheckError();
+        }
+
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <returns>No documentation.</returns>
+        /// <unmanaged>HRESULT IMFMediaSource::CreatePresentationDescriptor([Out] IMFPresentationDescriptor** ppPresentationDescriptor)</unmanaged>
+        /// <unmanaged-short>IMFMediaSource::CreatePresentationDescriptor</unmanaged-short>
+        public unsafe SharpMediaFoundation.PresentationDescriptor CreatePresentationDescriptor()
+        {
+            SharpMediaFoundation.PresentationDescriptor presentationDescriptorOut;
+            System.IntPtr presentationDescriptorOut_ = System.IntPtr.Zero;
+            SharpGen.Runtime.Result __result__;
+            __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, &presentationDescriptorOut_, (*(void ***)this._nativePointer)[8]);
+            if (presentationDescriptorOut_ != System.IntPtr.Zero)
+                presentationDescriptorOut = new SharpMediaFoundation.PresentationDescriptor(presentationDescriptorOut_);
+            else
+                presentationDescriptorOut = null;
+            __result__.CheckError();
+            return presentationDescriptorOut;
+        }
+
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <param name = "presentationDescriptorRef">No documentation.</param>
+        /// <param name = "guidTimeFormatRef">No documentation.</param>
+        /// <param name = "varStartPositionRef">No documentation.</param>
+        /// <returns>No documentation.</returns>
+        /// <unmanaged>HRESULT IMFMediaSource::Start([In, Optional] IMFPresentationDescriptor* pPresentationDescriptor,[In, Optional] const GUID* pguidTimeFormat,[In, Optional] const PROPVARIANT* pvarStartPosition)</unmanaged>
+        /// <unmanaged-short>IMFMediaSource::Start</unmanaged-short>
+        public unsafe void Start(SharpMediaFoundation.PresentationDescriptor presentationDescriptorRef, System.Guid? guidTimeFormatRef, SharpGen.Runtime.Win32.Variant? varStartPositionRef)
+        {
+            System.IntPtr presentationDescriptorRef_ = System.IntPtr.Zero;
+            System.Guid guidTimeFormatRef_;
+            SharpGen.Runtime.Win32.Variant varStartPositionRef_;
+            SharpGen.Runtime.Result __result__;
+            presentationDescriptorRef_ = SharpGen.Runtime.CppObject.ToCallbackPtr<SharpMediaFoundation.PresentationDescriptor>(presentationDescriptorRef);
+            if (guidTimeFormatRef != null)
+                guidTimeFormatRef_ = guidTimeFormatRef.Value;
+            if (varStartPositionRef != null)
+                varStartPositionRef_ = varStartPositionRef.Value;
+            __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, (void *)presentationDescriptorRef_, guidTimeFormatRef == null ? (void *)0 : &guidTimeFormatRef_, varStartPositionRef == null ? (void *)0 : &varStartPositionRef_, (*(void ***)this._nativePointer)[9]);
+            System.GC.KeepAlive(presentationDescriptorRef);
+            __result__.CheckError();
+        }
+
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <returns>No documentation.</returns>
+        /// <unmanaged>HRESULT IMFMediaSource::Stop()</unmanaged>
+        /// <unmanaged-short>IMFMediaSource::Stop</unmanaged-short>
+        public unsafe void Stop()
+        {
+            SharpGen.Runtime.Result __result__;
+            __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, (*(void ***)this._nativePointer)[10]);
+            __result__.CheckError();
+        }
+
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <returns>No documentation.</returns>
+        /// <unmanaged>HRESULT IMFMediaSource::Pause()</unmanaged>
+        /// <unmanaged-short>IMFMediaSource::Pause</unmanaged-short>
+        public unsafe void Pause()
+        {
+            SharpGen.Runtime.Result __result__;
+            __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, (*(void ***)this._nativePointer)[11]);
+            __result__.CheckError();
+        }
+
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <returns>No documentation.</returns>
+        /// <unmanaged>HRESULT IMFMediaSource::Shutdown()</unmanaged>
+        /// <unmanaged-short>IMFMediaSource::Shutdown</unmanaged-short>
+        public unsafe void Shutdown()
+        {
+            SharpGen.Runtime.Result __result__;
+            __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, (*(void ***)this._nativePointer)[12]);
+            __result__.CheckError();
+        }
+    }
+
     [System.Runtime.InteropServices.GuidAttribute("44ae0fa8-ea31-4109-8d2e-4cae4997c555")]
     public partial class MediaType : SharpMediaFoundation.MediaAttributes
     {
@@ -1785,31 +1907,195 @@ namespace SharpMediaFoundation
         /// <summary>
         /// No documentation.
         /// </summary>
-        /// <param name = "guidRepresentation">No documentation.</param>
-        /// <param name = "vRepresentationOut">No documentation.</param>
+        /// <param name = "representation">No documentation.</param>
         /// <returns>No documentation.</returns>
         /// <unmanaged>HRESULT IMFMediaType::GetRepresentation([In] GUID guidRepresentation,[Out] void** ppvRepresentation)</unmanaged>
         /// <unmanaged-short>IMFMediaType::GetRepresentation</unmanaged-short>
-        public unsafe void GetRepresentation(System.Guid guidRepresentation, out System.IntPtr vRepresentationOut)
+        public unsafe System.IntPtr GetRepresentation(System.Guid representation)
+        {
+            System.IntPtr vRepresentationOut;
+            SharpGen.Runtime.Result __result__;
+            __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, representation, &vRepresentationOut, (*(void ***)this._nativePointer)[36]);
+            __result__.CheckError();
+            return vRepresentationOut;
+        }
+
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <param name = "representation">No documentation.</param>
+        /// <param name = "representationRef">No documentation.</param>
+        /// <returns>No documentation.</returns>
+        /// <unmanaged>HRESULT IMFMediaType::FreeRepresentation([In] GUID guidRepresentation,[In] void* pvRepresentation)</unmanaged>
+        /// <unmanaged-short>IMFMediaType::FreeRepresentation</unmanaged-short>
+        public unsafe void FreeRepresentation(System.Guid representation, System.IntPtr representationRef)
         {
             SharpGen.Runtime.Result __result__;
-            fixed (void *vRepresentationOut_ = &vRepresentationOut)
-                __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, guidRepresentation, vRepresentationOut_, (*(void ***)this._nativePointer)[36]);
+            __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, representation, (void *)representationRef, (*(void ***)this._nativePointer)[37]);
+            __result__.CheckError();
+        }
+    }
+
+    [System.Runtime.InteropServices.GuidAttribute("e93dcf6c-4b07-4e1e-8123-aa16ed6eadf5")]
+    public partial class MediaTypeHandler : SharpGen.Runtime.ComObject
+    {
+        public MediaTypeHandler(System.IntPtr nativePtr): base (nativePtr)
+        {
+        }
+
+        public static explicit operator MediaTypeHandler(System.IntPtr nativePtr) => nativePtr == System.IntPtr.Zero ? null : new MediaTypeHandler(nativePtr);
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <unmanaged>GetMediaTypeCount</unmanaged>
+        /// <unmanaged-short>GetMediaTypeCount</unmanaged-short>
+        public System.Int32 MediaTypeCount
+        {
+            get
+            {
+                GetMediaTypeCount(out var __output__);
+                return __output__;
+            }
+        }
+
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <unmanaged>GetCurrentMediaType / SetCurrentMediaType</unmanaged>
+        /// <unmanaged-short>GetCurrentMediaType</unmanaged-short>
+        public SharpMediaFoundation.MediaType CurrentMediaType
+        {
+            get
+            {
+                GetCurrentMediaType(out var __output__);
+                return __output__;
+            }
+
+            set => SetCurrentMediaType(value);
+        }
+
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <unmanaged>GetMajorType</unmanaged>
+        /// <unmanaged-short>GetMajorType</unmanaged-short>
+        public System.Guid MajorType
+        {
+            get
+            {
+                GetMajorType(out var __output__);
+                return __output__;
+            }
+        }
+
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <param name = "mediaTypeRef">No documentation.</param>
+        /// <param name = "mediaTypeOut">No documentation.</param>
+        /// <returns>No documentation.</returns>
+        /// <unmanaged>HRESULT IMFMediaTypeHandler::IsMediaTypeSupported([In] IMFMediaType* pMediaType,[Out, Optional] IMFMediaType** ppMediaType)</unmanaged>
+        /// <unmanaged-short>IMFMediaTypeHandler::IsMediaTypeSupported</unmanaged-short>
+        public unsafe void IsMediaTypeSupported(SharpMediaFoundation.MediaType mediaTypeRef, out SharpMediaFoundation.MediaType mediaTypeOut)
+        {
+            System.IntPtr mediaTypeRef_ = System.IntPtr.Zero;
+            System.IntPtr mediaTypeOut_ = System.IntPtr.Zero;
+            SharpGen.Runtime.Result __result__;
+            mediaTypeRef_ = SharpGen.Runtime.CppObject.ToCallbackPtr<SharpMediaFoundation.MediaType>(mediaTypeRef);
+            __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, (void *)mediaTypeRef_, &mediaTypeOut_, (*(void ***)this._nativePointer)[3]);
+            if (mediaTypeOut_ != System.IntPtr.Zero)
+                mediaTypeOut = new SharpMediaFoundation.MediaType(mediaTypeOut_);
+            else
+                mediaTypeOut = null;
+            System.GC.KeepAlive(mediaTypeRef);
             __result__.CheckError();
         }
 
         /// <summary>
         /// No documentation.
         /// </summary>
-        /// <param name = "guidRepresentation">No documentation.</param>
-        /// <param name = "vRepresentationRef">No documentation.</param>
+        /// <param name = "typeCountRef">No documentation.</param>
         /// <returns>No documentation.</returns>
-        /// <unmanaged>HRESULT IMFMediaType::FreeRepresentation([In] GUID guidRepresentation,[In] void* pvRepresentation)</unmanaged>
-        /// <unmanaged-short>IMFMediaType::FreeRepresentation</unmanaged-short>
-        public unsafe void FreeRepresentation(System.Guid guidRepresentation, System.IntPtr vRepresentationRef)
+        /// <unmanaged>HRESULT IMFMediaTypeHandler::GetMediaTypeCount([Out] DWORD* pdwTypeCount)</unmanaged>
+        /// <unmanaged-short>IMFMediaTypeHandler::GetMediaTypeCount</unmanaged-short>
+        internal unsafe void GetMediaTypeCount(out System.Int32 typeCountRef)
         {
             SharpGen.Runtime.Result __result__;
-            __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, guidRepresentation, (void *)vRepresentationRef, (*(void ***)this._nativePointer)[37]);
+            fixed (void *typeCountRef_ = &typeCountRef)
+                __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, typeCountRef_, (*(void ***)this._nativePointer)[4]);
+            __result__.CheckError();
+        }
+
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <param name = "index">No documentation.</param>
+        /// <returns>No documentation.</returns>
+        /// <unmanaged>HRESULT IMFMediaTypeHandler::GetMediaTypeByIndex([In] DWORD dwIndex,[Out] IMFMediaType** ppType)</unmanaged>
+        /// <unmanaged-short>IMFMediaTypeHandler::GetMediaTypeByIndex</unmanaged-short>
+        public unsafe SharpMediaFoundation.MediaType GetMediaTypeByIndex(System.Int32 index)
+        {
+            SharpMediaFoundation.MediaType typeOut;
+            System.IntPtr typeOut_ = System.IntPtr.Zero;
+            SharpGen.Runtime.Result __result__;
+            __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, index, &typeOut_, (*(void ***)this._nativePointer)[5]);
+            if (typeOut_ != System.IntPtr.Zero)
+                typeOut = new SharpMediaFoundation.MediaType(typeOut_);
+            else
+                typeOut = null;
+            __result__.CheckError();
+            return typeOut;
+        }
+
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <param name = "mediaTypeRef">No documentation.</param>
+        /// <returns>No documentation.</returns>
+        /// <unmanaged>HRESULT IMFMediaTypeHandler::SetCurrentMediaType([In] IMFMediaType* pMediaType)</unmanaged>
+        /// <unmanaged-short>IMFMediaTypeHandler::SetCurrentMediaType</unmanaged-short>
+        internal unsafe void SetCurrentMediaType(SharpMediaFoundation.MediaType mediaTypeRef)
+        {
+            System.IntPtr mediaTypeRef_ = System.IntPtr.Zero;
+            SharpGen.Runtime.Result __result__;
+            mediaTypeRef_ = SharpGen.Runtime.CppObject.ToCallbackPtr<SharpMediaFoundation.MediaType>(mediaTypeRef);
+            __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, (void *)mediaTypeRef_, (*(void ***)this._nativePointer)[6]);
+            System.GC.KeepAlive(mediaTypeRef);
+            __result__.CheckError();
+        }
+
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <param name = "mediaTypeOut">No documentation.</param>
+        /// <returns>No documentation.</returns>
+        /// <unmanaged>HRESULT IMFMediaTypeHandler::GetCurrentMediaType([Out] IMFMediaType** ppMediaType)</unmanaged>
+        /// <unmanaged-short>IMFMediaTypeHandler::GetCurrentMediaType</unmanaged-short>
+        internal unsafe void GetCurrentMediaType(out SharpMediaFoundation.MediaType mediaTypeOut)
+        {
+            System.IntPtr mediaTypeOut_ = System.IntPtr.Zero;
+            SharpGen.Runtime.Result __result__;
+            __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, &mediaTypeOut_, (*(void ***)this._nativePointer)[7]);
+            if (mediaTypeOut_ != System.IntPtr.Zero)
+                mediaTypeOut = new SharpMediaFoundation.MediaType(mediaTypeOut_);
+            else
+                mediaTypeOut = null;
+            __result__.CheckError();
+        }
+
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <param name = "guidMajorTypeRef">No documentation.</param>
+        /// <returns>No documentation.</returns>
+        /// <unmanaged>HRESULT IMFMediaTypeHandler::GetMajorType([Out] GUID* pguidMajorType)</unmanaged>
+        /// <unmanaged-short>IMFMediaTypeHandler::GetMajorType</unmanaged-short>
+        internal unsafe void GetMajorType(out System.Guid guidMajorTypeRef)
+        {
+            guidMajorTypeRef = default (System.Guid);
+            SharpGen.Runtime.Result __result__;
+            fixed (void *guidMajorTypeRef_ = &guidMajorTypeRef)
+                __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, guidMajorTypeRef_, (*(void ***)this._nativePointer)[8]);
             __result__.CheckError();
         }
     }
@@ -1978,6 +2264,116 @@ namespace SharpMediaFoundation
         }
     }
 
+    [System.Runtime.InteropServices.GuidAttribute("03cb2711-24d7-4db6-a17f-f3a7a479a536")]
+    public partial class PresentationDescriptor : SharpMediaFoundation.MediaAttributes
+    {
+        public PresentationDescriptor(System.IntPtr nativePtr): base (nativePtr)
+        {
+        }
+
+        public static explicit operator PresentationDescriptor(System.IntPtr nativePtr) => nativePtr == System.IntPtr.Zero ? null : new PresentationDescriptor(nativePtr);
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <unmanaged>GetStreamDescriptorCount</unmanaged>
+        /// <unmanaged-short>GetStreamDescriptorCount</unmanaged-short>
+        public System.Int32 StreamDescriptorCount
+        {
+            get
+            {
+                GetStreamDescriptorCount(out var __output__);
+                return __output__;
+            }
+        }
+
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <param name = "descriptorCountRef">No documentation.</param>
+        /// <returns>No documentation.</returns>
+        /// <unmanaged>HRESULT IMFPresentationDescriptor::GetStreamDescriptorCount([Out] DWORD* pdwDescriptorCount)</unmanaged>
+        /// <unmanaged-short>IMFPresentationDescriptor::GetStreamDescriptorCount</unmanaged-short>
+        internal unsafe void GetStreamDescriptorCount(out System.Int32 descriptorCountRef)
+        {
+            SharpGen.Runtime.Result __result__;
+            fixed (void *descriptorCountRef_ = &descriptorCountRef)
+                __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, descriptorCountRef_, (*(void ***)this._nativePointer)[33]);
+            __result__.CheckError();
+        }
+
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <param name = "index">No documentation.</param>
+        /// <param name = "selectedRef">No documentation.</param>
+        /// <returns>No documentation.</returns>
+        /// <unmanaged>HRESULT IMFPresentationDescriptor::GetStreamDescriptorByIndex([In] DWORD dwIndex,[Out] BOOL* pfSelected,[Out] IMFStreamDescriptor** ppDescriptor)</unmanaged>
+        /// <unmanaged-short>IMFPresentationDescriptor::GetStreamDescriptorByIndex</unmanaged-short>
+        public unsafe SharpMediaFoundation.StreamDescriptor GetStreamDescriptorByIndex(System.Int32 index, out SharpGen.Runtime.Win32.RawBool selectedRef)
+        {
+            selectedRef = default (SharpGen.Runtime.Win32.RawBool);
+            SharpMediaFoundation.StreamDescriptor descriptorOut;
+            System.IntPtr descriptorOut_ = System.IntPtr.Zero;
+            SharpGen.Runtime.Result __result__;
+            fixed (void *selectedRef_ = &selectedRef)
+                __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, index, selectedRef_, &descriptorOut_, (*(void ***)this._nativePointer)[34]);
+            if (descriptorOut_ != System.IntPtr.Zero)
+                descriptorOut = new SharpMediaFoundation.StreamDescriptor(descriptorOut_);
+            else
+                descriptorOut = null;
+            __result__.CheckError();
+            return descriptorOut;
+        }
+
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <param name = "descriptorIndex">No documentation.</param>
+        /// <returns>No documentation.</returns>
+        /// <unmanaged>HRESULT IMFPresentationDescriptor::SelectStream([In] DWORD dwDescriptorIndex)</unmanaged>
+        /// <unmanaged-short>IMFPresentationDescriptor::SelectStream</unmanaged-short>
+        public unsafe void SelectStream(System.Int32 descriptorIndex)
+        {
+            SharpGen.Runtime.Result __result__;
+            __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, descriptorIndex, (*(void ***)this._nativePointer)[35]);
+            __result__.CheckError();
+        }
+
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <param name = "descriptorIndex">No documentation.</param>
+        /// <returns>No documentation.</returns>
+        /// <unmanaged>HRESULT IMFPresentationDescriptor::DeselectStream([In] DWORD dwDescriptorIndex)</unmanaged>
+        /// <unmanaged-short>IMFPresentationDescriptor::DeselectStream</unmanaged-short>
+        public unsafe void DeselectStream(System.Int32 descriptorIndex)
+        {
+            SharpGen.Runtime.Result __result__;
+            __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, descriptorIndex, (*(void ***)this._nativePointer)[36]);
+            __result__.CheckError();
+        }
+
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <returns>No documentation.</returns>
+        /// <unmanaged>HRESULT IMFPresentationDescriptor::Clone([Out] IMFPresentationDescriptor** ppPresentationDescriptor)</unmanaged>
+        /// <unmanaged-short>IMFPresentationDescriptor::Clone</unmanaged-short>
+        public unsafe SharpMediaFoundation.PresentationDescriptor Clone()
+        {
+            SharpMediaFoundation.PresentationDescriptor presentationDescriptorOut;
+            System.IntPtr presentationDescriptorOut_ = System.IntPtr.Zero;
+            SharpGen.Runtime.Result __result__;
+            __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, &presentationDescriptorOut_, (*(void ***)this._nativePointer)[37]);
+            if (presentationDescriptorOut_ != System.IntPtr.Zero)
+                presentationDescriptorOut = new SharpMediaFoundation.PresentationDescriptor(presentationDescriptorOut_);
+            else
+                presentationDescriptorOut = null;
+            __result__.CheckError();
+            return presentationDescriptorOut;
+        }
+    }
+
     [System.Runtime.InteropServices.GuidAttribute("7FF12CCE-F76F-41c2-863B-1666C8E5E139")]
     public partial class PresentationTimeSource : SharpMediaFoundation.Clock
     {
@@ -2065,7 +2461,7 @@ namespace SharpMediaFoundation
         /// <returns>No documentation.</returns>
         /// <unmanaged>HRESULT IMFSourceResolver::CreateObjectFromURL([In] const wchar_t* pwszURL,[In] DWORD dwFlags,[In] IPropertyStore* pProps,[Out] MF_OBJECT_TYPE* pObjectType,[Out] IUnknown** ppObject)</unmanaged>
         /// <unmanaged-short>IMFSourceResolver::CreateObjectFromURL</unmanaged-short>
-        internal unsafe void CreateObjectFromURL(System.String wszURLRef, System.Int32 flags, SharpGen.Runtime.ComObject propsRef, out SharpMediaFoundation.ObjectType objectTypeRef, out SharpGen.Runtime.IUnknown objectOut)
+        private unsafe void CreateObjectFromURL(System.String wszURLRef, System.Int32 flags, SharpGen.Runtime.ComObject propsRef, out SharpMediaFoundation.ObjectType objectTypeRef, out SharpGen.Runtime.IUnknown objectOut)
         {
             System.IntPtr propsRef_ = System.IntPtr.Zero;
             System.IntPtr objectOut_ = System.IntPtr.Zero;
@@ -2094,7 +2490,7 @@ namespace SharpMediaFoundation
         /// <returns>No documentation.</returns>
         /// <unmanaged>HRESULT IMFSourceResolver::CreateObjectFromByteStream([In] IMFByteStream* pByteStream,[In] const wchar_t* pwszURL,[In] DWORD dwFlags,[In] IPropertyStore* pProps,[Out] MF_OBJECT_TYPE* pObjectType,[Out] IUnknown** ppObject)</unmanaged>
         /// <unmanaged-short>IMFSourceResolver::CreateObjectFromByteStream</unmanaged-short>
-        public unsafe void CreateObjectFromByteStream(SharpMediaFoundation.IByteStream byteStreamRef, System.String wszURLRef, System.Int32 flags, SharpGen.Runtime.ComObject propsRef, out SharpMediaFoundation.ObjectType objectTypeRef, out SharpGen.Runtime.IUnknown objectOut)
+        private unsafe void CreateObjectFromByteStream(SharpMediaFoundation.IByteStream byteStreamRef, System.String wszURLRef, System.Int32 flags, SharpGen.Runtime.ComObject propsRef, out SharpMediaFoundation.ObjectType objectTypeRef, out SharpGen.Runtime.IUnknown objectOut)
         {
             System.IntPtr byteStreamRef_ = System.IntPtr.Zero;
             System.IntPtr propsRef_ = System.IntPtr.Zero;
@@ -2126,7 +2522,7 @@ namespace SharpMediaFoundation
         /// <returns>No documentation.</returns>
         /// <unmanaged>HRESULT IMFSourceResolver::BeginCreateObjectFromURL([In] const wchar_t* pwszURL,[In] DWORD dwFlags,[In] IPropertyStore* pProps,[Out, Optional] IUnknown** ppIUnknownCancelCookie,[In] IMFAsyncCallback* pCallback,[In] IUnknown* punkState)</unmanaged>
         /// <unmanaged-short>IMFSourceResolver::BeginCreateObjectFromURL</unmanaged-short>
-        public unsafe void BeginCreateObjectFromURL(System.String wszURLRef, System.Int32 flags, SharpGen.Runtime.ComObject propsRef, out SharpGen.Runtime.IUnknown iUnknownCancelCookieOut, SharpMediaFoundation.IAsyncCallback callbackRef, SharpGen.Runtime.IUnknown unkStateRef)
+        private unsafe void BeginCreateObjectFromURL(System.String wszURLRef, System.Int32 flags, SharpGen.Runtime.ComObject propsRef, out SharpGen.Runtime.IUnknown iUnknownCancelCookieOut, SharpMediaFoundation.IAsyncCallback callbackRef, SharpGen.Runtime.IUnknown unkStateRef)
         {
             System.IntPtr propsRef_ = System.IntPtr.Zero;
             System.IntPtr iUnknownCancelCookieOut_ = System.IntPtr.Zero;
@@ -2157,7 +2553,7 @@ namespace SharpMediaFoundation
         /// <returns>No documentation.</returns>
         /// <unmanaged>HRESULT IMFSourceResolver::EndCreateObjectFromURL([In] IMFAsyncResult* pResult,[Out] MF_OBJECT_TYPE* pObjectType,[Out] IUnknown** ppObject)</unmanaged>
         /// <unmanaged-short>IMFSourceResolver::EndCreateObjectFromURL</unmanaged-short>
-        public unsafe void EndCreateObjectFromURL(SharpMediaFoundation.AsyncResult resultRef, out SharpMediaFoundation.ObjectType objectTypeRef, out SharpGen.Runtime.IUnknown objectOut)
+        private unsafe void EndCreateObjectFromURL(SharpMediaFoundation.AsyncResult resultRef, out SharpMediaFoundation.ObjectType objectTypeRef, out SharpGen.Runtime.IUnknown objectOut)
         {
             System.IntPtr resultRef_ = System.IntPtr.Zero;
             System.IntPtr objectOut_ = System.IntPtr.Zero;
@@ -2186,7 +2582,7 @@ namespace SharpMediaFoundation
         /// <returns>No documentation.</returns>
         /// <unmanaged>HRESULT IMFSourceResolver::BeginCreateObjectFromByteStream([In] IMFByteStream* pByteStream,[In] const wchar_t* pwszURL,[In] DWORD dwFlags,[In] IPropertyStore* pProps,[Out, Optional] IUnknown** ppIUnknownCancelCookie,[In] IMFAsyncCallback* pCallback,[In] IUnknown* punkState)</unmanaged>
         /// <unmanaged-short>IMFSourceResolver::BeginCreateObjectFromByteStream</unmanaged-short>
-        public unsafe void BeginCreateObjectFromByteStream(SharpMediaFoundation.IByteStream byteStreamRef, System.String wszURLRef, System.Int32 flags, SharpGen.Runtime.ComObject propsRef, out SharpGen.Runtime.IUnknown iUnknownCancelCookieOut, SharpMediaFoundation.IAsyncCallback callbackRef, SharpGen.Runtime.IUnknown unkStateRef)
+        private unsafe void BeginCreateObjectFromByteStream(SharpMediaFoundation.IByteStream byteStreamRef, System.String wszURLRef, System.Int32 flags, SharpGen.Runtime.ComObject propsRef, out SharpGen.Runtime.IUnknown iUnknownCancelCookieOut, SharpMediaFoundation.IAsyncCallback callbackRef, SharpGen.Runtime.IUnknown unkStateRef)
         {
             System.IntPtr byteStreamRef_ = System.IntPtr.Zero;
             System.IntPtr propsRef_ = System.IntPtr.Zero;
@@ -2220,7 +2616,7 @@ namespace SharpMediaFoundation
         /// <returns>No documentation.</returns>
         /// <unmanaged>HRESULT IMFSourceResolver::EndCreateObjectFromByteStream([In] IMFAsyncResult* pResult,[Out] MF_OBJECT_TYPE* pObjectType,[Out] IUnknown** ppObject)</unmanaged>
         /// <unmanaged-short>IMFSourceResolver::EndCreateObjectFromByteStream</unmanaged-short>
-        public unsafe void EndCreateObjectFromByteStream(SharpMediaFoundation.AsyncResult resultRef, out SharpMediaFoundation.ObjectType objectTypeRef, out SharpGen.Runtime.IUnknown objectOut)
+        private unsafe void EndCreateObjectFromByteStream(SharpMediaFoundation.AsyncResult resultRef, out SharpMediaFoundation.ObjectType objectTypeRef, out SharpGen.Runtime.IUnknown objectOut)
         {
             System.IntPtr resultRef_ = System.IntPtr.Zero;
             System.IntPtr objectOut_ = System.IntPtr.Zero;
@@ -2243,13 +2639,84 @@ namespace SharpMediaFoundation
         /// <returns>No documentation.</returns>
         /// <unmanaged>HRESULT IMFSourceResolver::CancelObjectCreation([In] IUnknown* pIUnknownCancelCookie)</unmanaged>
         /// <unmanaged-short>IMFSourceResolver::CancelObjectCreation</unmanaged-short>
-        public unsafe void CancelObjectCreation(SharpGen.Runtime.IUnknown iUnknownCancelCookieRef)
+        private unsafe void CancelObjectCreation(SharpGen.Runtime.IUnknown iUnknownCancelCookieRef)
         {
             System.IntPtr iUnknownCancelCookieRef_ = System.IntPtr.Zero;
             SharpGen.Runtime.Result __result__;
             iUnknownCancelCookieRef_ = SharpGen.Runtime.CppObject.ToCallbackPtr<SharpGen.Runtime.IUnknown>(iUnknownCancelCookieRef);
             __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, (void *)iUnknownCancelCookieRef_, (*(void ***)this._nativePointer)[9]);
             System.GC.KeepAlive(iUnknownCancelCookieRef);
+            __result__.CheckError();
+        }
+    }
+
+    [System.Runtime.InteropServices.GuidAttribute("56c03d9c-9dbb-45f5-ab4b-d80f47c05938")]
+    public partial class StreamDescriptor : SharpMediaFoundation.MediaAttributes
+    {
+        public StreamDescriptor(System.IntPtr nativePtr): base (nativePtr)
+        {
+        }
+
+        public static explicit operator StreamDescriptor(System.IntPtr nativePtr) => nativePtr == System.IntPtr.Zero ? null : new StreamDescriptor(nativePtr);
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <unmanaged>GetStreamIdentifier</unmanaged>
+        /// <unmanaged-short>GetStreamIdentifier</unmanaged-short>
+        public System.Int32 StreamIdentifier
+        {
+            get
+            {
+                GetStreamIdentifier(out var __output__);
+                return __output__;
+            }
+        }
+
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <unmanaged>GetMediaTypeHandler</unmanaged>
+        /// <unmanaged-short>GetMediaTypeHandler</unmanaged-short>
+        public SharpMediaFoundation.MediaTypeHandler MediaTypeHandler
+        {
+            get
+            {
+                GetMediaTypeHandler(out var __output__);
+                return __output__;
+            }
+        }
+
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <param name = "streamIdentifierRef">No documentation.</param>
+        /// <returns>No documentation.</returns>
+        /// <unmanaged>HRESULT IMFStreamDescriptor::GetStreamIdentifier([Out] DWORD* pdwStreamIdentifier)</unmanaged>
+        /// <unmanaged-short>IMFStreamDescriptor::GetStreamIdentifier</unmanaged-short>
+        internal unsafe void GetStreamIdentifier(out System.Int32 streamIdentifierRef)
+        {
+            SharpGen.Runtime.Result __result__;
+            fixed (void *streamIdentifierRef_ = &streamIdentifierRef)
+                __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, streamIdentifierRef_, (*(void ***)this._nativePointer)[33]);
+            __result__.CheckError();
+        }
+
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <param name = "mediaTypeHandlerOut">No documentation.</param>
+        /// <returns>No documentation.</returns>
+        /// <unmanaged>HRESULT IMFStreamDescriptor::GetMediaTypeHandler([Out] IMFMediaTypeHandler** ppMediaTypeHandler)</unmanaged>
+        /// <unmanaged-short>IMFStreamDescriptor::GetMediaTypeHandler</unmanaged-short>
+        internal unsafe void GetMediaTypeHandler(out SharpMediaFoundation.MediaTypeHandler mediaTypeHandlerOut)
+        {
+            System.IntPtr mediaTypeHandlerOut_ = System.IntPtr.Zero;
+            SharpGen.Runtime.Result __result__;
+            __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, &mediaTypeHandlerOut_, (*(void ***)this._nativePointer)[34]);
+            if (mediaTypeHandlerOut_ != System.IntPtr.Zero)
+                mediaTypeHandlerOut = new SharpMediaFoundation.MediaTypeHandler(mediaTypeHandlerOut_);
+            else
+                mediaTypeHandlerOut = null;
             __result__.CheckError();
         }
     }

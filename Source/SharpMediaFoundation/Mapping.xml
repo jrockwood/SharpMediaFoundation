@@ -69,9 +69,13 @@
     <attach>MFCreateTopologyNode</attach>
     <attach>IMFGetService</attach>
     <attach>IMFMediaSession</attach>
+    <attach>IMFMediaSource</attach>
+    <attach>IMFMediaTypeHandler</attach>
     <attach>IMFPresentationClock</attach>
+    <attach>IMFPresentationDescriptor</attach>
     <attach>IMFPresentationTimeSource</attach>
     <attach>IMFSourceResolver</attach>
+    <attach>IMFStreamDescriptor</attach>
     <attach>IMFTopology</attach>
     <attach>IMFTopologyNode</attach>
     <attach>MFCLOCK_PROPERTIES</attach>
@@ -81,7 +85,9 @@
     <attach>MFCreateMFByteStreamOnStreamEx</attach>
     <attach>MFCreateSourceResolver</attach>
     <attach>MFGetService</attach>
+    <attach>MFMEDIASOURCE_CHARACTERISTICS</attach>
     <attach>MF_OBJECT_TYPE</attach>
+
     <!-- The following is the MF_RESOLUTION_* enum -->
     <attach>__MIDL___MIDL_itf_mfidl_0000_0001_0001</attach>
     <attach>MFSESSION_SETTOPOLOGY_FLAGS</attach>
@@ -270,6 +276,8 @@
     <short name="QUALITYKNOB">QualityKnob</short>
     <short name="SAFEMODE">SafeMode</short>
     <short name="SAMPLEALLOCATOR">SampleAllocator</short>
+    <short name="SKIPBACKWARD">SkipBackward</short>
+    <short name="SKIPFORWARD">SkipForward</short>
     <short name="SOURCERESOLVER">SourceResolver</short>
     <short name="SOURCESTREAM">SourceStream</short>
     <short name="SPKR">Speaker</short>
@@ -314,6 +322,9 @@
     <map enum-item="ME(.*)" name-tmp="$1" />
     <map enum-item="MEWMDRM(.*)" name-tmp="WindowsMediaDrm$1" />
     <remove enum-item="MEReservedMax" />
+
+    <!-- MediaSourceCharacteristics -->
+    <map enum="MFMEDIASOURCE_CHARACTERISTICS" flags="true" />
 
     <!-- SessionSetTopologyFlags -->
     <map enum="MFSESSION_SETTOPOLOGY_FLAGS" name="SessionSetTopologyFlags" />
@@ -433,8 +444,30 @@
     <!-- IMFMediaSession -->
     <map param="IMFMediaSession::SetTopology::dwSetTopologyFlags" type="MFSESSION_SETTOPOLOGY_FLAGS" />
 
+    <!-- IMFMediaSource -->
+    <map param="IMFMediaSource::CreatePresentationDescriptor::ppPresentationDescriptor" return="true" />
+    <map param="IMFMediaSource::GetCharacteristics::pdwCharacteristics" type="MFMEDIASOURCE_CHARACTERISTICS" />
+
+    <!-- IMFMediaType -->
+    <map param="IMFMediaType::GetRepresentation::ppvRepresentation" return="true" />
+    <map param="IMFMediaType::.*::guid(.*)" name-tmp="$1" />
+    <map param="IMFMediaType::.*::pv(.*)" name-tmp="r$1" />
+
+    <!-- IMFMediaTypeHandler -->
+    <map param="IMFMediaTypeHandler::GetMediaTypeByIndex::ppType" return="true" />
+
+    <!-- IMFPresentationDescriptor -->
+    <map param="IMFPresentationDescriptor::Clone::ppPresentationDescriptor" return="true" />
+    <map param="IMFPresentationDescriptor::GetStreamDescriptorByIndex::ppDescriptor" return="true" />
+
     <!-- IMFSourceResolver -->
-    <map method="IMFSourceResolver::CreateObjectFromURL" visibility="internal" />
+    <map method="IMFSourceResolver::CreateObjectFromURL" visibility="private" />
+    <map method="IMFSourceResolver::CreateObjectFromByteStream" visibility="private" />
+    <map method="IMFSourceResolver::BeginCreateObjectFromURL" visibility="private" />
+    <map method="IMFSourceResolver::EndCreateObjectFromURL" visibility="private" />
+    <map method="IMFSourceResolver::BeginCreateObjectFromByteStream" visibility="private" />
+    <map method="IMFSourceResolver::EndCreateObjectFromByteStream" visibility="private" />
+    <map method="IMFSourceResolver::CancelObjectCreation" visibility="private" />
 
     <!--
     // *****************************************************************
