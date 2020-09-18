@@ -105,6 +105,7 @@
     <attach>MF_TOPONODE_ATTRIBUTE_EDITOR_SERVICE</attach>
     <attach>MF_WRAPPED_OBJECT</attach>
     <attach>MF_WORKQUEUE_SERVICES</attach>
+
     <attach>MFNET_SAVEJOB_SERVICE</attach>
     <attach>MFNETSOURCE_STATISTICS_SERVICE</attach>
     <attach>MR_AUDIO_POLICY_SERVICE</attach>
@@ -113,6 +114,38 @@
     <attach>MR_POLICY_VOLUME_SERVICE</attach>
     <attach>MR_STREAM_VOLUME_SERVICE</attach>
     <attach>MR_VIDEO_ACCELERATION_SERVICE</attach>
+
+    <!-- TopologyNodeAttributeKeys -->
+    <attach>MF_TOPONODE_CONNECT_METHOD</attach>
+    <attach>MF_TOPONODE_D3DAWARE</attach>
+    <attach>MF_TOPONODE_DECODER</attach>
+    <attach>MF_TOPONODE_DECRYPTOR</attach>
+    <attach>MF_TOPONODE_DISABLE_PREROLL</attach>
+    <attach>MF_TOPONODE_DISCARDABLE</attach>
+    <attach>MF_TOPONODE_DRAIN</attach>
+    <attach>MF_TOPONODE_ERROR_MAJORTYPE</attach>
+    <attach>MF_TOPONODE_ERROR_SUBTYPE</attach>
+    <attach>MF_TOPONODE_ERRORCODE</attach>
+    <attach>MF_TOPONODE_FLUSH</attach>
+    <attach>MF_TOPONODE_LOCKED</attach>
+    <attach>MF_TOPONODE_MARKIN_HERE</attach>
+    <attach>MF_TOPONODE_MARKOUT_HERE</attach>
+    <attach>MF_TOPONODE_MEDIASTART</attach>
+    <attach>MF_TOPONODE_MEDIASTOP</attach>
+    <attach>MF_TOPONODE_NOSHUTDOWN_ON_REMOVE</attach>
+    <attach>MF_TOPONODE_PRESENTATION_DESCRIPTOR</attach>
+    <attach>MF_TOPONODE_PRIMARYOUTPUT</attach>
+    <attach>MF_TOPONODE_RATELESS</attach>
+    <attach>MF_TOPONODE_SEQUENCE_ELEMENTID</attach>
+    <attach>MF_TOPONODE_SOURCE</attach>
+    <attach>MF_TOPONODE_STREAM_DESCRIPTOR</attach>
+    <attach>MF_TOPONODE_STREAMID</attach>
+    <attach>MF_TOPONODE_TRANSFORM_OBJECTID</attach>
+    <attach>MF_TOPONODE_WORKQUEUE_ID</attach>
+    <attach>MF_TOPONODE_WORKQUEUE_ITEM_PRIORITY</attach>
+    <attach>MF_TOPONODE_WORKQUEUE_MMCSS_CLASS</attach>
+    <attach>MF_TOPONODE_WORKQUEUE_MMCSS_PRIORITY</attach>
+    <attach>MF_TOPONODE_WORKQUEUE_MMCSS_TASKID</attach>
   </include>
 
   <include file="mferror.h" attach="true" />
@@ -203,17 +236,50 @@
     <const from-guid="MR_STREAM_VOLUME_SERVICE" class='SharpMediaFoundation.MediaServiceKeys' type='System.Guid' name="StreamVolume">new System.Guid("$1")</const>
     <const from-guid="MR_VIDEO_ACCELERATION_SERVICE" class='SharpMediaFoundation.MediaServiceKeys' type='System.Guid' name="VideoAcceleration">new System.Guid("$1")</const>
 
-    <!-- MediaTypeGuids -->
-    <create visibility="public static" class="MediaTypeGuids" />
-    <const from-guid="MFMediaType_(.*)" class="SharpMediaFoundation.MediaTypeGuids" type="System.Guid" name="$1">new System.Guid("$1")</const>
-
     <!-- MediaFactory -->
     <create class="SharpMediaFoundation.MediaFactory" visibility="public static" />
     <const from-macro="MF_VERSION" class="SharpMediaFoundation.MediaFactory" type="int" name="Version" />
 
+    <!-- MediaTypeGuids -->
+    <create visibility="public static" class="MediaTypeGuids" />
+    <const from-guid="MFMediaType_(.*)" class="SharpMediaFoundation.MediaTypeGuids" type="System.Guid" name="$1">new System.Guid("$1")</const>
+
     <!-- ResultCode -->
     <create class="ResultCode" visibility="public" />
     <const from-macro="MF_E_(.*)" type="SharpGen.Runtime.ResultDescriptor" cpp-type="int" name="$1" class="SharpMediaFoundation.ResultCode" visibility="public static readonly">new SharpGen.Runtime.ResultDescriptor($1, "$3", "$0", "$2")</const>
+
+    <!-- TopologyNodeAttributeKeys -->
+    <create visibility="public static" class="TopologyNodeAttributeKeys" />
+    <const from-guid="MF_TOPONODE_CONNECT_METHOD" class="SharpMediaFoundation.TopologyNodeAttributeKeys" type="MediaAttributeKey&lt;int&gt;" name="ConnectMethod">new MediaAttributeKey&lt;int&gt;("$1", "ConnectMethod")</const>
+    <const from-guid="MF_TOPONODE_D3DAWARE" class="SharpMediaFoundation.TopologyNodeAttributeKeys" type="MediaAttributeKey&lt;bool&gt;" name="D3DAware">new MediaAttributeKey&lt;bool&gt;("$1", "D3DAware")</const>
+    <const from-guid="MF_TOPONODE_DECODER" class="SharpMediaFoundation.TopologyNodeAttributeKeys" type="MediaAttributeKey&lt;bool&gt;" name="Decoder">new MediaAttributeKey&lt;bool&gt;("$1", "Decoder")</const>
+    <const from-guid="MF_TOPONODE_DECRYPTOR" class="SharpMediaFoundation.TopologyNodeAttributeKeys" type="MediaAttributeKey&lt;bool&gt;" name="Decryptor">new MediaAttributeKey&lt;bool&gt;("$1", "Decryptor")</const>
+    <const from-guid="MF_TOPONODE_DISABLE_PREROLL" class="SharpMediaFoundation.TopologyNodeAttributeKeys" type="MediaAttributeKey&lt;bool&gt;" name="DisablePreRoll">new MediaAttributeKey&lt;bool&gt;("$1", "DisablePreRoll")</const>
+    <const from-guid="MF_TOPONODE_DISCARDABLE" class="SharpMediaFoundation.TopologyNodeAttributeKeys" type="MediaAttributeKey&lt;byte[]&gt;" name="Discardable">new MediaAttributeKey&lt;byte[]&gt;("$1", "Discardable")</const>
+    <const from-guid="MF_TOPONODE_DRAIN" class="SharpMediaFoundation.TopologyNodeAttributeKeys" type="MediaAttributeKey&lt;int&gt;" name="Drain">new MediaAttributeKey&lt;int&gt;("$1", "Drain")</const>
+    <const from-guid="MF_TOPONODE_ERROR_MAJORTYPE" class="SharpMediaFoundation.TopologyNodeAttributeKeys" type="MediaAttributeKey&lt;System.Guid&gt;" name="ErrorMajorType">new MediaAttributeKey&lt;System.Guid&gt;("$1", "ErrorMajorType")</const>
+    <const from-guid="MF_TOPONODE_ERROR_SUBTYPE" class="SharpMediaFoundation.TopologyNodeAttributeKeys" type="MediaAttributeKey&lt;System.Guid&gt;" name="ErrorSubtype">new MediaAttributeKey&lt;System.Guid&gt;("$1", "ErrorSubtype")</const>
+    <const from-guid="MF_TOPONODE_ERRORCODE" class="SharpMediaFoundation.TopologyNodeAttributeKeys" type="MediaAttributeKey&lt;int&gt;" name="ErrorCode">new MediaAttributeKey&lt;int&gt;("$1", "ErrorCode")</const>
+    <const from-guid="MF_TOPONODE_FLUSH" class="SharpMediaFoundation.TopologyNodeAttributeKeys" type="MediaAttributeKey&lt;int&gt;" name="Flush">new MediaAttributeKey&lt;int&gt;("$1", "Flush")</const>
+    <const from-guid="MF_TOPONODE_LOCKED" class="SharpMediaFoundation.TopologyNodeAttributeKeys" type="MediaAttributeKey&lt;bool&gt;" name="Locked">new MediaAttributeKey&lt;bool&gt;("$1", "Locked")</const>
+    <const from-guid="MF_TOPONODE_MARKIN_HERE" class="SharpMediaFoundation.TopologyNodeAttributeKeys" type="MediaAttributeKey&lt;bool&gt;" name="MarkInHere">new MediaAttributeKey&lt;bool&gt;("$1", "MarkInHere")</const>
+    <const from-guid="MF_TOPONODE_MARKOUT_HERE" class="SharpMediaFoundation.TopologyNodeAttributeKeys" type="MediaAttributeKey&lt;bool&gt;" name="MarkOutHere">new MediaAttributeKey&lt;bool&gt;("$1", "MarkOutHere")</const>
+    <const from-guid="MF_TOPONODE_MEDIASTART" class="SharpMediaFoundation.TopologyNodeAttributeKeys" type="MediaAttributeKey&lt;long&gt;" name="MediaStart">new MediaAttributeKey&lt;long&gt;("$1", "MediaStart")</const>
+    <const from-guid="MF_TOPONODE_MEDIASTOP" class="SharpMediaFoundation.TopologyNodeAttributeKeys" type="MediaAttributeKey&lt;long&gt;" name="MediaStop">new MediaAttributeKey&lt;long&gt;("$1", "MediaStop")</const>
+    <const from-guid="MF_TOPONODE_NOSHUTDOWN_ON_REMOVE" class="SharpMediaFoundation.TopologyNodeAttributeKeys" type="MediaAttributeKey&lt;bool&gt;" name="NoShutdownOnRemove">new MediaAttributeKey&lt;bool&gt;("$1", "NoShutdownOnRemove")</const>
+    <const from-guid="MF_TOPONODE_PRESENTATION_DESCRIPTOR" class="SharpMediaFoundation.TopologyNodeAttributeKeys" type="MediaAttributeKey&lt;SharpGen.Runtime.ComObject&gt;" name="PresentationDescriptor">new MediaAttributeKey&lt;SharpGen.Runtime.ComObject&gt;("$1", "PresentationDescriptor")</const>
+    <const from-guid="MF_TOPONODE_PRIMARYOUTPUT" class="SharpMediaFoundation.TopologyNodeAttributeKeys" type="MediaAttributeKey&lt;int&gt;" name="PrimaryOutput">new MediaAttributeKey&lt;int&gt;("$1", "PrimaryOutput")</const>
+    <const from-guid="MF_TOPONODE_RATELESS" class="SharpMediaFoundation.TopologyNodeAttributeKeys" type="MediaAttributeKey&lt;bool&gt;" name="Rateless">new MediaAttributeKey&lt;bool&gt;("$1", "Rateless")</const>
+    <const from-guid="MF_TOPONODE_SEQUENCE_ELEMENTID" class="SharpMediaFoundation.TopologyNodeAttributeKeys" type="MediaAttributeKey&lt;int&gt;" name="SequenceElementId">new MediaAttributeKey&lt;int&gt;("$1", "SequenceElementId")</const>
+    <const from-guid="MF_TOPONODE_SOURCE" class="SharpMediaFoundation.TopologyNodeAttributeKeys" type="MediaAttributeKey&lt;SharpGen.Runtime.ComObject&gt;" name="Source">new MediaAttributeKey&lt;SharpGen.Runtime.ComObject&gt;("$1", "Source")</const>
+    <const from-guid="MF_TOPONODE_STREAM_DESCRIPTOR" class="SharpMediaFoundation.TopologyNodeAttributeKeys" type="MediaAttributeKey&lt;SharpGen.Runtime.ComObject&gt;" name="StreamDescriptor">new MediaAttributeKey&lt;SharpGen.Runtime.ComObject&gt;("$1", "StreamDescriptor")</const>
+    <const from-guid="MF_TOPONODE_STREAMID" class="SharpMediaFoundation.TopologyNodeAttributeKeys" type="MediaAttributeKey&lt;int&gt;" name="StreamId">new MediaAttributeKey&lt;int&gt;("$1", "StreamId")</const>
+    <const from-guid="MF_TOPONODE_TRANSFORM_OBJECTID" class="SharpMediaFoundation.TopologyNodeAttributeKeys" type="MediaAttributeKey&lt;System.Guid&gt;" name="TransformObjectId">new MediaAttributeKey&lt;System.Guid&gt;("$1", "TransformObjectId")</const>
+    <const from-guid="MF_TOPONODE_WORKQUEUE_ID" class="SharpMediaFoundation.TopologyNodeAttributeKeys" type="MediaAttributeKey&lt;int&gt;" name="WorkQueueId">new MediaAttributeKey&lt;int&gt;("$1", "WorkQueueId")</const>
+    <const from-guid="MF_TOPONODE_WORKQUEUE_ITEM_PRIORITY" class="SharpMediaFoundation.TopologyNodeAttributeKeys" type="MediaAttributeKey&lt;int&gt;" name="WorkQueueItemPriority">new MediaAttributeKey&lt;int&gt;("$1", "WorkQueueItemPriority")</const>
+    <const from-guid="MF_TOPONODE_WORKQUEUE_MMCSS_CLASS" class="SharpMediaFoundation.TopologyNodeAttributeKeys" type="MediaAttributeKey&lt;string&gt;" name="WorkQueueMmcssClass">new MediaAttributeKey&lt;string&gt;("$1", "WorkQueueMmcssClass")</const>
+    <const from-guid="MF_TOPONODE_WORKQUEUE_MMCSS_PRIORITY" class="SharpMediaFoundation.TopologyNodeAttributeKeys" type="MediaAttributeKey&lt;int&gt;" name="WorkQueueMmcssPriority">new MediaAttributeKey&lt;int&gt;("$1", "WorkQueueMmcssPriority")</const>
+    <const from-guid="MF_TOPONODE_WORKQUEUE_MMCSS_TASKID" class="SharpMediaFoundation.TopologyNodeAttributeKeys" type="MediaAttributeKey&lt;int&gt;" name="WorkQueueMmcssTaskId">new MediaAttributeKey&lt;int&gt;("$1", "WorkQueueMmcssTaskId")</const>
 
     <define enum="SharpMediaFoundation.MediaEventTypes" sizeof="4" />
     <context-clear />

@@ -1481,4 +1481,101 @@ namespace SharpMediaFoundation
         ///<unmanaged>MF_E_MEDIA_EXTENSION_PACKAGE_LICENSE_INVALID</unmanaged>
         public static readonly SharpGen.Runtime.ResultDescriptor MediaExtensionPackageLicenseInvalid = new SharpGen.Runtime.ResultDescriptor(unchecked ((int)3222123443UL), "SharpMediaFoundation", "MF_E_MEDIA_EXTENSION_PACKAGE_LICENSE_INVALID", "MediaExtensionPackageLicenseInvalid");
     }
+
+    /// <summary>
+    /// Functions
+    /// </summary>
+    public static partial class TopologyNodeAttributeKeys
+    {
+                ///<summary>Constant ConnectMethod</summary>
+        ///<unmanaged>MF_TOPONODE_CONNECT_METHOD</unmanaged>
+        public static readonly MediaAttributeKey<int> ConnectMethod = new MediaAttributeKey<int>("494bbcf1-b031-4e38-97c4-d5422dd618dc", "ConnectMethod");
+                ///<summary>Constant D3DAware</summary>
+        ///<unmanaged>MF_TOPONODE_D3DAWARE</unmanaged>
+        public static readonly MediaAttributeKey<bool> D3DAware = new MediaAttributeKey<bool>("494bbced-b031-4e38-97c4-d5422dd618dc", "D3DAware");
+                ///<summary>Constant Decoder</summary>
+        ///<unmanaged>MF_TOPONODE_DECODER</unmanaged>
+        public static readonly MediaAttributeKey<bool> Decoder = new MediaAttributeKey<bool>("494bbd02-b031-4e38-97c4-d5422dd618dc", "Decoder");
+                ///<summary>Constant Decryptor</summary>
+        ///<unmanaged>MF_TOPONODE_DECRYPTOR</unmanaged>
+        public static readonly MediaAttributeKey<bool> Decryptor = new MediaAttributeKey<bool>("494bbcfa-b031-4e38-97c4-d5422dd618dc", "Decryptor");
+                ///<summary>Constant DisablePreRoll</summary>
+        ///<unmanaged>MF_TOPONODE_DISABLE_PREROLL</unmanaged>
+        public static readonly MediaAttributeKey<bool> DisablePreRoll = new MediaAttributeKey<bool>("14932f9e-9087-4bb4-8412-5167145cbe04", "DisablePreRoll");
+                ///<summary>Constant Discardable</summary>
+        ///<unmanaged>MF_TOPONODE_DISCARDABLE</unmanaged>
+        public static readonly MediaAttributeKey<byte[]> Discardable = new MediaAttributeKey<byte[]>("494bbcfb-b031-4e38-97c4-d5422dd618dc", "Discardable");
+                ///<summary>Constant Drain</summary>
+        ///<unmanaged>MF_TOPONODE_DRAIN</unmanaged>
+        public static readonly MediaAttributeKey<int> Drain = new MediaAttributeKey<int>("494bbce9-b031-4e38-97c4-d5422dd618dc", "Drain");
+                ///<summary>Constant ErrorMajorType</summary>
+        ///<unmanaged>MF_TOPONODE_ERROR_MAJORTYPE</unmanaged>
+        public static readonly MediaAttributeKey<System.Guid> ErrorMajorType = new MediaAttributeKey<System.Guid>("494bbcfd-b031-4e38-97c4-d5422dd618dc", "ErrorMajorType");
+                ///<summary>Constant ErrorSubtype</summary>
+        ///<unmanaged>MF_TOPONODE_ERROR_SUBTYPE</unmanaged>
+        public static readonly MediaAttributeKey<System.Guid> ErrorSubtype = new MediaAttributeKey<System.Guid>("494bbcfe-b031-4e38-97c4-d5422dd618dc", "ErrorSubtype");
+                ///<summary>Constant ErrorCode</summary>
+        ///<unmanaged>MF_TOPONODE_ERRORCODE</unmanaged>
+        public static readonly MediaAttributeKey<int> ErrorCode = new MediaAttributeKey<int>("494bbcee-b031-4e38-97c4-d5422dd618dc", "ErrorCode");
+                ///<summary>Constant Flush</summary>
+        ///<unmanaged>MF_TOPONODE_FLUSH</unmanaged>
+        public static readonly MediaAttributeKey<int> Flush = new MediaAttributeKey<int>("494bbce8-b031-4e38-97c4-d5422dd618dc", "Flush");
+                ///<summary>Constant Locked</summary>
+        ///<unmanaged>MF_TOPONODE_LOCKED</unmanaged>
+        public static readonly MediaAttributeKey<bool> Locked = new MediaAttributeKey<bool>("494bbcf7-b031-4e38-97c4-d5422dd618dc", "Locked");
+                ///<summary>Constant MarkInHere</summary>
+        ///<unmanaged>MF_TOPONODE_MARKIN_HERE</unmanaged>
+        public static readonly MediaAttributeKey<bool> MarkInHere = new MediaAttributeKey<bool>("494bbd00-b031-4e38-97c4-d5422dd618dc", "MarkInHere");
+                ///<summary>Constant MarkOutHere</summary>
+        ///<unmanaged>MF_TOPONODE_MARKOUT_HERE</unmanaged>
+        public static readonly MediaAttributeKey<bool> MarkOutHere = new MediaAttributeKey<bool>("494bbd01-b031-4e38-97c4-d5422dd618dc", "MarkOutHere");
+                ///<summary>Constant MediaStart</summary>
+        ///<unmanaged>MF_TOPONODE_MEDIASTART</unmanaged>
+        public static readonly MediaAttributeKey<long> MediaStart = new MediaAttributeKey<long>("835c58ea-e075-4bc7-bcba-4de000df9ae6", "MediaStart");
+                ///<summary>Constant MediaStop</summary>
+        ///<unmanaged>MF_TOPONODE_MEDIASTOP</unmanaged>
+        public static readonly MediaAttributeKey<long> MediaStop = new MediaAttributeKey<long>("835c58eb-e075-4bc7-bcba-4de000df9ae6", "MediaStop");
+                ///<summary>Constant NoShutdownOnRemove</summary>
+        ///<unmanaged>MF_TOPONODE_NOSHUTDOWN_ON_REMOVE</unmanaged>
+        public static readonly MediaAttributeKey<bool> NoShutdownOnRemove = new MediaAttributeKey<bool>("14932f9c-9087-4bb4-8412-5167145cbe04", "NoShutdownOnRemove");
+                ///<summary>Constant PresentationDescriptor</summary>
+        ///<unmanaged>MF_TOPONODE_PRESENTATION_DESCRIPTOR</unmanaged>
+        public static readonly MediaAttributeKey<SharpGen.Runtime.ComObject> PresentationDescriptor = new MediaAttributeKey<SharpGen.Runtime.ComObject>("835c58ed-e075-4bc7-bcba-4de000df9ae6", "PresentationDescriptor");
+                ///<summary>Constant PrimaryOutput</summary>
+        ///<unmanaged>MF_TOPONODE_PRIMARYOUTPUT</unmanaged>
+        public static readonly MediaAttributeKey<int> PrimaryOutput = new MediaAttributeKey<int>("6304ef99-16b2-4ebe-9d67-e4c539b3a259", "PrimaryOutput");
+                ///<summary>Constant Rateless</summary>
+        ///<unmanaged>MF_TOPONODE_RATELESS</unmanaged>
+        public static readonly MediaAttributeKey<bool> Rateless = new MediaAttributeKey<bool>("14932f9d-9087-4bb4-8412-5167145cbe04", "Rateless");
+                ///<summary>Constant SequenceElementId</summary>
+        ///<unmanaged>MF_TOPONODE_SEQUENCE_ELEMENTID</unmanaged>
+        public static readonly MediaAttributeKey<int> SequenceElementId = new MediaAttributeKey<int>("835c58ef-e075-4bc7-bcba-4de000df9ae6", "SequenceElementId");
+                ///<summary>Constant Source</summary>
+        ///<unmanaged>MF_TOPONODE_SOURCE</unmanaged>
+        public static readonly MediaAttributeKey<SharpGen.Runtime.ComObject> Source = new MediaAttributeKey<SharpGen.Runtime.ComObject>("835c58ec-e075-4bc7-bcba-4de000df9ae6", "Source");
+                ///<summary>Constant StreamDescriptor</summary>
+        ///<unmanaged>MF_TOPONODE_STREAM_DESCRIPTOR</unmanaged>
+        public static readonly MediaAttributeKey<SharpGen.Runtime.ComObject> StreamDescriptor = new MediaAttributeKey<SharpGen.Runtime.ComObject>("835c58ee-e075-4bc7-bcba-4de000df9ae6", "StreamDescriptor");
+                ///<summary>Constant StreamId</summary>
+        ///<unmanaged>MF_TOPONODE_STREAMID</unmanaged>
+        public static readonly MediaAttributeKey<int> StreamId = new MediaAttributeKey<int>("14932f9b-9087-4bb4-8412-5167145cbe04", "StreamId");
+                ///<summary>Constant TransformObjectId</summary>
+        ///<unmanaged>MF_TOPONODE_TRANSFORM_OBJECTID</unmanaged>
+        public static readonly MediaAttributeKey<System.Guid> TransformObjectId = new MediaAttributeKey<System.Guid>("88dcc0c9-293e-4e8b-9aeb-0ad64cc016b0", "TransformObjectId");
+                ///<summary>Constant WorkQueueId</summary>
+        ///<unmanaged>MF_TOPONODE_WORKQUEUE_ID</unmanaged>
+        public static readonly MediaAttributeKey<int> WorkQueueId = new MediaAttributeKey<int>("494bbcf8-b031-4e38-97c4-d5422dd618dc", "WorkQueueId");
+                ///<summary>Constant WorkQueueItemPriority</summary>
+        ///<unmanaged>MF_TOPONODE_WORKQUEUE_ITEM_PRIORITY</unmanaged>
+        public static readonly MediaAttributeKey<int> WorkQueueItemPriority = new MediaAttributeKey<int>("a1ff99be-5e97-4a53-b494-568c642c0ff3", "WorkQueueItemPriority");
+                ///<summary>Constant WorkQueueMmcssClass</summary>
+        ///<unmanaged>MF_TOPONODE_WORKQUEUE_MMCSS_CLASS</unmanaged>
+        public static readonly MediaAttributeKey<string> WorkQueueMmcssClass = new MediaAttributeKey<string>("494bbcf9-b031-4e38-97c4-d5422dd618dc", "WorkQueueMmcssClass");
+                ///<summary>Constant WorkQueueMmcssPriority</summary>
+        ///<unmanaged>MF_TOPONODE_WORKQUEUE_MMCSS_PRIORITY</unmanaged>
+        public static readonly MediaAttributeKey<int> WorkQueueMmcssPriority = new MediaAttributeKey<int>("5001f840-2816-48f4-9364-ad1ef661a123", "WorkQueueMmcssPriority");
+                ///<summary>Constant WorkQueueMmcssTaskId</summary>
+        ///<unmanaged>MF_TOPONODE_WORKQUEUE_MMCSS_TASKID</unmanaged>
+        public static readonly MediaAttributeKey<int> WorkQueueMmcssTaskId = new MediaAttributeKey<int>("494bbcff-b031-4e38-97c4-d5422dd618dc", "WorkQueueMmcssTaskId");
+    }
 }
