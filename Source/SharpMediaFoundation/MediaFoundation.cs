@@ -1,5 +1,5 @@
 ﻿// ---------------------------------------------------------------------------------------------------------------------
-// <copyright file="ClassNamePlaceholder.cs" company="Justin Rockwood">
+// <copyright file="MediaFoundation.cs" company="Justin Rockwood">
 //   Copyright (c) Justin Rockwood. All Rights Reserved. Licensed under the Apache License, Version 2.0. See
 //   LICENSE.txt in the project root for license information.
 // </copyright>
@@ -7,9 +7,15 @@
 
 namespace SharpMediaFoundation
 {
-    using SharpGen.Runtime;
-
-    public static class MediaManager
+    /// <summary>
+    /// Contains startup and shutdown logic for the Microsoft Media Foundation.
+    /// </summary>
+    /// <remarks>
+    /// The application should call <see cref="Startup"/> once before using any Media Foundation functionality and call
+    /// <see cref="Shutdown"/> once before exiting. This class ensures that startup and shutdown are called only once.
+    /// This class is NOT thread-safe, so these methods should normally be called from the UI thread.
+    /// </remarks>
+    public static class MediaFoundation
     {
         //// ===========================================================================================================
         //// Member Variables
@@ -22,23 +28,15 @@ namespace SharpMediaFoundation
         //// ===========================================================================================================
 
         /// <summary>
-        /// Initializes Microsoft Media Foundation.
+        /// Initializes Microsoft Media Foundation. Do not call this function from work queue threads.
         /// </summary>
         /// <param name="useLightVersion">
-        /// If true, do not initialize the sockets library, else full initialization. Default is false.
+        /// Indicates whether full initialization occurs or if light initialization occurs, which skips initialization
+        /// of the sockets library.
         /// </param>
-        /// <unmanaged>HRESULT MFStartup([In] unsigned int Version,[In] unsigned int dwFlags)</unmanaged>
-        /// <unmanaged-short>MFStartup</unmanaged-short>
         /// <remarks>
-        /// <p>
         /// An application must call this function before using Media Foundation. Before your application quits, call
-        /// <strong><see cref="MediaFactory.Shutdown"/></strong> once for every previous call to <strong><see cref="MediaFactory.Startup"/></strong>.
-        /// </p>
-        /// <p>
-        /// Do not call <strong><see cref="MediaFactory.Startup"/></strong> or <strong><see
-        /// cref="MediaFactory.Shutdown"/></strong> from work queue threads. For more information about work queues, see
-        /// Work Queues.
-        /// </p>
+        /// <see cref="Shutdown"/>. Do not call <see cref="Startup"/> or <see cref="Shutdown"/> from work queue threads.
         /// </remarks>
         public static void Startup(bool useLightVersion = false)
         {
@@ -48,21 +46,12 @@ namespace SharpMediaFoundation
             }
 
             MediaFactory.Startup(MediaFactory.Version, useLightVersion ? 1 : 0);
-            s_hasStarted = useLightVersion;
+            s_hasStarted = true;
         }
 
         /// <summary>
-        /// Shuts down the Microsoft Media Foundation platform. Call this function once for every call to <strong><see
-        /// cref="MediaFactory.Startup"/></strong>. Do not call this function from work queue threads.
+        /// Shuts down the Microsoft Media Foundation platform. Do not call this function from work queue threads.
         /// </summary>
-        /// <returns>
-        /// <p>
-        /// If this function succeeds, it returns <strong><see cref="Result.Ok"/></strong>. Otherwise, it returns an
-        /// <strong><see cref="Result"/></strong> error code.
-        /// </p>
-        /// </returns>
-        /// <unmanaged>HRESULT MFShutdown()</unmanaged>
-        /// <unmanaged-short>MFShutdown</unmanaged-short>
         public static void Shutdown()
         {
             if (!s_hasStarted)
