@@ -548,7 +548,11 @@
     <map function="MF(.*)" name-tmp="$1" />
     <map function="MF.*" dll='"Mfplat.dll"' group="SharpMediaFoundation.MediaFactory" />
 
+    <!-- MFCreateAsyncResult -->
+    <map param="MFCreateAsyncResult::ppAsyncResult" return="true" />
+
     <!-- MFCreateAttributes -->
+    <map function="MFCreateAttributes" visibility="internal" />
     <map param="MFCreateAttributes::ppMFAttributes" attribute="out fast" />
 
     <!-- MFCreateAudioRendererActivate -->
@@ -557,8 +561,11 @@
 
     <!-- MFCreateMediaSession -->
     <map function="MFCreateMediaSession" dll='"mf.dll"' />
+    <map param="MFCreateMediaSession::ppMediaSession" return="true" />
 
     <!-- MFCreateMFByteStreamOnStream -->
+    <map function="MFCreateMFByteStreamOnStream" visibility="internal" />
+    <map function="MFCreateMFByteStreamOnStreamEx" visibility="internal" />
     <map param="MFCreateMFByteStreamOnStream::ppByteStream" attribute="out fast" />
     <map param="MFCreateMFByteStreamOnStreamEx::ppByteStream" attribute="out fast" />
 

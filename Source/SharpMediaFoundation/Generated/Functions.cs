@@ -147,15 +147,15 @@ namespace SharpMediaFoundation
         /// <param name = "unkObjectRef">No documentation.</param>
         /// <param name = "callbackRef">No documentation.</param>
         /// <param name = "unkStateRef">No documentation.</param>
-        /// <param name = "asyncResultOut">No documentation.</param>
         /// <returns>No documentation.</returns>
         /// <unmanaged>HRESULT MFCreateAsyncResult([In] IUnknown* punkObject,[In] IMFAsyncCallback* pCallback,[In] IUnknown* punkState,[Out] IMFAsyncResult** ppAsyncResult)</unmanaged>
         /// <unmanaged-short>MFCreateAsyncResult</unmanaged-short>
-        public static unsafe void CreateAsyncResult(SharpGen.Runtime.IUnknown unkObjectRef, SharpMediaFoundation.IAsyncCallback callbackRef, SharpGen.Runtime.IUnknown unkStateRef, out SharpMediaFoundation.AsyncResult asyncResultOut)
+        public static unsafe SharpMediaFoundation.AsyncResult CreateAsyncResult(SharpGen.Runtime.IUnknown unkObjectRef, SharpMediaFoundation.IAsyncCallback callbackRef, SharpGen.Runtime.IUnknown unkStateRef)
         {
             System.IntPtr unkObjectRef_ = System.IntPtr.Zero;
             System.IntPtr callbackRef_ = System.IntPtr.Zero;
             System.IntPtr unkStateRef_ = System.IntPtr.Zero;
+            SharpMediaFoundation.AsyncResult asyncResultOut;
             System.IntPtr asyncResultOut_ = System.IntPtr.Zero;
             SharpGen.Runtime.Result __result__;
             unkObjectRef_ = SharpGen.Runtime.CppObject.ToCallbackPtr<SharpGen.Runtime.IUnknown>(unkObjectRef);
@@ -170,6 +170,7 @@ namespace SharpMediaFoundation
             System.GC.KeepAlive(callbackRef);
             System.GC.KeepAlive(unkStateRef);
             __result__.CheckError();
+            return asyncResultOut;
         }
 
         [System.Runtime.InteropServices.DllImportAttribute("Mfplat.dll", EntryPoint = "MFCreateAsyncResult", CallingConvention = System.Runtime.InteropServices.CallingConvention.StdCall)]
@@ -182,7 +183,7 @@ namespace SharpMediaFoundation
         /// <returns>No documentation.</returns>
         /// <unmanaged>HRESULT MFCreateAttributes([Out, Fast] IMFAttributes** ppMFAttributes,[In] UINT32 cInitialSize)</unmanaged>
         /// <unmanaged-short>MFCreateAttributes</unmanaged-short>
-        public static unsafe void CreateAttributes(SharpMediaFoundation.MediaAttributes mFAttributesOut, System.Int32 cInitialSize)
+        internal static unsafe void CreateAttributes(SharpMediaFoundation.MediaAttributes mFAttributesOut, System.Int32 cInitialSize)
         {
             System.IntPtr mFAttributesOut_ = System.IntPtr.Zero;
             SharpGen.Runtime.Result __result__;
@@ -197,13 +198,13 @@ namespace SharpMediaFoundation
         /// No documentation.
         /// </summary>
         /// <param name = "configurationRef">No documentation.</param>
-        /// <param name = "mediaSessionOut">No documentation.</param>
         /// <returns>No documentation.</returns>
         /// <unmanaged>HRESULT MFCreateMediaSession([In] IMFAttributes* pConfiguration,[Out] IMFMediaSession** ppMediaSession)</unmanaged>
         /// <unmanaged-short>MFCreateMediaSession</unmanaged-short>
-        public static unsafe void CreateMediaSession(SharpMediaFoundation.MediaAttributes configurationRef, out SharpMediaFoundation.MediaSession mediaSessionOut)
+        public static unsafe SharpMediaFoundation.MediaSession CreateMediaSession(SharpMediaFoundation.MediaAttributes configurationRef)
         {
             System.IntPtr configurationRef_ = System.IntPtr.Zero;
+            SharpMediaFoundation.MediaSession mediaSessionOut;
             System.IntPtr mediaSessionOut_ = System.IntPtr.Zero;
             SharpGen.Runtime.Result __result__;
             configurationRef_ = SharpGen.Runtime.CppObject.ToCallbackPtr<SharpMediaFoundation.MediaAttributes>(configurationRef);
@@ -214,6 +215,7 @@ namespace SharpMediaFoundation
                 mediaSessionOut = null;
             System.GC.KeepAlive(configurationRef);
             __result__.CheckError();
+            return mediaSessionOut;
         }
 
         [System.Runtime.InteropServices.DllImportAttribute("mf.dll", EntryPoint = "MFCreateMediaSession", CallingConvention = System.Runtime.InteropServices.CallingConvention.StdCall)]
@@ -338,7 +340,7 @@ namespace SharpMediaFoundation
         /// <returns>No documentation.</returns>
         /// <unmanaged>HRESULT MFCreateMFByteStreamOnStream([In] IStream* pStream,[Out, Fast] IMFByteStream** ppByteStream)</unmanaged>
         /// <unmanaged-short>MFCreateMFByteStreamOnStream</unmanaged-short>
-        public static unsafe void CreateMFByteStreamOnStream(SharpGen.Runtime.Win32.IStream streamRef, SharpMediaFoundation.ByteStream byteStreamOut)
+        internal static unsafe void CreateMFByteStreamOnStream(SharpGen.Runtime.Win32.IStream streamRef, SharpMediaFoundation.ByteStream byteStreamOut)
         {
             System.IntPtr streamRef_ = System.IntPtr.Zero;
             System.IntPtr byteStreamOut_ = System.IntPtr.Zero;
@@ -360,7 +362,7 @@ namespace SharpMediaFoundation
         /// <returns>No documentation.</returns>
         /// <unmanaged>HRESULT MFCreateMFByteStreamOnStreamEx([In] IUnknown* punkStream,[Out, Fast] IMFByteStream** ppByteStream)</unmanaged>
         /// <unmanaged-short>MFCreateMFByteStreamOnStreamEx</unmanaged-short>
-        public static unsafe void CreateMFByteStreamOnStreamEx(SharpGen.Runtime.IUnknown unkStreamRef, SharpMediaFoundation.ByteStream byteStreamOut)
+        internal static unsafe void CreateMFByteStreamOnStreamEx(SharpGen.Runtime.IUnknown unkStreamRef, SharpMediaFoundation.ByteStream byteStreamOut)
         {
             System.IntPtr unkStreamRef_ = System.IntPtr.Zero;
             System.IntPtr byteStreamOut_ = System.IntPtr.Zero;
