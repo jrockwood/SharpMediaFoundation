@@ -65,6 +65,7 @@
     <attach>IMFAudioStreamVolume</attach>
     <attach>IMFClock</attach>
     <attach>IMFClockStateSink</attach>
+    <attach>MFCreateAudioRendererActivate</attach>
     <attach>MFCreateTopology</attach>
     <attach>MFCreateTopologyNode</attach>
     <attach>IMFGetService</attach>
@@ -151,6 +152,7 @@
   <include file="mferror.h" attach="true" />
 
   <include file="mfobjects.h">
+    <attach>IMFActivate</attach>
     <attach>IMFAsyncCallback</attach>
     <attach>IMFAsyncResult</attach>
     <attach>IMFAttributes</attach>
@@ -429,6 +431,9 @@
     <map param=".*::.*::f(.*)" name-tmp="$1" />
     <map param=".*::.*::pf(.*)" name-tmp="f$1" />
 
+    <!-- IMFActivate -->
+    <map param="IMFActivate::ActivateObject::ppv" return="true" />
+
     <!-- IMFAsyncCallback -->
     <map interface="IMFAsyncCallback" name="IAsyncCallback" callback="true" />
     <map param="IMFAsyncCallback::GetParameters::pdwFlags" type="MFASYNC_CALLBACK_FLAGS" />
@@ -545,6 +550,10 @@
 
     <!-- MFCreateAttributes -->
     <map param="MFCreateAttributes::ppMFAttributes" attribute="out fast" />
+
+    <!-- MFCreateAudioRendererActivate -->
+    <map function="MFCreateAudioRendererActivate" dll='"mf.dll"' />
+    <map param="MFCreateAudioRendererActivate::ppActivate" return="true" />
 
     <!-- MFCreateMediaSession -->
     <map function="MFCreateMediaSession" dll='"mf.dll"' />

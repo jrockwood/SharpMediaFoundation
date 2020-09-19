@@ -2,6 +2,57 @@
 
 namespace SharpMediaFoundation
 {
+    [System.Runtime.InteropServices.GuidAttribute("7FEE9E9A-4A89-47a6-899C-B6A53A70FB67")]
+    public partial class Activate : SharpMediaFoundation.MediaAttributes
+    {
+        public Activate(System.IntPtr nativePtr): base (nativePtr)
+        {
+        }
+
+        public static explicit operator Activate(System.IntPtr nativePtr) => nativePtr == System.IntPtr.Zero ? null : new Activate(nativePtr);
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <param name = "riid">No documentation.</param>
+        /// <returns>No documentation.</returns>
+        /// <unmanaged>HRESULT IMFActivate::ActivateObject([In] const GUID&amp; riid,[Out] void** ppv)</unmanaged>
+        /// <unmanaged-short>IMFActivate::ActivateObject</unmanaged-short>
+        public unsafe System.IntPtr ActivateObject(System.Guid riid)
+        {
+            System.IntPtr vOut;
+            SharpGen.Runtime.Result __result__;
+            __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, &riid, &vOut, (*(void ***)this._nativePointer)[33]);
+            __result__.CheckError();
+            return vOut;
+        }
+
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <returns>No documentation.</returns>
+        /// <unmanaged>HRESULT IMFActivate::ShutdownObject()</unmanaged>
+        /// <unmanaged-short>IMFActivate::ShutdownObject</unmanaged-short>
+        public unsafe void ShutdownObject()
+        {
+            SharpGen.Runtime.Result __result__;
+            __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, (*(void ***)this._nativePointer)[34]);
+            __result__.CheckError();
+        }
+
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <returns>No documentation.</returns>
+        /// <unmanaged>HRESULT IMFActivate::DetachObject()</unmanaged>
+        /// <unmanaged-short>IMFActivate::DetachObject</unmanaged-short>
+        public unsafe void DetachObject()
+        {
+            SharpGen.Runtime.Result __result__;
+            __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, (*(void ***)this._nativePointer)[35]);
+            __result__.CheckError();
+        }
+    }
+
     [System.Runtime.InteropServices.GuidAttribute("ac6b7889-0740-4d51-8619-905994a55cc6")]
     public partial class AsyncResult : SharpGen.Runtime.ComObject
     {

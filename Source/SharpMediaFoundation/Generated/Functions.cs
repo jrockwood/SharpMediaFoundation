@@ -311,6 +311,28 @@ namespace SharpMediaFoundation
         /// <summary>
         /// No documentation.
         /// </summary>
+        /// <returns>No documentation.</returns>
+        /// <unmanaged>HRESULT MFCreateAudioRendererActivate([Out] IMFActivate** ppActivate)</unmanaged>
+        /// <unmanaged-short>MFCreateAudioRendererActivate</unmanaged-short>
+        public static unsafe SharpMediaFoundation.Activate CreateAudioRendererActivate()
+        {
+            SharpMediaFoundation.Activate activateOut;
+            System.IntPtr activateOut_ = System.IntPtr.Zero;
+            SharpGen.Runtime.Result __result__;
+            __result__ = MFCreateAudioRendererActivate_(&activateOut_);
+            if (activateOut_ != System.IntPtr.Zero)
+                activateOut = new SharpMediaFoundation.Activate(activateOut_);
+            else
+                activateOut = null;
+            __result__.CheckError();
+            return activateOut;
+        }
+
+        [System.Runtime.InteropServices.DllImportAttribute("mf.dll", EntryPoint = "MFCreateAudioRendererActivate", CallingConvention = System.Runtime.InteropServices.CallingConvention.StdCall)]
+        private unsafe static extern int MFCreateAudioRendererActivate_(void *param0);
+        /// <summary>
+        /// No documentation.
+        /// </summary>
         /// <param name = "streamRef">No documentation.</param>
         /// <param name = "byteStreamOut">No documentation.</param>
         /// <returns>No documentation.</returns>
