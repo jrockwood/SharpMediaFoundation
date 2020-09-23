@@ -1868,6 +1868,96 @@ namespace SharpMediaFoundation
         }
     }
 
+    [System.Runtime.InteropServices.GuidAttribute("3C9B2EB9-86D5-4514-A394-F56664F9F0D8")]
+    public partial class MediaSourceEx : SharpMediaFoundation.MediaSource
+    {
+        public MediaSourceEx(System.IntPtr nativePtr): base (nativePtr)
+        {
+        }
+
+        public static explicit operator MediaSourceEx(System.IntPtr nativePtr) => nativePtr == System.IntPtr.Zero ? null : new MediaSourceEx(nativePtr);
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <unmanaged>GetSourceAttributes</unmanaged>
+        /// <unmanaged-short>GetSourceAttributes</unmanaged-short>
+        public SharpMediaFoundation.MediaAttributes SourceAttributes
+        {
+            get
+            {
+                GetSourceAttributes(out var __output__);
+                return __output__;
+            }
+        }
+
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <unmanaged>SetD3DManager</unmanaged>
+        /// <unmanaged-short>SetD3DManager</unmanaged-short>
+        public SharpGen.Runtime.IUnknown D3DManager
+        {
+            set => SetD3DManager(value);
+        }
+
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <param name = "attributesOut">No documentation.</param>
+        /// <returns>No documentation.</returns>
+        /// <unmanaged>HRESULT IMFMediaSourceEx::GetSourceAttributes([Out] IMFAttributes** ppAttributes)</unmanaged>
+        /// <unmanaged-short>IMFMediaSourceEx::GetSourceAttributes</unmanaged-short>
+        internal unsafe void GetSourceAttributes(out SharpMediaFoundation.MediaAttributes attributesOut)
+        {
+            System.IntPtr attributesOut_ = System.IntPtr.Zero;
+            SharpGen.Runtime.Result __result__;
+            __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, &attributesOut_, (*(void ***)this._nativePointer)[13]);
+            if (attributesOut_ != System.IntPtr.Zero)
+                attributesOut = new SharpMediaFoundation.MediaAttributes(attributesOut_);
+            else
+                attributesOut = null;
+            __result__.CheckError();
+        }
+
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <param name = "streamIdentifier">No documentation.</param>
+        /// <returns>No documentation.</returns>
+        /// <unmanaged>HRESULT IMFMediaSourceEx::GetStreamAttributes([In] DWORD dwStreamIdentifier,[Out] IMFAttributes** ppAttributes)</unmanaged>
+        /// <unmanaged-short>IMFMediaSourceEx::GetStreamAttributes</unmanaged-short>
+        public unsafe SharpMediaFoundation.MediaAttributes GetStreamAttributes(System.Int32 streamIdentifier)
+        {
+            SharpMediaFoundation.MediaAttributes attributesOut;
+            System.IntPtr attributesOut_ = System.IntPtr.Zero;
+            SharpGen.Runtime.Result __result__;
+            __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, streamIdentifier, &attributesOut_, (*(void ***)this._nativePointer)[14]);
+            if (attributesOut_ != System.IntPtr.Zero)
+                attributesOut = new SharpMediaFoundation.MediaAttributes(attributesOut_);
+            else
+                attributesOut = null;
+            __result__.CheckError();
+            return attributesOut;
+        }
+
+        /// <summary>
+        /// No documentation.
+        /// </summary>
+        /// <param name = "managerRef">No documentation.</param>
+        /// <returns>No documentation.</returns>
+        /// <unmanaged>HRESULT IMFMediaSourceEx::SetD3DManager([In, Optional] IUnknown* pManager)</unmanaged>
+        /// <unmanaged-short>IMFMediaSourceEx::SetD3DManager</unmanaged-short>
+        internal unsafe void SetD3DManager(SharpGen.Runtime.IUnknown managerRef)
+        {
+            System.IntPtr managerRef_ = System.IntPtr.Zero;
+            SharpGen.Runtime.Result __result__;
+            managerRef_ = SharpGen.Runtime.CppObject.ToCallbackPtr<SharpGen.Runtime.IUnknown>(managerRef);
+            __result__ = SharpMediaFoundation.LocalInterop.CalliStdCallint(this._nativePointer, (void *)managerRef_, (*(void ***)this._nativePointer)[15]);
+            System.GC.KeepAlive(managerRef);
+            __result__.CheckError();
+        }
+    }
+
     [System.Runtime.InteropServices.GuidAttribute("44ae0fa8-ea31-4109-8d2e-4cae4997c555")]
     public partial class MediaType : SharpMediaFoundation.MediaAttributes
     {

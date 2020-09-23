@@ -71,6 +71,7 @@
     <attach>IMFGetService</attach>
     <attach>IMFMediaSession</attach>
     <attach>IMFMediaSource</attach>
+    <attach>IMFMediaSourceEx</attach>
     <attach>IMFMediaTypeHandler</attach>
     <attach>IMFPresentationClock</attach>
     <attach>IMFPresentationDescriptor</attach>
@@ -518,6 +519,9 @@
     <!-- IMFMediaSource -->
     <map param="IMFMediaSource::CreatePresentationDescriptor::ppPresentationDescriptor" return="true" />
     <map param="IMFMediaSource::GetCharacteristics::pdwCharacteristics" type="MFMEDIASOURCE_CHARACTERISTICS" />
+
+    <!-- IMFMediaSourceEx -->
+    <map param="IMFMediaSourceEx::GetStreamAttributes::ppAttributes" return="true" />
 
     <!-- IMFMediaType -->
     <map param="IMFMediaType::GetRepresentation::ppvRepresentation" return="true" />

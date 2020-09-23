@@ -24,10 +24,10 @@ namespace SharpMediaFoundation
         /// This is an aggregation method that invokes <see cref="CreateObjectFromUrl(string,SourceResolverFlags)"/>
         /// behind the scenes and then performs a QueryInterface for the <see cref="MediaSource"/> interface.
         /// </remarks>
-        public MediaSource CreateMediaSource(string url)
+        public MediaSourceEx CreateMediaSource(string url)
         {
             using var source = new ComObject(CreateObjectFromUrl(url, SourceResolverFlags.MediaSource));
-            return source.QueryInterface<MediaSource>();
+            return source.QueryInterface<MediaSourceEx>();
         }
 
         /// <summary>
@@ -41,7 +41,7 @@ namespace SharpMediaFoundation
         /// cref="CreateObjectFromStream(ByteStream,string,SourceResolverFlags)"/> behind the scenes and then performs a
         /// QueryInterface for the <see cref="MediaSource"/> interface.
         /// </remarks>
-        public MediaSource CreateMediaSource(Stream stream, string url)
+        public MediaSourceEx CreateMediaSource(Stream stream, string url)
         {
             var byteStream = new ByteStream(stream);
             return CreateMediaSource(byteStream, url);
@@ -58,10 +58,10 @@ namespace SharpMediaFoundation
         /// cref="CreateObjectFromStream(ByteStream,string,SourceResolverFlags)"/> behind the scenes and then performs a
         /// QueryInterface for the <see cref="MediaSource"/> interface.
         /// </remarks>
-        public MediaSource CreateMediaSource(ByteStream stream, string url)
+        public MediaSourceEx CreateMediaSource(ByteStream stream, string url)
         {
             using var source = new ComObject(CreateObjectFromStream(stream, url, SourceResolverFlags.MediaSource));
-            return source.QueryInterface<MediaSource>();
+            return source.QueryInterface<MediaSourceEx>();
         }
 
         public IUnknown CreateObjectFromUrl(string url, SourceResolverFlags flags)
